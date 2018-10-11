@@ -1,0 +1,64 @@
+
+## 排序结构的向量
+
+[![std-badge]][std] [![cat-science-badge]][cat-science]
+
+使用属性对Person结构的Vector进行排序`name`和`age`按其自然顺序(按名称和年龄).为了使Person可排序,你需要四个特征[`Eq`],[`PartialEq`],[`Ord`]和[`PartialOrd`].这些特征可以巧妙地得出.您还可以使用a提供自定义比较器功能[`vec:sort_by`]方法,并按年龄排序.
+
+```rust
+#[derive(Debug, Eq, Ord, PartialEq, PartialOrd)]
+struct Person {
+    name: String,
+    age: u32
+}
+
+impl Person {
+    pub fn new(name: String, age: u32) -> Self {
+        Person {
+            name,
+            age
+        }
+    }
+}
+
+fn main() {
+    let mut people = vec![
+        Person::new("Zoe".to_string(), 25),
+        Person::new("Al".to_string(), 60),
+        Person::new("John".to_string(), 1),
+    ];
+
+    // Sort people by derived natural order (Name and age)
+    people.sort();
+
+    assert_eq!(
+        people,
+        vec![
+            Person::new("Al".to_string(), 60),
+            Person::new("John".to_string(), 1),
+            Person::new("Zoe".to_string(), 25),
+        ]);
+
+    // Sort people by age
+    people.sort_by(|a, b| b.age.cmp(&a.age));
+
+    assert_eq!(
+        people,
+        vec![
+            Person::new("Al".to_string(), 60),
+            Person::new("Zoe".to_string(), 25),
+            Person::new("John".to_string(), 1),
+        ]);
+
+}
+```
+
+[`eq`]: https://doc.rust-lang.org/std/cmp/trait.Eq.html
+
+[`partialeq`]: https://doc.rust-lang.org/std/cmp/trait.PartialEq.html
+
+[`ord`]: https://doc.rust-lang.org/std/cmp/trait.Ord.html
+
+[`partialord`]: https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html
+
+[`vec:sort_by`]: https://doc.rust-lang.org/std/vec/struct.Vec.html#method.sort_by
