@@ -4,7 +4,7 @@
 | 食谱 | 包装箱 | 分类 |
 | --- | --- | --- |
 | [百分比编码字符串][ex-percent-encode] | [![url-badge]][url] | [![cat-encoding-badge]][cat-encoding] |
-| [将字符串编码为application / x-www-form-urlencoded][ex-urlencoded] | [![url-badge]][url] | [![cat-encoding-badge]][cat-encoding] |
+| [将字符串编码为application/x-www-form-urlencoded][ex-urlencoded] | [![url-badge]][url] | [![cat-encoding-badge]][cat-encoding] |
 | [编码和解码十六进制][ex-hex-encode-decode] | [![data-encoding-badge]][data-encoding] | [![cat-encoding-badge]][cat-encoding] |
 | [编码和解码base64][ex-base64] | [![base64-badge]][base64] | [![cat-encoding-badge]][cat-encoding] |
 | [读取CSV记录][ex-csv-read] | [![csv-badge]][csv] | [![cat-encoding-badge]][cat-encoding] |
@@ -46,4 +46,4 @@
 
 [ex-byteorder-le]: encoding/complex.html#read-and-write-integers-in-little-endian-byte-order
 
-{{#include links.md}}
+{{#include links.zh.md}}

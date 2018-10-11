@@ -27,7 +27,7 @@
 | [从文件名中获得MIME类型][ex-mime-from-filename] | [![mime-badge]][mime] | [![cat-encoding-badge]][cat-encoding] |
 | [解析HTTP响应的MIME类型][ex-http-response-mime-type] | [![mime-badge]][mime] [![reqwest-badge]][reqwest] | [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding] |
 
-{{包括Web/Copys.Md}}
+{{包括Web/Copys.zh.md}}
 
 [ex-extract-links-webpage]: web/scraping.html#extract-all-links-from-a-webpage-html
 
@@ -51,4 +51,4 @@
 
 [ex-http-response-mime-type]: web/mime.html#parse-the-mime-type-of-a-http-response
 
-{{包括链接.Md}}
+{{包括链接.zh.md}}

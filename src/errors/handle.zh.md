@@ -1,10 +1,9 @@
-
 # 错误处理
 
-{{#include handle / main.md}}
+{{#include handle/main.zh.md}}
 
-{{#include handle / retain.md}}
+{{#include handle/retain.zh.md}}
 
-{{#include handle / backtrace.md}}
+{{#include handle/backtrace.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

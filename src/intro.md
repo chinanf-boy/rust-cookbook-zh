@@ -12,42 +12,44 @@ how to read the book, how to use the examples, and notes on conventions.
 This project is intended to be easy for new Rust programmers to
 contribute to, and an easy way to get involved with the Rust
 community. It needs and welcomes help. For details see
-[CONTRIBUTING.md].
+[CONTRIBUTING.zh.md].
 
-[CONTRIBUTING.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.md
+[CONTRIBUTING.zh.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.zh.md
 
-{{#include algorithms.md}}
+{{#include algorithms.zh.md}}
 
-{{#include cli.md}}
+{{#include cli.zh.md}}
 
-{{#include compression.md}}
+{{#include compression.zh.md}}
 
-{{#include concurrency.md}}
+{{#include concurrency.zh.md}}
 
-{{#include cryptography.md}}
+{{#include cryptography.zh.md}}
 
-{{#include data_structures.md}}
+{{#include data_structures.zh.md}}
 
-{{#include database.md}}
+{{#include database.zh.md}}
 
-{{#include datetime.md}}
+{{#include datetime.zh.md}}
 
-{{#include development_tools.md}}
+{{#include development_tools.zh.md}}
 
-{{#include encoding.md}}
+{{#include encoding.zh.md}}
 
-{{#include file.md}}
+{{#include file.zh.md}}
 
-{{#include hardware.md}}
+{{#include hardware.zh.md}}
 
-{{#include mem.md}}
+{{#include mem.zh.md}}
 
-{{#include net.md}}
+{{#include net.zh.md}}
 
-{{#include os.md}}
+{{#include os.zh.md}}
 
-{{#include text.md}}
+{{#include text.zh.md}}
 
-{{#include web.md}}
+{{#include web.zh.md}}
 
-{{#include science.md}}
+{{#include science.zh.md}}
+
+{{#include links.zh.md}}

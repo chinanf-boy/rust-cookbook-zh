@@ -22,4 +22,4 @@
 [ex-progress-with-range]: web/clients/download.html#post-a-file-to-paste-rs
 [ex-file-post]: web/clients/download.html#make-a-partial-download-with-http-range-headers
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

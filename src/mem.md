@@ -6,4 +6,4 @@
 
 [ex-lazy-constant]: mem/global_static.html#declare-lazily-evaluated-constant
 
-{{#include links.md}}
+{{#include links.zh.md}}

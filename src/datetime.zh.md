@@ -25,4 +25,4 @@
 
 [ex-parse-datetime]: datetime/parse.html#parse-string-into-datetime-struct
 
-{{#include links.md}}
+{{#include links.zh.md}}

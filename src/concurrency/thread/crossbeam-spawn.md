@@ -26,7 +26,7 @@ fn find_max(arr: &[i32], start: usize, end: usize) -> i32 {
         return *arr.iter().max().unwrap();
     }
 
-    let mid = start + (end - start) / 2;
+    let mid = start + (end - start)/2;
     crossbeam::thread::scope(|scope| {
         let left = scope.spawn(|| find_max(arr, start, mid));
         let right = scope.spawn(|| find_max(arr, mid, end));

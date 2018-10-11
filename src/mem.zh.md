@@ -7,4 +7,4 @@
 
 [ex-lazy-constant]: mem/global_static.html#declare-lazily-evaluated-constant
 
-{{包括链接.Md}}
+{{包括链接.zh.md}}

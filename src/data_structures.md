@@ -6,4 +6,4 @@
 
 [ex-bitflags]: data_structures/bitfield.html#define-and-operate-on-a-type-represented-as-a-bitfield
 
-{{#include links.md}}
+{{#include links.zh.md}}

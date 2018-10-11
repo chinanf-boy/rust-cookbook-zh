@@ -31,4 +31,5 @@
 
 [ex-sort-structs]: algorithms/sorting.html#sort-a-vector-of-structs
 
-{{#include links.md}}
+{{#include links.zh.md}}
+

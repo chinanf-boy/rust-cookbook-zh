@@ -26,4 +26,4 @@
 [ex-glob-recursive]: file/dir.html#find-all-png-files-recursively
 [ex-glob-with]: file/dir.html#find-all-files-with-given-pattern-ignoring-filename-case
 
-{{#include links.md}}
+{{#include links.zh.md}}

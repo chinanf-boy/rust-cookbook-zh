@@ -37,4 +37,4 @@
 
 [ex-glob-with]: file/dir.html#find-all-files-with-given-pattern-ignoring-filename-case
 
-{{包括链接.Md}}
+{{包括链接.zh.md}}

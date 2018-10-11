@@ -31,4 +31,4 @@
 
 [ex-log-custom]: development_tools/debugging/config_log.html#log-messages-to-a-custom-location
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

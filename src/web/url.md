@@ -1,13 +1,13 @@
 # Uniform Resource Location
 
-{{#include url/parse.md}}
+{{#include url/parse.zh.md}}
 
-{{#include url/base.md}}
+{{#include url/base.zh.md}}
 
-{{#include url/new.md}}
+{{#include url/new.zh.md}}
 
-{{#include url/origin.md}}
+{{#include url/origin.zh.md}}
 
-{{#include url/fragment.md}}
+{{#include url/fragment.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

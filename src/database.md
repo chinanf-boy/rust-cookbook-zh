@@ -8,4 +8,4 @@
 
 [ex-sqlite-initialization]: database/sqlite.html#create-a-sqlite-database
 
-{{#include links.md}}
+{{#include links.zh.md}}

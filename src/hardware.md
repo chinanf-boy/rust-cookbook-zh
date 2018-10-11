@@ -6,4 +6,4 @@
 
 [ex-check-cpu-cores]: hardware/processor.html#check-number-of-logical-cpu-cores
 
-{{#include links.md}}
+{{#include links.zh.md}}

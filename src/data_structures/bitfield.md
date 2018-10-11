@@ -1,5 +1,5 @@
 # Custom
 
-{{#include bitfield/bitfield.md}}
+{{#include bitfield/bitfield.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

@@ -1,6 +1,6 @@
 
 # SQLite的
 
-{{#include sqlite / initialization.md}}
+{{#include sqlite/initialization.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

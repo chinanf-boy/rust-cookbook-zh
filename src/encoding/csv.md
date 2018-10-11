@@ -1,17 +1,17 @@
 # CSV processing
 
-{{#include csv/read.md}}
+{{#include csv/read.zh.md}}
 
-{{#include csv/delimiter.md}}
+{{#include csv/delimiter.zh.md}}
 
-{{#include csv/filter.md}}
+{{#include csv/filter.zh.md}}
 
-{{#include csv/invalid.md}}
+{{#include csv/invalid.zh.md}}
 
-{{#include csv/serialize.md}}
+{{#include csv/serialize.zh.md}}
 
-{{#include csv/serde-serialize.md}}
+{{#include csv/serde-serialize.zh.md}}
 
-{{#include csv/transform.md}}
+{{#include csv/transform.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

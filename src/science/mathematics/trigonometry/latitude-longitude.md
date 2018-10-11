@@ -25,8 +25,8 @@ fn main() {
     let delta_latitude = (paris_latitude_degrees - london_latitude_degrees).to_radians();
     let delta_longitude = (paris_longitude_degrees - london_longitude_degrees).to_radians();
 
-    let central_angle_inner = (delta_latitude / 2.0).sin().powi(2)
-        + paris_latitude.cos() * london_latitude.cos() * (delta_longitude / 2.0).sin().powi(2);
+    let central_angle_inner = (delta_latitude/2.0).sin().powi(2)
+        + paris_latitude.cos() * london_latitude.cos() * (delta_longitude/2.0).sin().powi(2);
     let central_angle = 2.0 * central_angle_inner.sqrt().asin();
 
     let distance = earth_radius_kilometer * central_angle;

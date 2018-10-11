@@ -1,14 +1,14 @@
 
 # 记录消息
 
-{{#include log / log-debug.md}}
+{{#include log/log-debug.zh.md}}
 
-{{#include log / log-error.md}}
+{{#include log/log-error.zh.md}}
 
-{{#include log / log-stdout.md}}
+{{#include log/log-stdout.zh.md}}
 
-{{#include log / log-custom-logger.md}}
+{{#include log/log-custom-logger.zh.md}}
 
-{{#include log / log-syslog.md}}
+{{#include log/log-syslog.zh.md}}
 
-{{#include ../../links.md}}
+{{#include ../../links.zh.md}}

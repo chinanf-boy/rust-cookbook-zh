@@ -1,9 +1,9 @@
 # Structured Data
 
-{{#include complex/json.md}}
+{{#include complex/json.zh.md}}
 
-{{#include complex/toml.md}}
+{{#include complex/toml.zh.md}}
 
-{{#include complex/endian-byte.md}}
+{{#include complex/endian-byte.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

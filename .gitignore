@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 fork
 source
+Cargo.lock
+target/
+*~
+book/
+*.swp
+lines.txt

@@ -32,4 +32,4 @@
 
 [ex-file-post]: web/clients/download.html#make-a-partial-download-with-http-range-headers
 
-{{包含…/Link.Md}}
+{{包含…/Link.zh.md}}

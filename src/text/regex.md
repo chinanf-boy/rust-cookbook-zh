@@ -1,13 +1,13 @@
 # Regular Expressions
 
-{{#include regex/email.md}}
+{{#include regex/email.zh.md}}
 
-{{#include regex/hashtags.md}}
+{{#include regex/hashtags.zh.md}}
 
-{{#include regex/phone.md}}
+{{#include regex/phone.zh.md}}
 
-{{#include regex/filter-log.md}}
+{{#include regex/filter-log.zh.md}}
 
-{{#include regex/replace.md}}
+{{#include regex/replace.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

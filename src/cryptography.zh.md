@@ -13,4 +13,4 @@
 
 [ex-pbkdf2]: cryptography/encryption.html#salt-and-hash-a-password-with-pbkdf2
 
-{{#include links.md}}
+{{#include links.zh.md}}

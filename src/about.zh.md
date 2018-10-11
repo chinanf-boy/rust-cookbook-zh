@@ -142,7 +142,7 @@ fn run() -> Result<()> {
 
 这本食谱与之密切相关[Rust Libz Blitz],一个识别和提高此类板条箱质量的项目,因此它在很大程度上将板条箱选择推迟到该项目.已经作为该过程的一部分进行评估的任何板条箱都在食谱的范围内,正在等待评估的板条箱也是如此.
 
-{{#include links.md}}
+{{#include links.zh.md}}
 
 [index]: intro.html
 

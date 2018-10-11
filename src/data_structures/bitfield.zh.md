@@ -1,6 +1,6 @@
 
 # 习惯
 
-{{#include bitfield / bitfield.md}}
+{{#include bitfield/bitfield.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

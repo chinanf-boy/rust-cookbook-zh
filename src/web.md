@@ -15,7 +15,7 @@
 | [Parse a URL from a string to a `Url` type][ex-url-parse] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
 | [Create a base URL by removing path segments][ex-url-base] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
 | [Create new URLs from a base URL][ex-url-new-from-base] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
-| [Extract the URL origin (scheme / host / port)][ex-url-origin] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| [Extract the URL origin (scheme/host/port)][ex-url-origin] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
 | [Remove fragment identifiers and query pairs from a URL][ex-url-rm-frag] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
 
 ## Media Types (MIME)
@@ -27,7 +27,7 @@
 | [Parse the MIME type of a HTTP response][ex-http-response-mime-type] | [![mime-badge]][mime] [![reqwest-badge]][reqwest] | [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding] |
 
 
-{{#include web/clients.md}}
+{{#include web/clients.zh.md}}
 
 [ex-extract-links-webpage]: web/scraping.html#extract-all-links-from-a-webpage-html
 [ex-check-broken-links]: web/scraping.html#check-a-webpage-for-broken-links
@@ -43,4 +43,4 @@
 [ex-mime-from-filename]: web/mime.html#get-mime-type-from-filename
 [ex-http-response-mime-type]: web/mime.html#parse-the-mime-type-of-a-http-response
 
-{{#include links.md}}
+{{#include links.zh.md}}

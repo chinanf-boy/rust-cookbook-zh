@@ -1,5 +1,5 @@
 # Constants
 
-{{#include global_static/lazy-constant.md}}
+{{#include global_static/lazy-constant.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

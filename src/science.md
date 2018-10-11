@@ -1,5 +1,5 @@
 # Science
 
-{{#include science/mathematics.md}}
+{{#include science/mathematics.zh.md}}
 
-{{#include links.md}}
+{{#include links.zh.md}}

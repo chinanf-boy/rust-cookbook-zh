@@ -1,8 +1,8 @@
 
 [book]
 title = "Rust Cookbook"
-description = "Collection of useful Rust code examples"
-authors = ["Rust Language Community"]
+description = "有用的 Rust 代码 实践集合"
+authors = ["Rust Language Community","译文: Yobrave Lee"]
 multilingual = false
 src = "src"
 

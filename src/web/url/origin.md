@@ -1,4 +1,4 @@
-## Extract the URL origin (scheme / host / port)
+## Extract the URL origin (scheme/host/port)
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 

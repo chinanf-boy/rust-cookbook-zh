@@ -1,9 +1,9 @@
 # Media Types
 
-{{#include mime/string.md}}
+{{#include mime/string.zh.md}}
 
-{{#include mime/filename.md}}
+{{#include mime/filename.zh.md}}
 
-{{#include mime/request.md}}
+{{#include mime/request.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

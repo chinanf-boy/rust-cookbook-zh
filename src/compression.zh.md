@@ -13,4 +13,4 @@
 
 [ex-tar-strip-prefix]: compression/tar.html#decompress-a-tarball-while-removing-a-prefix-from-the-paths
 
-{{#include links.md}}
+{{#include links.zh.md}}

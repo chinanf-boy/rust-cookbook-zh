@@ -10,4 +10,4 @@
 
 [ex-ansi_term-basic]: cli/ansi_terminal.html#ansi-terminal
 
-{{#include links.md}}
+{{#include links.zh.md}}

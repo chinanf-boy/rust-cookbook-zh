@@ -1,48 +1,47 @@
+# Rust 菜谱
 
-# 用锈煮
+这个*Rust Cookbook*是一个简单的[rust]生态系统的 crate 包集合, 展示完成常见编程任务的良好实践的示例
 
-这个*锈菜谱*是一个简单的示例集合,演示了使用Rust生态系统中的板条箱完成常见编程任务的良好实践.
-
-[Read more about *Rust Cookbook*](about.html)包括如何阅读这本书的提示,如何使用这些例子,以及关于约定的注释.
+[阅读更多关于 _Rust Cookbook_](about.zh.html), 其中包括如何阅读这本书的提示,如何使用这些例子,以及关于约定好的注释.
 
 ## 贡献
 
-这个项目旨在让新的Rust程序员更容易做出贡献,并且是参与Rust社区的简单方法.它需要并欢迎帮助.详情见[MD的贡献.].
+这个项目旨在让新的 Rust 程序员更容易做出贡献,并且是参与 Rust 社区的简单方法.它需要并欢迎帮助.详情见[贡献.](contributing.zh.md).
 
-[contributing.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.md
+[contributing.zh.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.zh.md
 
-{{包含算法〉.MD }
+{{#include algorithms.zh.md}}
 
-{{包括CLI.Md}}
+{{#include cli.zh.md}}
 
-{{包括压缩.Md}}
+{{#include compression.zh.md}}
 
-{{包含并发.Md}}
+{{#include concurrency.zh.md}}
 
-{{包含密码学.MD }
+{{#include cryptography.zh.md}}
 
-{{包含DATAX结构.MD }
+{{#include data_structures.zh.md}}
 
-{{包含数据库.Md}}
+{{#include database.zh.md}}
 
-{{包含DATEIME.MD }
+{{#include datetime.zh.md}}
 
-{{包括开发工具-Md}}
+{{#include development_tools.zh.md}}
 
-{{包含编码.Md}}
+{{#include encoding.zh.md}}
 
-{{包含文件.Md}}
+{{#include file.zh.md}}
 
-{{包含硬件.Md}}
+{{#include hardware.zh.md}}
 
-{{包括MEM.Md}}
+{{#include mem.zh.md}}
 
-{{包含NET.Md}}
+{{#include net.zh.md}}
 
-{{包括OS.Md}}
+{{#include os.zh.md}}
 
-{{包含文本.Md}}
+{{#include text.zh.md}}
 
-{{包括Web.Md}}
+{{#include web.zh.md}}
 
-{{包括科学〉MD }
+{{#include science.zh.md}}

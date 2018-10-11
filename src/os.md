@@ -14,4 +14,4 @@
 [ex-redirect-stdout-stderr-same-file]: os/external.html#redirect-both-stdout-and-stderr-of-child-process-to-the-same-file
 [ex-continuous-process-output]: os/external.html#continuously-process-child-process-outputs
 
-{{#include links.md}}
+{{#include links.zh.md}}

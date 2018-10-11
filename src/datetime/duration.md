@@ -1,9 +1,9 @@
 # Duration and Calculation
 
-{{#include duration/profile.md}}
+{{#include duration/profile.zh.md}}
 
-{{#include duration/checked.md}}
+{{#include duration/checked.zh.md}}
 
-{{#include duration/timezone.md}}
+{{#include duration/timezone.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

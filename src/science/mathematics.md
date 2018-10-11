@@ -26,4 +26,4 @@
 [add-complex]: science/mathematics/complex_numbers.html#adding-complex-numbers
 [mathematical-functions]: science/mathematics/complex_numbers.html#mathematical-functions
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

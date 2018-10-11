@@ -1,13 +1,13 @@
 # External Command
 
-{{#include external/process-output.md}}
+{{#include external/process-output.zh.md}}
 
-{{#include external/send-input.md}}
+{{#include external/send-input.zh.md}}
 
-{{#include external/piped.md}}
+{{#include external/piped.zh.md}}
 
-{{#include external/error-file.md}}
+{{#include external/error-file.zh.md}}
 
-{{#include external/continuous.md}}
+{{#include external/continuous.zh.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

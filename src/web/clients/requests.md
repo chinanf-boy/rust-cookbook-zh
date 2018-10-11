@@ -1,5 +1,5 @@
 # Making Requests
 
-{{#include requests/get.md}}
+{{#include requests/get.zh.md}}
 
-{{#include ../../links.md}}
+{{#include ../../links.zh.md}}

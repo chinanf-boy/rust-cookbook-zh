@@ -1,11 +1,11 @@
 # Calling a Web API
 
-{{#include api/rest-get.md}}
+{{#include api/rest-get.zh.md}}
 
-{{#include api/rest-head.md}}
+{{#include api/rest-head.zh.md}}
 
-{{#include api/rest-post.md}}
+{{#include api/rest-post.zh.md}}
 
-{{#include api/paginated.md}}
+{{#include api/paginated.zh.md}}
 
-{{#include ../../links.md}}
+{{#include ../../links.zh.md}}

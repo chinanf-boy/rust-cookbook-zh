@@ -19,4 +19,4 @@
 
 [ex-regex-replace-named]: text/regex.html#replace-all-occurrences-of-one-text-pattern-with-another-pattern
 
-{{包括链接.Md}}
+{{包括链接.zh.md}}

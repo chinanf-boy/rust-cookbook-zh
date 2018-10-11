@@ -1,7 +1,7 @@
 
 # 开发工具
 
-{{#include development_tools / debugging.md}}
+{{#include development_tools/debugging.zh.md}}
 
 ## 版本
 
@@ -37,4 +37,4 @@
 
 [ex-cc-custom-defines]: development_tools/build_tools.html#compile-a-c-library-while-setting-custom-defines
 
-{{#include links.md}}
+{{#include links.zh.md}}

@@ -1,6 +1,6 @@
 
 # 常量
 
-{{〉包括GULALLYSTATION/LIDE常数.MD }
+{{〉包括GULALLYSTATION/LIDE常数.zh.md }
 
-{{包含…/Link.Md}}
+{{包含…/Link.zh.md}}

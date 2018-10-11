@@ -34,4 +34,4 @@
 
 [ex-rayon-thumbnails]: concurrency/parallel.html#generate-jpg-thumbnails-in-parallel
 
-{{#include links.md}}
+{{#include links.zh.md}}
