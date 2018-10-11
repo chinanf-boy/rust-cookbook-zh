@@ -32,7 +32,68 @@
 <!-- doc-templite END generated -->
 
 - [x] [readme]
-- [ ] [src/SUMMARY.md](src/SUMMARY.md)
+- [x] [src/SUMMARY.md](src/SUMMARY.md)
+- [ ] [目录表](./src/intro.zh.md)
+- [ ] [关于](./src/about.zh.md)
+- [ ] [算法](./src/algorithms.zh.md)
+  - [ ] [生成随机值](./src/algorithms/randomness.zh.md)
+  - [ ] [排序向量](./src/algorithms/sorting.zh.md)
+- [ ] [命令行](./src/cli.zh.md)
+  - [ ] [参数解析](./src/cli/arguments.zh.md)
+  - [ ] [ANSI 终端](./src/cli/ansi_terminal.zh.md)
+- [ ] [压缩](./src/compression.zh.md)
+  - [ ] [与 Tarballs 合作](./src/compression/tar.zh.md)
+- [ ] [并发性](./src/concurrency.zh.md)
+  - [ ] [显式线程](./src/concurrency/threads.zh.md)
+  - [ ] [数据并行性](./src/concurrency/parallel.zh.md)
+- [ ] [密码学](./src/cryptography.zh.md)
+  - [ ] [哈希](./src/cryptography/hashing.zh.md)
+  - [ ] [加密](./src/cryptography/encryption.zh.md)
+- [ ] [数据结构](./src/data_structures.zh.md)
+  - [ ] [位字段](./src/data_structures/bitfield.zh.md)
+- [ ] [数据库](./src/database.zh.md)
+  - [ ] [数据库](./src/database/sqlite.zh.md)
+- [ ] [日期和时间](./src/datetime.zh.md)
+  - [ ] [持续时间和计算](./src/datetime/duration.zh.md)
+  - [ ] [解析与显示](./src/datetime/parse.zh.md)
+- [ ] [开发工具](./src/development_tools.zh.md)
+  - [ ] [调试](./src/development_tools/debugging.zh.md)
+    - [ ] [日志消息](./src/development_tools/debugging/log.zh.md)
+    - [ ] [配置日志记录](./src/development_tools/debugging/config_log.zh.md)
+  - [ ] [版本控制](./src/development_tools/versioning.zh.md)
+  - [ ] [建立时间工具](./src/development_tools/build_tools.zh.md)
+- [ ] [编码](./src/encoding.zh.md)
+  - [ ] [字符集](./src/encoding/strings.zh.md)
+  - [ ] [CSV 处理](./src/encoding/csv.zh.md)
+  - [ ] [结构化数据](./src/encoding/complex.zh.md)
+- [ ] [错误处理](./src/errors.zh.md)
+  - [ ] [处理错误变量](./src/errors/handle.zh.md)
+- [ ] [文件系统](./src/file.zh.md)
+  - [ ] [读写](./src/file/read-write.zh.md)
+  - [ ] [目录穿越漏洞](./src/file/dir.zh.md)
+- [ ] [硬件支持](./src/hardware.zh.md)
+  - [ ] [处理器](./src/hardware/processor.zh.md)
+- [ ] [内存管理](./src/mem.zh.md)
+  - [ ] [全局静态](./src/mem/global_static.zh.md)
+- [ ] [网络](./src/net.zh.md)
+  - [ ] [服务器](./src/net/server.zh.md)
+- [ ] [操作系统](./src/os.zh.md)
+  - [ ] [外部命令](./src/os/external.zh.md)
+- [ ] [科学类](./src/science.zh.md)
+  - [ ] [数学](./src/science/mathematics.zh.md)
+    - [ ] [线性代数](./src/science/mathematics/linear_algebra.zh.md)
+    - [ ] [三角法](./src/science/mathematics/trigonometry.zh.md)
+    - [ ] [复数](./src/science/mathematics/complex_numbers.zh.md)
+- [ ] [文本处理](./src/text.zh.md)
+  - [ ] [正则表达式](./src/text/regex.zh.md)
+- [ ] [网页编程](./src/web.zh.md)
+  - [ ] [提取链接](./src/web/scraping.zh.md)
+  - [ ] [统一资源定位地址:URL](./src/web/url.zh.md)
+  - [ ] [媒体类型](./src/web/mime.zh.md)
+  - [ ] [客户](./src/web/clients.zh.md)
+    - [ ] [提出请求](./src/web/clients/requests.zh.md)
+    - [ ] [调用 Web API](./src/web/clients/apis.zh.md)
+    - [ ] [下载](./src/web/clients/download.zh.md)
 
 ### 贡献
 
@@ -55,7 +116,7 @@
 
 这个*Rust Cookbook*是一个简单的[rust]生态系统的 crate 包集合, 展示完成常见编程任务的良好实践的示例.
 
-这些例子是完整的,适合直接复制到新的货物项目中.它们经过测试并保证可以正常工作.
+这些例子是完整的,适合直接复制到新的Cargo项目中.它们经过测试并保证可以正常工作.
 
 ## 离线阅读
 

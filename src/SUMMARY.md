@@ -1,7 +1,7 @@
 # 概要
 
-[目录表](intro.zh.md)
-[关于](about.zh.md)
+- [目录表](intro.zh.md)
+- [关于](about.zh.md)
 
 - [算法](algorithms.zh.md)
   - [生成随机值](algorithms/randomness.zh.md)
@@ -10,7 +10,7 @@
   - [参数解析](cli/arguments.zh.md)
   - [ANSI 终端](cli/ansi_terminal.zh.md)
 - [压缩](compression.zh.md)
-  - [与塔尔鲍尔合作](compression/tar.zh.md)
+  - [与 Tarballs 合作](compression/tar.zh.md)
 - [并发性](concurrency.zh.md)
   - [显式线程](concurrency/threads.zh.md)
   - [数据并行性](concurrency/parallel.zh.md)
@@ -18,7 +18,7 @@
   - [哈希](cryptography/hashing.zh.md)
   - [加密](cryptography/encryption.zh.md)
 - [数据结构](data_structures.zh.md)
-  - [位场](data_structures/bitfield.zh.md)
+  - [位字段](data_structures/bitfield.zh.md)
 - [数据库](database.zh.md)
   - [数据库](database/sqlite.zh.md)
 - [日期和时间](datetime.zh.md)
@@ -56,7 +56,7 @@
   - [正则表达式](text/regex.zh.md)
 - [网页编程](web.zh.md)
   - [提取链接](web/scraping.zh.md)
-  - [统一资源定位地址](web/url.zh.md)
+  - [统一资源定位地址:URL](web/url.zh.md)
   - [媒体类型](web/mime.zh.md)
   - [客户](web/clients.zh.md)
     - [提出请求](web/clients/requests.zh.md)

@@ -6,9 +6,9 @@
 
 ## 贡献
 
-这个项目旨在让新的 Rust 程序员更容易做出贡献,并且是参与 Rust 社区的简单方法.它需要并欢迎帮助.详情见[贡献.](contributing.zh.md).
+这个项目旨在让新的 Rust 程序员更容易做出贡献,并且是参与 Rust 社区的简单方法.它需要并欢迎帮助.详情见[贡献.][contributing.zh.md]
 
-[contributing.zh.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.zh.md
+[contributing.zh.md]: https://github.com/chinanf-boy/rust-cookbook-zh/blob/master/CONTRIBUTING.zh.md
 
 {{#include algorithms.zh.md}}
 
