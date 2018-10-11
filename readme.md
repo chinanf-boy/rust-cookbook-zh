@@ -1,13 +1,7 @@
-# rust-lang-nursery/rust-cookbook [![explain]][source] [![translate-svg]][translate-list]
+# rust-lang-nursery/rust-cookbook [![translate-svg]][translate-list]
 
-<!-- [![size-img]][size] -->
-
-[explain]: http://llever.com/explain.svg
-[source]: https://github.com/chinanf-boy/Source-Explain
 [translate-svg]: http://llever.com/translate.svg
 [translate-list]: https://github.com/chinanf-boy/chinese-translate-list
-[size-img]: https://packagephobia.now.sh/badge?p=Name
-[size]: https://packagephobia.now.sh/result?p=Name
 
 「 这个*Rust Cookbook*是一个简单的[rust]生态系统的 crate 包集合, 展示完成常见编程任务的良好实践的示例.」
 
