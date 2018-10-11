@@ -3,10 +3,8 @@
 
 食谱需要贡献者,并且易于贡献.欢迎帮助.
 
--   [Building and testing](#building-and-testing)
--   [Finding what to contribute](#finding-what-to-contribute)
--   [Adding an example](#adding-an-example)
--   [Example guidelines](#example-guidelines)
+<!-- START doctoc -->
+<!-- END doctoc -->
 
 ## 建设和测试
 
