@@ -7,4 +7,4 @@
 
 [ex-random-port-tcp]: net/server.html#listen-on-unused-port-tcpip
 
-{{#include links.zh.md}}
+{{#include links.md}}

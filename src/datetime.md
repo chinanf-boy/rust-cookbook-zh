@@ -18,4 +18,4 @@
 [ex-format-datetime]: datetime/parse.html#display-formatted-date-and-time
 [ex-parse-datetime]: datetime/parse.html#parse-string-into-datetime-struct
 
-{{#include links.zh.md}}
+{{#include links.md}}

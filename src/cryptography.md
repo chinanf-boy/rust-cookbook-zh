@@ -10,4 +10,4 @@
 [ex-hmac]: cryptography/hashing.html#sign-and-verify-a-message-with-hmac-digest
 [ex-pbkdf2]: cryptography/encryption.html#salt-and-hash-a-password-with-pbkdf2
 
-{{#include links.zh.md}}
+{{#include links.md}}

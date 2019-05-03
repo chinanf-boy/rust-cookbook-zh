@@ -1,13 +1,13 @@
 # Versioning
 
-{{#include versioning/semver-increment.zh.md}}
+{{#include versioning/semver-increment.md}}
 
-{{#include versioning/semver-complex.zh.md}}
+{{#include versioning/semver-complex.md}}
 
-{{#include versioning/semver-prerelease.zh.md}}
+{{#include versioning/semver-prerelease.md}}
 
-{{#include versioning/semver-latest.zh.md}}
+{{#include versioning/semver-latest.md}}
 
-{{#include versioning/semver-command.zh.md}}
+{{#include versioning/semver-command.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

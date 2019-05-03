@@ -22,4 +22,4 @@
 [ex-sort-floats]:   algorithms/sorting.html#sort-a-vector-of-floats
 [ex-sort-structs]:   algorithms/sorting.html#sort-a-vector-of-structs
 
-{{#include links.zh.md}}
+{{#include links.md}}

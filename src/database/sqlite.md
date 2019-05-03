@@ -1,5 +1,9 @@
 # SQLite
 
-{{#include sqlite/initialization.zh.md}}
+{{#include sqlite/initialization.md}}
 
-{{#include ../links.zh.md}}
+{{#include sqlite/insert_select.md}}
+
+{{#include sqlite/transactions.md}}
+
+{{#include ../links.md}}

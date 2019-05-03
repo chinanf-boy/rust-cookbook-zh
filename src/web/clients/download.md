@@ -1,9 +1,9 @@
 # Downloads
 
-{{#include download/basic.zh.md}}
+{{#include download/basic.md}}
 
-{{#include download/post-file.zh.md}}
+{{#include download/post-file.md}}
 
-{{#include download/partial.zh.md}}
+{{#include download/partial.md}}
 
-{{#include ../../links.zh.md}}
+{{#include ../../links.md}}

@@ -10,4 +10,4 @@
 [ex-error-chain-avoid-discarding]: errors/handle.html#avoid-discarding-errors-during-error-conversions
 [ex-error-chain-backtrace]: errors/handle.html#obtain-backtrace-of-complex-error-scenarios
 
-{{#include links.zh.md}}
+{{#include links.md}}

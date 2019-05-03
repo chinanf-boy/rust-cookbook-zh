@@ -1,5 +1,5 @@
 # Processor
 
-{{#include processor/cpu-count.zh.md}}
+{{#include processor/cpu-count.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

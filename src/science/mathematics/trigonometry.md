@@ -1,7 +1,7 @@
 # Trigonometry
 
-{{#include trigonometry/side-length.zh.md}}
-{{#include trigonometry/tan-sin-cos.zh.md}}
-{{#include trigonometry/latitude-longitude.zh.md}}
+{{#include trigonometry/side-length.md}}
+{{#include trigonometry/tan-sin-cos.md}}
+{{#include trigonometry/latitude-longitude.md}}
 
-{{#include ../../links.zh.md}}
+{{#include ../../links.md}}

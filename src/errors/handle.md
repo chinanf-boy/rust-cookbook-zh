@@ -1,9 +1,9 @@
 # Error Handling
 
-{{#include handle/main.zh.md}}
+{{#include handle/main.md}}
 
-{{#include handle/retain.zh.md}}
+{{#include handle/retain.md}}
 
-{{#include handle/backtrace.zh.md}}
+{{#include handle/backtrace.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

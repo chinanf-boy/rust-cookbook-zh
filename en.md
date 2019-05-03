@@ -42,9 +42,9 @@ This project is intended to be easy for new [Rust] programmers to
 contribute to, and an easy way to get involved with the Rust
 community. It needs and welcomes help.
 
-For details see [CONTRIBUTING.zh.md] on GitHub.
+For details see [CONTRIBUTING.md] on GitHub.
 
-[CONTRIBUTING.zh.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.zh.md
+[CONTRIBUTING.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.md
 
 ## License [![CC0-badge]][CC0-deed]
 

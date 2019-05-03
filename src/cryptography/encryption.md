@@ -1,5 +1,5 @@
 # Encryption
 
-{{#include encryption/pbkdf2.zh.md}}
+{{#include encryption/pbkdf2.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

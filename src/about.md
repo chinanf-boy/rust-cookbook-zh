@@ -200,7 +200,7 @@ defers crate selection to that project. Any crates that have already
 been evaluated as part of that process are in scope for the cookbook,
 as are crates that are pending evaluation.
 
-{{#include links.zh.md}}
+{{#include links.md}}
 
 [index]: intro.html
 [error-docs]: https://doc.rust-lang.org/book/error-handling.html

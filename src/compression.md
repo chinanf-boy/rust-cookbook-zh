@@ -10,4 +10,4 @@
 [ex-tar-compress]: compression/tar.html#compress-a-directory-into-tarball
 [ex-tar-strip-prefix]: compression/tar.html#decompress-a-tarball-while-removing-a-prefix-from-the-paths
 
-{{#include links.zh.md}}
+{{#include links.md}}

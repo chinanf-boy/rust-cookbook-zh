@@ -1,5 +1,5 @@
 # ANSI Terminal
 
-{{#include ansi_terminal/ansi_term-basic.zh.md}}
+{{#include ansi_terminal/ansi_term-basic.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

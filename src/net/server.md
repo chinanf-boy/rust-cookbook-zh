@@ -1,5 +1,5 @@
 # Server
 
-{{#include server/listen-unused.zh.md}}
+{{#include server/listen-unused.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

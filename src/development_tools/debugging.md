@@ -22,4 +22,4 @@
 [ex-log-timestamp]: development_tools/debugging/config_log.html#include-timestamp-in-log-messages
 [ex-log-custom]: development_tools/debugging/config_log.html#log-messages-to-a-custom-location
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

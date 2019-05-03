@@ -8,4 +8,4 @@
 [ex-clap-basic]: cli/arguments.html#parse-command-line-arguments
 [ex-ansi_term-basic]: cli/ansi_terminal.html#ansi-terminal
 
-{{#include links.zh.md}}
+{{#include links.md}}

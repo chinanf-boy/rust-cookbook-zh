@@ -1,7 +1,7 @@
 # Hashing
 
-{{#include hashing/sha-digest.zh.md}}
+{{#include hashing/sha-digest.md}}
 
-{{#include hashing/hmac.zh.md}}
+{{#include hashing/hmac.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

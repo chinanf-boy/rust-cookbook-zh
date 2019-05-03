@@ -1,9 +1,9 @@
 # Read & Write
 
-{{#include read-write/read-file.zh.md}}
+{{#include read-write/read-file.md}}
 
-{{#include read-write/same-file.zh.md}}
+{{#include read-write/same-file.md}}
 
-{{#include read-write/memmap.zh.md}}
+{{#include read-write/memmap.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}
