@@ -1,16 +1,16 @@
-
-## 创建一个SQLite数据库
+## 创建sqlite数据库
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-使用`rusqlite`打开SQLite数据库.看到[箱][documentation]在Windows上进行编译.
+使用`rusqlite`板条箱打开sqlite数据库。见[机箱][documentation]用于在Windows上编译。
 
-[`Connection::open`]如果数据库尚不存在,将创建数据库.
+[`Connection::open`]如果数据库不存在，将创建该数据库。
 
 ```rust,no_run
 extern crate rusqlite;
 
 use rusqlite::{Connection, Result};
+use rusqlite::NO_PARAMS;
 
 fn main() -> Result<()> {
     let conn = Connection::open("cats.db")?;
@@ -18,18 +18,17 @@ fn main() -> Result<()> {
     conn.execute(
         "create table if not exists cat_colors (
              id integer primary key,
-             name text not null
+             name text not null unique
          )",
-        &[],
+        NO_PARAMS,
     )?;
     conn.execute(
         "create table if not exists cats (
              id integer primary key,
              name text not null,
-             date_of_birth datetime,
              color_id integer not null references cat_colors(id)
          )",
-        &[],
+        NO_PARAMS,
     )?;
 
     Ok(())

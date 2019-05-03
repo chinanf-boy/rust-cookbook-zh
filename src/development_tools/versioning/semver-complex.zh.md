@@ -1,26 +1,17 @@
-
-## 解析复杂的版本字符串.
+## 分析复杂的版本字符串。
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-构造一个[`semver::Version`]从复杂的版本字符串使用[`Version::parse`].该字符串包含预定义的预发布和构建元数据[语义版本规范].
+构建一个[`semver::Version`]从复杂版本字符串使用[`Version::parse`]. 该字符串包含预发布和生成元数据，如[语义版本规范].
 
-请注意,根据规范,解析构建元数据,但在比较版本时不予考虑.换句话说,即使它们的构建字符串不同,两个版本也可能相同.
+注意，根据规范，构建元数据是解析的，但在比较版本时不考虑。换句话说，即使构建字符串不同，两个版本也可能相同。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate semver;
 
-use semver::{Identifier, Version};
-#
-# error_chain! {
-#     foreign_links {
-#         SemVer(semver::SemVerError);
-#     }
-# }
+use semver::{Identifier, Version, SemVerError};
 
-fn run() -> Result<()> {
+fn main() -> Result<(), SemVerError> {
     let version_str = "1.0.49-125+g72ee7853";
     let parsed_version = Version::parse(version_str)?;
 
@@ -44,8 +35,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`semver::version`]: https://docs.rs/semver/*/semver/struct.Version.html

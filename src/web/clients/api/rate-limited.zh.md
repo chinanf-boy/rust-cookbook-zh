@@ -1,9 +1,8 @@
-
-## 处理速率受限的API
+## 处理限速API
 
 [![reqwest-badge]][reqwest] [![hyper-badge]][hyper] [![cat-net-badge]][cat-net]
 
-此示例使用[GITHUB API -速率限制]作为如何处理远程服务器错误的示例.此示例使用[`hyper::header!`]宏解析响应头并检查[`reqwest::StatusCode::Forbidden`]. 如果响应超过速率限制,则示例等待并重试.
+此示例使用[Github API-速率限制]作为如何处理远程服务器错误的示例。此示例使用[`hyper::header!`]要分析响应头并检查的宏[`reqwest::StatusCode::Forbidden`]. 如果响应超过速率限制，则示例将等待并重试。
 
 ```rust,no_run,ignore
 # #[macro_use]

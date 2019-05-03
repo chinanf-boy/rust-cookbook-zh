@@ -1,4 +1,3 @@
-
 # 压缩
 
 | 食谱 | 包装箱 | 分类 |
@@ -13,4 +12,4 @@
 
 [ex-tar-strip-prefix]: compression/tar.html#decompress-a-tarball-while-removing-a-prefix-from-the-paths
 
-{{#include links.zh.md}}
+{{#include links.md}}

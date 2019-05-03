@@ -1,9 +1,8 @@
-
-## 过滤与谓词匹配的CSV记录
+## 筛选与谓词匹配的csv记录
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-返回*只要*来自的行`data`与匹配的字段`query`.
+退换商品*只有*行从`data`与匹配的字段`query`.
 
 ```rust
 # #[macro_use]
@@ -47,4 +46,4 @@ West Hollywood,CA,37031,34.0900000,-118.3608333";
 # quick_main!(run);
 ```
 
-*免责声明:此示例已改编自[the csv crate tutorial](https://docs.rs/csv/*/csv/tutorial/index.html#filter-by-search)*.
+*免责声明：本示例改编自[the csv crate tutorial](https://docs.rs/csv/*/csv/tutorial/index.html#filter-by-search)*.

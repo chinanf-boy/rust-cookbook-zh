@@ -1,11 +1,10 @@
-
 ## Map-reduce并行
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-这个例子使用[`rayon::filter`],[`rayon::map`],和[`rayon::reduce`]计算平均年龄`Person`年龄超过30岁的物品.
+这个例子使用[`rayon::filter`]，[`rayon::map`]，和[`rayon::reduce`]计算平均年龄`Person`年龄超过30岁的物品。
 
-[`rayon::filter`]返回满足给定谓词的集合中的元素.[`rayon::map`]对每个元素执行一个操作,创建一个新的迭代,和[`rayon::reduce`]给定先前的减少和当前元素执行操作.还显示了使用[`rayon::sum`],与本例中的reduce操作具有相同的结果.
+[`rayon::filter`]返回满足给定谓词的集合中的元素。[`rayon::map`]对每个元素执行一个操作，创建一个新的迭代，然后[`rayon::reduce`]给定先前的减少和当前元素执行操作。还显示了使用[`rayon::sum`]，与本例中的reduce操作具有相同的结果。
 
 ```rust
 extern crate rayon;
@@ -38,7 +37,7 @@ fn main() {
         .filter(|&x| x > 30)
         .sum();
 
-    let avg_over_30 = sum_over_30 as f32/num_over_30;
+    let avg_over_30 = sum_over_30 as f32 / num_over_30;
     let alt_avg_over_30 = alt_sum_30 as f32/ num_over_30;
 
     assert!((avg_over_30 - alt_avg_over_30).abs() < std::f32::EPSILON);

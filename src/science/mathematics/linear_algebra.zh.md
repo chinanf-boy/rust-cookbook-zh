@@ -1,6 +1,5 @@
-
 # 线性代数
 
-{{include.\_algebra/.-sum.zh.md}}{{{include.\_algebra/.-norm.zh.md}}{{{include.\_algebra/add-matrices.zh.md}}{{include.\_algebra/multiply-scalar-.-..zh.md}}
+123;  \\ \\ \\\\\\\\\\123;\\\\ \\\\\\123;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\35;包括线性\_代数/逆矩阵.md
 
-{{包含…//.. /链接.zh.md }
+包括../。/links.md

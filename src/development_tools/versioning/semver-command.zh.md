@@ -1,9 +1,8 @@
-
-## 检查外部命令版本是否兼容
+## 检查外部命令版本的兼容性
 
 [![semver-badge]][semver] [![cat-text-processing-badge]][cat-text-processing] [![cat-os-badge]][cat-os]
 
-运行`git --version`运用[`Command`],然后将版本号解析为[`semver::Version`]运用[`Version::parse`].[`VersionReq::matches`]比较[`semver::VersionReq`]到解析版本.命令输出类似于"git version x.y.z".
+跑`git --version`使用[`Command`]，然后将版本号解析为[`semver::Version`]使用[`Version::parse`]. [`VersionReq::matches`]比较[`semver::VersionReq`]到已分析的版本。命令输出类似于“git版本x.y.z”。
 
 ```rust,no_run
 # #[macro_use]

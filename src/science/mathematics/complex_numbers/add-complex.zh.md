@@ -1,9 +1,8 @@
-
 ## 加复数
 
 [![num-badge]][num] [![cat-science-badge]][cat-science]
 
-对复杂数字执行数学运算与内置类型相同:所讨论的数字必须是相同类型(即浮点数或整数).
+对复数执行数学运算与内置类型相同：所讨论的数字必须是同一类型（即浮点数或整数）。
 
 ```rust
 extern crate num;

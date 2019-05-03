@@ -1,9 +1,8 @@
-
-## 在过去24小时内修改过的文件名
+## 过去24小时内修改过的文件名
 
 [![std-badge]][std] [![cat-filesystem-badge]][cat-filesystem]
 
-通过调用获取当前工作目录[`env::current_dir`],然后为每个条目[`fs::read_dir`],提取[`DirEntry::path`]通过获得metada[`fs::Metadata`].该[`Metadata::modified`]返回[`SystemTime::elapsed`]自上次修改以来的时间[`Duration::as_secs`]将时间转换为秒,并与24小时进行比较(24*60*60秒).[`Metadata::is_file`]过滤掉目录.
+通过调用[`env::current_dir`]，然后针对中的每个条目[`fs::read_dir`]提取[`DirEntry::path`]并通过[`fs::Metadata`]. 这个[`Metadata::modified`]返回[`SystemTime::elapsed`]上次修改后的时间。[`Duration::as_secs`]将时间转换为秒，并与24小时（24*六十*60秒）。[`Metadata::is_file`]筛选出目录。
 
 ```rust
 # #[macro_use]

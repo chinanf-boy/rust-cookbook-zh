@@ -1,24 +1,15 @@
-
-## 提取URL原点(方案/主机/端口)
+## 提取URL源（方案/主机/端口）
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-这个[`Url`]Strut公开了各种方法来提取它所代表的URL的信息.
+这个[`Url`]结构公开了各种方法来提取有关它所表示的URL的信息。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate url;
 
-use url::{Url, Host};
+use url::{Url, Host, ParseError};
 
-# error_chain! {
-#     foreign_links {
-#         UrlParse(url::ParseError);
-#     }
-# }
-#
-fn run() -> Result<()> {
+fn main() -> Result<(), ParseError> {
     let s = "ftp://rust-lang.org/examples";
 
     let url = Url::parse(s)?;
@@ -30,11 +21,9 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
-[`origin`]产生同样的结果.
+[`origin`]产生相同的结果。
 
 ```rust
 # #[macro_use]

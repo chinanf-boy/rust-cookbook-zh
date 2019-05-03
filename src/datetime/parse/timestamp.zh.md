@@ -1,9 +1,8 @@
-
-## 将日期转换为UNIX时间戳,反之亦然
+## 将日期转换为Unix时间戳，反之亦然
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-转换由...给出的日期[`NaiveDate::from_ymd`]和[`NaiveTime::from_hms`]至[UNIX时间戳]运用[`NaiveDateTime::timestamp`].然后它计算自1970年1月1日0:00:00 UTC以来10亿秒之后的日期[`NaiveDateTime::from_timestamp`].
+转换给定日期[`NaiveDate::from_ymd`]和[`NaiveTime::from_hms`]到[UNIX时间戳]使用[`NaiveDateTime::timestamp`]. 然后它计算1970年1月1日10亿秒后的日期0:00:00 UTC，使用[`NaiveDateTime::from_timestamp`].
 
 ```rust
 extern crate chrono;

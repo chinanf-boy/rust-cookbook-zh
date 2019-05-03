@@ -1,13 +1,12 @@
-
 ## 使用给定谓词并行搜索项目
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-这个例子使用[`rayon::find_any`]和[`par_iter`]并行地搜索满足给定闭包中谓词的元素.
+这个例子使用[`rayon::find_any`]和[`par_iter`]并行地搜索满足给定闭包中谓词的元素的向量。
 
-如果有多个元素满足闭包参数中定义的谓词[`rayon::find_any`],`rayon`返回找到的第一个,不一定是第一个.
+如果有多个元素满足闭包参数中定义的谓词[`rayon::find_any`]，`rayon`返回找到的第一个，不一定是第一个。
 
-另请注意,闭包的参数是对引用的引用(`&&x`).请参阅讨论[`std::find`]了解更多细节.
+另请注意，闭包的参数是对引用的引用（`&&x`）。请参阅讨论[`std::find`]了解更多细节。
 
 ```rust
 extern crate rayon;

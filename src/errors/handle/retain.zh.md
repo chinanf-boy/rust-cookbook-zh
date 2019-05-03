@@ -1,11 +1,10 @@
-
 ## 避免在错误转换期间丢弃错误
 
 [![error-chain-badge]][error-chain] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-该[错误链-]箱子做[匹配]在函数返回的不同错误类型上可能且相对紧凑.[`ErrorKind`]确定错误类型.
+这个[误差链-]板条箱[匹配]对于函数返回的不同错误类型，可能是相对紧凑的。[`ErrorKind`]确定错误类型。
 
-用途[reqwest]查询随机整数生成器Web服务.将字符串响应转换为整数.Rust标准库,[reqwest],Web服务都可以生成错误.定义良好的Rust错误使用[`foreign_links`].额外的[`ErrorKind`]Web服务错误使用的变体`errors`块`error_chain!`宏.
+使用[雷克韦斯特]查询随机整数生成器Web服务。将字符串响应转换为整数。Rust标准库，[雷克韦斯特]和Web服务都会产生错误。明确定义的生锈错误使用[`foreign_links`]. 额外的[`ErrorKind`]Web服务错误变量使用`errors`方块`error_chain!`宏。
 
 ```rust
 #[macro_use]

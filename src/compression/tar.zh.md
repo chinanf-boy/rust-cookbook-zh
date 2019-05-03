@@ -1,10 +1,9 @@
-
 # 使用Tarballs
 
-{{#include tar/tar-decompress.zh.md}}
+{{#include tar / tar-decompress.md}}
 
-{{#include tar/tar-compress.zh.md}}
+{{#include tar / tar-compress.md}}
 
-{{#include tar/tar-strip-prefix.zh.md}}
+{{#include tar / tar-strip-prefix.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

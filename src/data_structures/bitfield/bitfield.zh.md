@@ -1,9 +1,8 @@
-
-## 定义并操作表示为位域的类型
+## 对表示为位字段的类型定义和操作
 
 [![bitflags-badge]][bitflags] [![cat-no-std-badge]][cat-no-std]
 
-创建类型安全位域类型`MyFlags`在...的帮助下[`bitflags!`]宏观和实现基础`clear`操作以及[`Display`]它的特点.随后,显示基本的按位运算和格式化.
+创建类型安全位域类型`MyFlags`借助于[`bitflags!`]宏和实现元素`clear`操作以及[`Display`]它的特点。随后，显示基本的位操作和格式设置。
 
 ```rust
 #[macro_use]

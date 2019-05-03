@@ -1,22 +1,14 @@
-
-## 使用分页的REST API
+## 使用分页的RESTful API
 
 [![reqwest-badge]][reqwest] [![serde-badge]][serde] [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding]
 
-在一个方便的锈蚀迭代器中包装一个分页的Web API.迭代器在到达每个页面的末尾时懒洋洋地从远程服务器获取下一页的结果.
+在方便的Rust迭代器中包装分页的Web API。迭代器在到达每一页的末尾时，从远程服务器惰性地获取下一页的结果。
 
 ```rust,no_run
-# #[macro_use]
-# extern crate error_chain;
 #[macro_use]
 extern crate serde_derive;
 extern crate reqwest;
-#
-# error_chain! {
-#     foreign_links {
-#         Reqwest(reqwest::Error);
-#     }
-# }
+use reqwest::Error;
 
 #[derive(Deserialize)]
 struct ApiResponse {
@@ -44,7 +36,7 @@ struct ReverseDependencies {
 }
 
 impl ReverseDependencies {
-    fn of(crate_id: &str) -> Result<Self> {
+    fn of(crate_id: &str) -> Result<Self, Error> {
         Ok(ReverseDependencies {
                crate_id: crate_id.to_owned(),
                dependencies: vec![].into_iter(),
@@ -55,7 +47,7 @@ impl ReverseDependencies {
            })
     }
 
-    fn try_next(&mut self) -> Result<Option<Dependency>> {
+    fn try_next(&mut self) -> Result<Option<Dependency>, Error> {
         if let Some(dep) = self.dependencies.next() {
             return Ok(Some(dep));
         }
@@ -78,7 +70,7 @@ impl ReverseDependencies {
 }
 
 impl Iterator for ReverseDependencies {
-    type Item = Result<Dependency>;
+    type Item = Result<Dependency, Error>;
 
     fn next(&mut self) -> Option<Self::Item> {
         match self.try_next() {
@@ -89,12 +81,10 @@ impl Iterator for ReverseDependencies {
     }
 }
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     for dep in ReverseDependencies::of("serde")? {
         println!("reverse dependency: {}", dep?.crate_id);
     }
     Ok(())
 }
-#
-# quick_main!(run);
 ```

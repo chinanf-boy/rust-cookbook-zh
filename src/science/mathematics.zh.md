@@ -1,4 +1,3 @@
-
 ## 数学
 
 | 食谱 | 板条箱 | 类别 |
@@ -7,13 +6,17 @@
 | [向量范数][vector-norm] | [![ndarray-badge]][ndarray] | [![cat-science-badge]][cat-science] |
 | [加法矩阵][add-matrices] | [![ndarray-badge]][ndarray] | [![cat-science-badge]][cat-science] |
 | [矩阵乘法][multiply-matrices] | [![ndarray-badge]][ndarray] | [![cat-science-badge]][cat-science] |
-| [用矩阵将标量与向量相乘][multiply-scalar-vector-matrix] | [![ndarray-badge]][ndarray] | [![cat-science-badge]][cat-science] |
-| [三角形的边长计算][side-length] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
-| [验证谭等于罪除以][tan-sin-cos] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
-| [地球上两点之间的距离][latitude-longitude] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [用向量和矩阵相乘一个标量][multiply-scalar-vector-matrix] | [![ndarray-badge]][ndarray] | [![cat-science-badge]][cat-science] |
+| [反向MARIX][invert-matrix] | [![nalgebra-badge]][nalgebra] | [![cat-science-badge]][cat-science] |
+| [计算三角形的边长][side-length] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [验证tan等于sin除以cos][tan-sin-cos] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [地球两点之间的距离][latitude-longitude] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
 | [创建复数][create-complex] | [![num-badge]][num] | [![cat-science-badge]][cat-science] |
 | [加复数][add-complex] | [![num-badge]][num] | [![cat-science-badge]][cat-science] |
 | [复数的数学函数][mathematical-functions] | [![num-badge]][num] | [![cat-science-badge]][cat-science] |
+| [集中趋势措施][ex-central-tendency] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [计算标准偏差][ex-standard-deviation] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [大整数][big-integers] | [![num-badge]][num] | [![cat-science-badge]][cat-science] |
 
 [vector-sum]: science/mathematics/linear_algebra.html#vector-sum
 
@@ -24,6 +27,8 @@
 [multiply-matrices]: science/mathematics/linear_algebra.html#multiplying-matrices
 
 [multiply-scalar-vector-matrix]: science/mathematics/linear_algebra.html#multiply-a-scalar-with-a-vector-with-a-matrix
+
+[invert-matrix]: science/mathematics/linear_algebra.html#invert-matrix
 
 [side-length]: science/mathematics/trigonometry.html#calculating-the-side-length-of-a-triangle
 
@@ -37,4 +42,10 @@
 
 [mathematical-functions]: science/mathematics/complex_numbers.html#mathematical-functions
 
-{{包含…/Link.zh.md}}
+[ex-central-tendency]: science/mathematics/statistics.html#measures-of-central-tendency
+
+[ex-standard-deviation]: science/mathematics/statistics.html#standard-deviation
+
+[big-integers]: science/mathematics/miscellaneous.html#big-integers
+
+包括../links.md

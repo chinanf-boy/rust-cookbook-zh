@@ -1,11 +1,10 @@
-
 ## 获取复杂错误场景的回溯
 
 [![error-chain-badge]][error-chain] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-此配方显示如何处理复杂的错误方案,然后打印回溯.它依赖于[`chain_err`]通过附加新错误来扩展错误.错误堆栈可以解开,从而提供更好的上下文来理解错误被引发的原因.
+这个方法演示了如何处理复杂的错误场景，然后打印回溯。它依赖于[`chain_err`]通过附加新错误来扩展错误。可以解开错误堆栈，从而提供更好的上下文来理解引发错误的原因。
 
-以下配方尝试反序列化该值`256`变成一个`u8`.错误将从Serde然后csv冒出,最后到用户代码.
+以下配方尝试反序列化值`256`变成一个`u8`. 错误将从serde冒泡，然后是csv，最后是用户代码。
 
 ```rust
 # extern crate csv;
@@ -76,7 +75,7 @@ fn main() {
 }
 ```
 
-呈现的Backtrace错误:
+已呈现回溯错误：
 
 ```text
 Error level - description
@@ -86,7 +85,7 @@ Error level - description
 └> 3 - field 1: number too large to fit in target type
 ```
 
-运行配方`RUST_BACKTRACE=1`显示详细信息[`backtrace`]与此错误相关联.
+使用`RUST_BACKTRACE=1`显示详细信息[`backtrace`]与此错误关联。
 
 [`backtrace`]: https://docs.rs/error-chain/*/error_chain/trait.ChainedError.html#tymethod.backtrace
 

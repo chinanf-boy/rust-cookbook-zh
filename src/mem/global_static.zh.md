@@ -1,6 +1,5 @@
-
 # 常量
 
-{{〉包括GULALLYSTATION/LIDE常数.zh.md }
+包括全局\_static/lazy constant.md\_
 
-{{包含…/Link.zh.md}}
+包括../links.md

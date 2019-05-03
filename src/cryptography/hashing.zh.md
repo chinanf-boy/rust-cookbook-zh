@@ -1,8 +1,7 @@
+# 散列
 
-# 哈希
+\# include { } / sha-digest.md散列
 
-{{#include hashing/sha-digest.zh.md}}
+\# include { } / hmac.md散列
 
-{{#include hashing/hmac.zh.md}}
-
-{{#include ../links.zh.md}}
+\# include {…} } / links.md

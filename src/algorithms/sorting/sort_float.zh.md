@@ -1,9 +1,8 @@
-
 ## 排序浮动矢量
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-可以使用f32或f64的矢量进行排序[`vec::sort_by`]和[`PartialOrd::partial_cmp`].
+可以使用f32或f64的矢量进行排序[`vec::sort_by`]和[`PartialOrd::partial_cmp`]。
 
 ```rust
 fn main() {

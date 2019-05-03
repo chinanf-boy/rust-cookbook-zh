@@ -1,15 +1,14 @@
-
 ## 将分形调度工作绘制到线程池
 
 [![threadpool-badge]][threadpool] [![num-badge]][num] [![num_cpus-badge]][num_cpus] [![image-badge]][image] [![cat-concurrency-badge]][cat-concurrency][![cat-science-badge]][cat-science][![cat-rendering-badge]][cat-rendering]
 
-此示例通过从中绘制分形来生成图像[朱莉娅设定]用于分布式计算的线程池.
+此示例通过从中绘制分形来生成图像[朱莉娅设定]用于分布式计算的线程池。
 
 <a href="https://cloud.githubusercontent.com/assets/221000/26546700/9be34e80-446b-11e7-81dc-dd9871614ea1.png"><img src="https://cloud.githubusercontent.com/assets/221000/26546700/9be34e80-446b-11e7-81dc-dd9871614ea1.png" width="150" /></a>
 
-为给定宽度和高度的输出图像分配内存[`ImageBuffer::new`].[`Rgb::from_channels`]计算RGB像素值.创建[`ThreadPool`]线程数等于核心数[`num_cpus::get`].[`ThreadPool::execute`]接收每个像素作为单独的工作.
+为给定宽度和高度的输出图像分配内存[`ImageBuffer::new`]。[`Rgb::from_channels`]计算RGB像素值。创建[`ThreadPool`]线程数等于核心数[`num_cpus::get`]。[`ThreadPool::execute`]接收每个像素作为单独的工作。
 
-[`mpsc::channel`]收到工作和[`Receiver::recv`]检索它们.[`ImageBuffer::put_pixel`]使用数据来设置像素颜色.[`ImageBuffer::save`]将图像写入`output.png`.
+[`mpsc::channel`]收到工作和[`Receiver::recv`]检索它们。[`ImageBuffer::put_pixel`]使用数据设置像素颜色。[`ImageBuffer::save`]将图像写入`output.png`。
 
 ```rust,no_run
 # #[macro_use]
@@ -37,18 +36,18 @@ use image::{ImageBuffer, Pixel, Rgb};
 #     let wave = wavelength as f32;
 #
 #     let (r, g, b) = match wavelength {
-#         380...439 => ((440. - wave)/(440. - 380.), 0.0, 1.0),
-#         440...489 => (0.0, (wave - 440.)/(490. - 440.), 1.0),
-#         490...509 => (0.0, 1.0, (510. - wave)/(510. - 490.)),
-#         510...579 => ((wave - 510.)/(580. - 510.), 1.0, 0.0),
-#         580...644 => (1.0, (645. - wave)/(645. - 580.), 0.0),
+#         380...439 => ((440. - wave) / (440. - 380.), 0.0, 1.0),
+#         440...489 => (0.0, (wave - 440.) / (490. - 440.), 1.0),
+#         490...509 => (0.0, 1.0, (510. - wave) / (510. - 490.)),
+#         510...579 => ((wave - 510.) / (580. - 510.), 1.0, 0.0),
+#         580...644 => (1.0, (645. - wave) / (645. - 580.), 0.0),
 #         645...780 => (1.0, 0.0, 0.0),
 #         _ => (0.0, 0.0, 0.0),
 #     };
 #
 #     let factor = match wavelength {
-#         380...419 => 0.3 + 0.7 * (wave - 380.)/(420. - 380.),
-#         701...780 => 0.3 + 0.7 * (780. - wave)/(780. - 700.),
+#         380...419 => 0.3 + 0.7 * (wave - 380.) / (420. - 380.),
+#         701...780 => 0.3 + 0.7 * (780. - wave) / (780. - 700.),
 #         _ => 1.0,
 #     };
 #
@@ -63,8 +62,8 @@ use image::{ImageBuffer, Pixel, Rgb};
 #
 #     let mut z = Complex {
 #         // scale and translate the point to image coordinates
-#         re: 3.0 * (x as f32 - 0.5 * width)/width,
-#         im: 2.0 * (y as f32 - 0.5 * height)/height,
+#         re: 3.0 * (x as f32 - 0.5 * width) / width,
+#         im: 2.0 * (y as f32 - 0.5 * height) / height,
 #     };
 #
 #     let mut i = 0;
@@ -97,7 +96,7 @@ fn run() -> Result<()> {
         let tx = tx.clone();
         pool.execute(move || for x in 0..width {
                          let i = julia(c, x, y, width, height, iterations);
-                         let pixel = wavelength_to_rgb(380 + i * 400/iterations);
+                         let pixel = wavelength_to_rgb(380 + i * 400 / iterations);
                          tx.send((x, y, pixel)).expect("Could not send data!");
                      });
     }

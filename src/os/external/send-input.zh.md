@@ -1,9 +1,8 @@
-
-## 运行外部命令传递它STDIN并检查错误代码
+## 运行传递stdin的外部命令并检查错误代码
 
 [![std-badge]][std] [![cat-os-badge]][cat-os]
 
-打开`python`外部解释程序[`Command`]并传递一个Python语句执行.[`Output`]然后分析语句.
+打开`python`使用外部语言的解释程序[`Command`]并将python语句传递给它以供执行。[`Output`]然后解析OF语句。
 
 ```rust,no_run
 # #[macro_use]

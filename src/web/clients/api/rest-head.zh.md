@@ -1,25 +1,18 @@
-
-## 检查是否存在API资源
+## 检查API资源是否存在
 
 [![reqwest-badge]][reqwest] [![cat-net-badge]][cat-net]
 
-使用头部请求查询GITHUB用户端点([`Client::head`]然后检查响应代码以确定成功.这是一种快速查询REST资源而不需要接收体的方法.[`reqwest::Client`]与…合作[`ClientBuilder::timeout`]确保请求不会持续超过超时时间.
+使用头请求查询GitHub用户终结点（[`Client::head`]）然后检查响应代码以确定是否成功。这是一种无需接收主体即可快速查询REST资源的方法。[`reqwest::Client`]与…合作[`ClientBuilder::timeout`]确保请求的持续时间不会超过超时。
 
 ```rust,no_run
-# #[macro_use]
-# extern crate error_chain;
 extern crate reqwest;
 
+use reqwest::Error;
 use std::time::Duration;
 use reqwest::ClientBuilder;
-#
-# error_chain! {
-#     foreign_links {
-#         Reqwest(reqwest::Error);
-#     }
-# }
 
-fn run() -> Result<()> {
+
+fn main() -> Result<(), Error> {
     let user = "ferris-the-crab";
     let request_url = format!("https://api.github.com/users/{}", user);
     println!("{}", request_url);
@@ -36,8 +29,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`client::head`]: https://docs.rs/reqwest/*/reqwest/struct.Client.html#method.head

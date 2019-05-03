@@ -1,9 +1,8 @@
-
 # 错误处理
 
-| 食谱 | 包装箱 | 分类 |
+| 食谱 | 板条箱 | 类别 |
 | --- | --- | --- |
-| [正确处理错误][ex-error-chain-simple-error-handling] | [![error-chain-badge]][error-chain] | [![cat-rust-patterns-badge]][cat-rust-patterns] |
+| [主要正确处理错误][ex-error-chain-simple-error-handling] | [![error-chain-badge]][error-chain] | [![cat-rust-patterns-badge]][cat-rust-patterns] |
 | [避免在错误转换期间丢弃错误][ex-error-chain-avoid-discarding] | [![error-chain-badge]][error-chain] | [![cat-rust-patterns-badge]][cat-rust-patterns] |
 | [获取复杂错误场景的回溯][ex-error-chain-backtrace] | [![error-chain-badge]][error-chain] | [![cat-rust-patterns-badge]][cat-rust-patterns] |
 
@@ -13,4 +12,4 @@
 
 [ex-error-chain-backtrace]: errors/handle.html#obtain-backtrace-of-complex-error-scenarios
 
-{{#include links.zh.md}}
+包含链接.md

@@ -1,9 +1,8 @@
-
-## 运行外部命令并处理STDUT
+## 运行外部命令并处理stdout
 
 [![regex-badge]][regex] [![cat-os-badge]][cat-os] [![cat-text-processing-badge]][cat-text-processing]
 
-跑`git log --oneline`作为一个外部[`Command`]并检查其[`Output`]使用[`Regex`]获取最后5个提交的哈希和消息.
+跑`git log --oneline`作为一个外部[`Command`]并检查其[`Output`]使用[`Regex`]获取最后5次提交的哈希和消息。
 
 ```rust,no_run
 # #[macro_use]

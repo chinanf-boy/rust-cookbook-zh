@@ -1,9 +1,8 @@
-
 ## 递归查找重复的文件名
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-在当前目录中以递归方式查找重复文件名,仅打印一次.
+在当前目录中递归查找重复的文件名，只打印一次。
 
 ```rust,no_run
 extern crate walkdir;

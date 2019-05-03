@@ -1,9 +1,8 @@
-
-## 编码和解码base64
+## 对base64进行编码和解码
 
 [![base64-badge]][base64] [![cat-encoding-badge]][cat-encoding]
 
-将字节片编码为`base64`字符串使用[`encode`]并用它解码[`decode`].
+将字节片编码为`base64`使用字符串[`encode`]并用[`decode`].
 
 ```rust
 # #[macro_use]

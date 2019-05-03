@@ -1,13 +1,12 @@
-
-## 设置REST请求的自定义页眉和URL参数
+## 为REST请求设置自定义头和URL参数
 
 [![reqwest-badge]][reqwest] [![hyper-badge]][hyper] [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-设置HTTP GET请求的标准和自定义HTTP报头以及URL参数.创建类型的自定义页眉`XPoweredBy`具有[`hyper::header!`]宏.
+为HTTP GET请求设置标准和自定义HTTP头以及URL参数。创建类型为的自定义页眉`XPoweredBy`具有[`hyper::header!`]宏。
 
-构建复杂的URL[`Url::parse_with_params`].  设置标准标题[`header::UserAgent`],[`header::Authorization`]和习俗`XPoweredBy`具有[`RequestBuilder::header`]然后提出请求[`RequestBuilder::send`].
+使用生成复杂的URL[`Url::parse_with_params`].  设置标准标题[`header::UserAgent`]，[`header::Authorization`]和习俗`XPoweredBy`具有[`RequestBuilder::header`]然后用[`RequestBuilder::send`].
 
-请求目标<http://httpbin.org/headers>使用JSON DIST进行响应的服务,其包含所有请求标头以便于验证.
+请求目标<http://httpbin.org/headers>服务，它用包含所有请求头的JSON dict响应，以便于验证。
 
 ```rust,no_run,ignore
 # #[macro_use]

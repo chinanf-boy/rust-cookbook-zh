@@ -1,29 +1,20 @@
-
 ## 序列化和反序列化非结构化JSON
 
 [![serde-json-badge]][serde-json] [![cat-encoding-badge]][cat-encoding]
 
-该[`serde_json`]箱子提供了一个[`from_str`]解析一个函数`&str`JSON.
+这个[`serde_json`]板条箱提供[`from_str`]要分析的函数`&str`JSON的。
 
-非结构化JSON可以解析为通用[`serde_json::Value`]能够表示任何有效JSON数据的类型.
+非结构化JSON可以解析为通用的[`serde_json::Value`]能够表示任何有效JSON数据的类型。
 
-下面的例子显示了一个`&str`正在解析的JSON.使用the声明预期值[`json!`]宏.
+下面的示例显示了`&str`正在解析的JSON。使用[`json!`]宏。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 #[macro_use]
 extern crate serde_json;
 
-use serde_json::Value;
-#
-# error_chain! {
-#     foreign_links {
-#         Json(serde_json::Error);
-#     }
-# }
+use serde_json::{Value, Error};
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let j = r#"{
                  "userid": 103609,
                  "verified": true,
@@ -48,8 +39,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`from_str`]: https://docs.serde.rs/serde_json/fn.from_str.html

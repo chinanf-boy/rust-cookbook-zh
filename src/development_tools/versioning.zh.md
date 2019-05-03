@@ -1,14 +1,13 @@
+# 版本控制
 
-# 版本
+包括版本控制/semver increment.md
 
-{{#include versioning/semver-increment.zh.md}}
+包括版本控制/semver complex.md
 
-{{#include versioning/semver-complex.zh.md}}
+包括版本控制/semver prerelease.md
 
-{{#include versioning/semver-prerelease.zh.md}}
+包括最新版本/semver.md
 
-{{#include versioning/semver-latest.zh.md}}
+包括版本控制/semver命令.md
 
-{{#include versioning/semver-command.zh.md}}
-
-{{#include ../links.zh.md}}
+包括../links.md

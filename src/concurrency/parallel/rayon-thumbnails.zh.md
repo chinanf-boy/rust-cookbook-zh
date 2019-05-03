@@ -1,11 +1,10 @@
-
 ## 并行生成jpg缩略图
 
 [![rayon-badge]][rayon] [![glob-badge]][glob] [![image-badge]][image] [![cat-concurrency-badge]][cat-concurrency] [![cat-filesystem-badge]][cat-filesystem]
 
-此示例为当前目录中的所有.jpg文件生成缩略图,然后将其保存在名为的新文件夹中`thumbnails`.
+此示例为当前目录中的所有.jpg文件生成缩略图，然后将其保存在名为的新文件夹中`thumbnails`。
 
-[`glob::glob_with`]在当前目录中查找jpeg文件.`rayon`使用平行调整图像大小[`par_iter`]调用[`DynamicImage::resize`].
+[`glob::glob_with`]在当前目录中查找jpeg文件。`rayon`使用平行调整图像大小[`par_iter`]调用[`DynamicImage::resize`]。
 
 ```rust,no_run
 # #[macro_use]

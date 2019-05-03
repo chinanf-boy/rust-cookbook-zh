@@ -1,9 +1,8 @@
-
-## 发出HTTP获取请求
+## 发出HTTP GET请求
 
 [![reqwest-badge]][reqwest] [![cat-net-badge]][cat-net]
 
-解析所提供的URL并生成同步HTTP GET请求[`reqwest::get`]. 获得的印刷品[`reqwest::Response`]状态和标题.将HTTP响应体读入分配[`String`]使用[`read_to_string`].
+分析提供的URL并使用[`reqwest::get`]. 获得的印刷品[`reqwest::Response`]状态和标题。将HTTP响应主体读取到分配的[`String`]使用[`read_to_string`].
 
 ```rust,no_run
 # #[macro_use]

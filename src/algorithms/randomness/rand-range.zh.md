@@ -1,9 +1,8 @@
-
-## 生成一个范围内的随机数
+## 生成范围内的随机数
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-在半开放内生成随机值`[0, 10)`范围(不包括`10`)[`Rng::gen_range`].
+在半开放内生成随机值`[0, 10)`范围（不包括`10`）[`Rng::gen_range`]。
 
 ```rust
 extern crate rand;
@@ -17,16 +16,17 @@ fn main() {
 }
 ```
 
-[`Range`]可以用.获得价值[均匀分布].这具有相同的效果,但是当在相同范围内重复生成数字时可能更快.
+[`Uniform`]可以用。获得价值[均匀分布]。这具有相同的效果，但是当在相同范围内重复生成数字时可能更快。
 
 ```rust
 extern crate rand;
 
-use rand::distributions::{Range, Distribution};
+
+use rand::distributions::{Distribution, Uniform};
 
 fn main() {
     let mut rng = rand::thread_rng();
-    let die = Range::new(1, 7);
+    let die = Uniform::from(1..7);
 
     loop {
         let throw = die.sample(&mut rng);

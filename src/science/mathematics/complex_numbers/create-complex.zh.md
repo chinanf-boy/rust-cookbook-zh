@@ -1,9 +1,8 @@
-
 ## 创建复数
 
 [![num-badge]][num] [![cat-science-badge]][cat-science]
 
-创建复数类型[`num::complex::Complex`]. 复数的实部和虚部必须是同一类型的.
+创建类型的复数[`num::complex::Complex`]. 复数的实部和虚部必须是同一类型。
 
 ```rust
 extern crate num;

@@ -1,11 +1,10 @@
-
 ## 将文件下载到临时目录
 
 [![reqwest-badge]][reqwest] [![tempdir-badge]][tempdir] [![cat-net-badge]][cat-net] [![cat-filesystem-badge]][cat-filesystem]
 
-创建一个临时目录[`TempDir::new`]并通过HTTP同步下载文件[`reqwest::get`].
+创建临时目录[`TempDir::new`]并使用[`reqwest::get`].
 
-创建目标[`File`]名称来自[`Response::url`]在内部[`TempDir::path`]并将下载的数据复制到其中.[`io::copy`]. 临时目录自动删除.`run`函数返回.
+创建目标[`File`]姓名从[`Response::url`]在内部[`TempDir::path`]并将下载的数据复制到其中[`io::copy`]. 临时目录将在上自动删除`run`函数返回。
 
 ```rust,no_run
 # #[macro_use]

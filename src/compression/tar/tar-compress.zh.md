@@ -1,11 +1,10 @@
-
 ## 将目录压缩为tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-压缩`/var/log`目录进入`archive.tar.gz`.
+压缩`/var/log`目录进入`archive.tar.gz`。
 
-创建一个[`File`]包装成[`GzEncoder`]和[`tar::Builder`].</br>添加内容`/var/log`目录递归进入归档下`backup/logs`路径[`Builder::append_dir_all`].[`GzEncoder`]负责在写入数据之前透明地压缩数据`archive.tar.gz`.
+创建一个[`File`]包装成[`GzEncoder`]和[`tar::Builder`]。</br>添加内容`/var/log`目录递归进入归档下`backup/logs`路径[`Builder::append_dir_all`]。[`GzEncoder`]负责在写入数据之前透明地压缩数据`archive.tar.gz`。
 
 ```rust,no_run
 extern crate tar;

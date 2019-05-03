@@ -1,11 +1,10 @@
-
-## 使用自定义环境变量来设置日志记录
+## 使用自定义环境变量设置日志记录
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-[`Builder`]配置日志记录.
+[`Builder`]配置日志记录。
 
-[`Builder::parse`]解析`MY_APP_LOG`环境变量内容的形式[`RUST_LOG`]句法.然后,[`Builder::init`]初始化记录器.所有这些步骤通常由内部完成[`env_logger::init`].
+[`Builder::parse`]解析`MY_APP_LOG`环境变量内容的形式为[`RUST_LOG`]语法。然后，[`Builder::init`]初始化记录器。所有这些步骤通常都是由[`env_logger::init`].
 
 ```rust
 #[macro_use]

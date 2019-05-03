@@ -1,9 +1,8 @@
-
 ## 矩阵乘法
 
 [![ndarray-badge]][ndarray] [![cat-science-badge]][cat-science]
 
-创建两个矩阵[`ndarray::arr2`]并对它们进行矩阵乘法运算.[`ndarray::ArrayBase::dot`].
+创建两个矩阵[`ndarray::arr2`]对它们执行矩阵乘法[`ndarray::ArrayBase::dot`].
 
 ```rust
 extern crate ndarray;

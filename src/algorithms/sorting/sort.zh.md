@@ -1,9 +1,8 @@
-
 ## 排序整数向量
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-此示例对整数向量进行排序[`vec::sort`].替代方案是使用[`vec::sort_unstable`]它可以更快,但不保留相等元素的顺序.
+此示例对整数向量进行排序[`vec::sort`]。替代方案是使用[`vec::sort_unstable`]它可以更快，但不保留相等元素的顺序。
 
 ```rust
 fn main() {

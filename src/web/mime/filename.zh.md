@@ -1,9 +1,8 @@
-
-## 从文件名中获得MIME类型
+## 从文件名获取mime类型
 
 [![mime-badge]][mime] [![cat-encoding-badge]][cat-encoding]
 
-下面的示例演示如何使用给定的文件名返回正确的MIME类型[哑剧演员]机箱.程序将检查文件扩展名,并与已知列表匹配.返回值为[`mime:Mime`].
+下面的示例演示如何使用[哑剧演员]机箱。程序将检查文件扩展名并与已知列表匹配。返回值为[`mime:Mime`].
 
 ```rust
 extern crate mime;

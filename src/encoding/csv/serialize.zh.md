@@ -1,9 +1,8 @@
-
-## 将记录序列化为CSV
+## 将记录序列化为csv
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-此示例显示如何序列化Rust元组.[`csv::writer`]支持从Rust类型到CSV记录的自动序列化.[`write_record`]写一个只包含字符串数据的简单记录.具有更复杂值的数据(如数字,浮点数和选项)使用[`serialize`].由于CSV编写器始终使用内部缓冲区[`flush`]完成后.
+这个例子演示了如何序列化一个rust元组。[`csv::writer`]支持从锈类型到csv记录的自动序列化。[`write_record`]只写入包含字符串数据的简单记录。具有更复杂值（如数字、浮点数和选项）的数据使用[`serialize`]. 因为csv编写器使用内部缓冲区，所以始终显式[`flush`]做完之后。
 
 ```rust
 # #[macro_use]

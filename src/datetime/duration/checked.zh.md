@@ -1,11 +1,10 @@
-
-## 执行检查日期和时间计算
+## 执行检查的日期和时间计算
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-计算并显示从现在起两周后的日期和时间[`DateTime::checked_add_signed`]以及使用前一天的日期[`DateTime::checked_sub_signed`].如果无法计算日期和时间,则方法返回None.
+计算并显示两周后的日期和时间，使用[`DateTime::checked_add_signed`]以及使用前一天的日期[`DateTime::checked_sub_signed`]. 如果无法计算日期和时间，则方法返回“无”。
 
-转义序列可用于[`DateTime::format`]可以在[`chrono::format::strftime`].
+可用于[`DateTime::format`]可以在[`chrono::format::strftime`].
 
 ```rust
 extern crate chrono;

@@ -1,10 +1,9 @@
-
 # 媒体类型
 
-{{包括MIME/String.zh.md }
+包括mime/string.md
 
-{{包含MIME /文件名.zh.md }
+包括mime/filename.md
 
-{{包括MIME /请求.zh.md }
+包括mime/request.md
 
-{{包含…/Link.zh.md}}
+包括../links.md

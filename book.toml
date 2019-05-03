@@ -1,24 +1,41 @@
 
 [book]
-title = "Rust Cookbook"
+title = "Rust 食谱"
 description = "有用的 Rust 代码 实践集合"
 authors = ["Rust Language Community","译文: Yobrave Lee"]
-multilingual = false
-src = "src"
+language = "zh-CN"
+
+[build]
+build-dir = "docs"
+create-missing = true
+use-default-preprocessors = false
+
+[preprocessor.links]
+# renderers = ["html"]
 
 [output.html]
 mathjax-support = false
 theme = "theme"
-additional-css = ["theme/custom.css"]
+curly-quotes = true
+google-analytics = "UA-128555056-1"
+# additional-css = ["theme/custom.css"]
+git_repository_url = "https://github.com/chinanf-boy/rust-cookbook-zh"
+git_repository_icon = "fa-github"
+# additional-js = ["theme/custom.js"]
 
 [output.html.playpen]
+# editor = "./path/to/editor"
 editable = false
 
 [output.html.search]
-limit-results = 20
+enable = true
+# searcher = "./path/to/searcher"
+limit-results = 30
+teaser-word-count = 30
 use-boolean-and = true
 boost-title = 2
-boost-hierarchy = 2
+boost-hierarchy = 1
 boost-paragraph = 1
 expand = true
-heading-split-level = 2
+heading-split-level = 3
+# copy-js = true

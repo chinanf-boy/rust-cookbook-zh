@@ -1,9 +1,8 @@
-
-## 排序结构的向量
+## 排序结构的矢量
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-使用属性对Person结构的Vector进行排序`name`和`age`按其自然顺序(按名称和年龄).为了使Person可排序,你需要四个特征[`Eq`],[`PartialEq`],[`Ord`]和[`PartialOrd`].这些特征可以巧妙地得出.您还可以使用a提供自定义比较器功能[`vec:sort_by`]方法,并按年龄排序.
+使用属性对Person结构的Vector进行排序`name`和`age`按其自然顺序（按名称和年龄）。为了使Person可排序，你需要四个特征[`Eq`]，[`PartialEq`]，[`Ord`]和[`PartialOrd`]。可以简单地推导出这些特征。您还可以使用a提供自定义比较器功能[`vec:sort_by`]方法，只按年龄排序。
 
 ```rust
 #[derive(Debug, Eq, Ord, PartialEq, PartialOrd)]

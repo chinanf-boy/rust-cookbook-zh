@@ -1,11 +1,10 @@
-
 ## 解析命令行参数
 
 [![clap-badge]][clap] [![cat-command-line-badge]][cat-command-line]
 
-该应用程序描述了其命令行界面的结构`clap`的建设者风格.该[文件]提供了另外两种可能的实例化应用程序的方法.
+该应用程序描述了其命令行界面的结构`clap`的建设者风格。该[文件]提供了另外两种可能的实例化应用程序的方法。
 
-在构建器样式中,`with_name`是唯一的标识符`value_of`将用于检索传递的值.该`short`和`long`options控制用户将要键入的标志;短旗看起来像`-f`和长旗看起来像`--file`.
+在构建器样式中，`with_name`是唯一的标识符`value_of`将用于检索传递的值。该`short`和`long`options控制用户将要键入的标志;短旗看起来像`-f`和长旗看起来像`--file`。
 
 ```rust
 extern crate clap;
@@ -45,7 +44,7 @@ fn main() {
 }
 ```
 
-使用信息由生成`clap`.示例应用程序的用法如下所示.
+使用信息由生成`clap`。示例应用程序的用法如下所示。
 
 ```
 My Test Program 0.1.0
@@ -64,13 +63,13 @@ OPTIONS:
     -n, --number <num>    Five less than your favorite number
 ```
 
-我们可以通过运行如下命令来测试应用程序.
+我们可以通过运行如下命令来测试应用程序。
 
 ```
 $ cargo run -- -f myfile.txt -n 251
 ```
 
-输出是:
+输出是：
 
 ```
 The file passed is: myfile.txt

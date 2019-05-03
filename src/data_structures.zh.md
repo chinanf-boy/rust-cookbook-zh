@@ -1,10 +1,9 @@
-
 # 数据结构
 
-| 食谱 | 包装箱 | 分类 |
+| 食谱 | 板条箱 | 类别 |
 | --- | --- | --- |
-| [定义并操作表示为位域的类型][ex-bitflags] | [![bitflags-badge]][bitflags] | [![cat-no-std-badge]][cat-no-std] |
+| [对表示为位字段的类型定义和操作][ex-bitflags] | [![bitflags-badge]][bitflags] | [![cat-no-std-badge]][cat-no-std] |
 
 [ex-bitflags]: data_structures/bitfield.html#define-and-operate-on-a-type-represented-as-a-bitfield
 
-{{#include links.zh.md}}
+包含链接.md

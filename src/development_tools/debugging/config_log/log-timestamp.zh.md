@@ -1,11 +1,10 @@
-
 ## 在日志消息中包含时间戳
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![chrono-badge]][chrono] [![cat-debugging-badge]][cat-debugging]
 
-使用创建自定义记录器配置[`Builder`].每个日志条目调用[`Local::now`]获得当前[`DateTime`]在当地时区和用途[`DateTime::format`]同[`strftime::specifiers`]格式化最终日志中使用的时间戳.
+使用创建自定义记录器配置[`Builder`]. 每个日志条目调用[`Local::now`]获取电流[`DateTime`]在本地时区和使用[`DateTime::format`]具有[`strftime::specifiers`]格式化在最终日志中使用的时间戳。
 
-示例调用[`Builder::format`]设置一个闭包,用时间戳格式化每个消息文本,[`Record::level`]与身体 ([`Record::args`]).
+示例调用[`Builder::format`]要设置一个闭包，用时间戳格式化每个消息文本，[`Record::level`]和身体[`Record::args`]）
 
 ```rust
 #[macro_use]

@@ -1,9 +1,8 @@
-
-## 声明懒惰评价常数
+## 声明延迟计算的常量
 
 [![lazy_static-badge]][lazy_static] [![cat-caching-badge]][cat-caching] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-声明一个懒散的评估常数[`HashMap`]. 这个[`HashMap`]将被评估一次,并存储在全局静态引用后面.
+声明延迟计算的常量[`HashMap`]. 这个[`HashMap`]将被计算一次并存储在全局静态引用之后。
 
 ```rust
 #[macro_use]

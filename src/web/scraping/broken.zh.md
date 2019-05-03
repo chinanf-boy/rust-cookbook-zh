@@ -1,11 +1,10 @@
-
-## 检查网页断链
+## 检查网页是否有断开的链接
 
 [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-呼叫`get_base_url`检索基本URL.如果文档具有基本标记,则获取HERF.[`attr`]从基础标签.[`Position::BeforePath`]原始URL充当默认值.
+呼叫`get_base_url`以检索基本URL。如果文档有基标记，请获取[`attr`]从基础标签。[`Position::BeforePath`]作为默认值。
 
-迭代文档中的链接并解析[`url::ParseOptions`]和[`Url::parse`])向ReqWestern链接请求并验证[`StatusCode`].
+遍历文档中的链接并用[`url::ParseOptions`]和[`Url::parse`]）用reqwest请求链接并验证[`StatusCode`].
 
 ```rust,no_run
 # #[macro_use]

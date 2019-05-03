@@ -1,9 +1,8 @@
-
 ## 加法矩阵
 
 [![ndarray-badge]][ndarray] [![cat-science-badge]][cat-science]
 
-创建两个矩阵[`ndarray::arr2`]并把它们加在一起.
+创建两个矩阵[`ndarray::arr2`]把它们加在一起。
 
 ```rust
 extern crate ndarray;

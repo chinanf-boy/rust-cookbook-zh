@@ -1,11 +1,10 @@
-
 ## 并行排序矢量
 
 [![rayon-badge]][rayon] [![rand-badge]][rand] [![cat-concurrency-badge]][cat-concurrency]
 
-此示例将并行排序字符串向量.
+此示例将并行排序字符串向量。
 
-分配一个空字符串向量.`par_iter_mut().for_each`并行填充随机值.虽然[多种选择]存在以对可枚举数据类型进行排序,[`par_sort_unstable`]通常比...更快[稳定分拣]算法.
+分配空字符串向量。`par_iter_mut().for_each`并行填充随机值。虽然[多种选择]存在以对可枚举数据类型进行排序，[`par_sort_unstable`]通常比...快[稳定分拣]算法。
 
 ```rust
 extern crate rand;

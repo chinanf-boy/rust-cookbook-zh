@@ -1,9 +1,8 @@
-
 ## 将字符串编码为application/x-www-form-urlencoded
 
 [![url-badge]][url] [![cat-encoding-badge]][cat-encoding]
 
-将字符串编码为[应用程序/ x-WWW窗体-urlencoded-]语法使用[`form_urlencoded::byte_serialize`]然后用它解码[`form_urlencoded::parse`].这两个函数都返回收集到a中的迭代器`String`.
+将字符串编码为[应用程序/X-WWW-FORM-URLENCODED]语法使用[`form_urlencoded::byte_serialize`]然后用[`form_urlencoded::parse`]. 两个函数都返回迭代器，这些迭代器收集到`String`.
 
 ```rust
 extern crate url;

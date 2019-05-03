@@ -1,18 +1,17 @@
-
 # CSV处理
 
-{{#include csv/read.zh.md}}
+包括csv/read.md
 
-{{#include csv/delimiter.zh.md}}
+包括csv/分隔符.md
 
-{{#include csv/filter.zh.md}}
+包括csv/filter.md
 
-{{#include csv/invalid.zh.md}}
+包含csv/invalid.md
 
-{{#include csv/serialize.zh.md}}
+包括csv/serialize.md
 
-{{#include csv/serde-serialize.zh.md}}
+包括csv/serde serize.md
 
-{{#include csv/transform.zh.md}}
+包括csv/transform.md
 
-{{#include ../links.zh.md}}
+包括../links.md

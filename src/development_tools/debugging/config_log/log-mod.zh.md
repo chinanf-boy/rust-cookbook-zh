@@ -1,9 +1,8 @@
-
 ## 启用每个模块的日志级别
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-创建两个模块`foo`和嵌套`foo::bar`与日志指令分别控制[`RUST_LOG`]环境变量.
+创建两个模块`foo`嵌套的`foo::bar`使用单独控制的日志记录指令[`RUST_LOG`]环境变量。
 
 ```rust
 #[macro_use]
@@ -36,13 +35,13 @@ fn main() {
 }
 ```
 
-[`RUST_LOG`]环境变量控制[`env_logger`][env_logger]输出.模块声明采用逗号分隔的条目格式化为`path::to::module=log_level`.跑过`test`申请如下:
+[`RUST_LOG`]环境变量控制[`env_logger`][env_logger]输出。模块声明采用逗号分隔的条目，格式如下`path::to::module=log_level`. 运行`test`应用如下：
 
 ```bash
 RUST_LOG="warn,test::foo=info,test::foo::bar=debug" ./test
 ```
 
-设置默认值[`log::Level`]至`warn`,模块`foo`和模块`foo::bar`至`info`和`debug`.
+设置默认值[`log::Level`]到`warn`模块`foo`模块`foo::bar`到`info`和`debug`.
 
 ```bash
 WARN:test: [root] warn

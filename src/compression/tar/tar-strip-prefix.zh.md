@@ -1,9 +1,8 @@
-
 ## 从路径中删除前缀时解压缩tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-迭代了[`Archive::entries`].使用[`Path::strip_prefix`]删除指定的路径前缀(`bundle/logs`).最后,提取出来[`tar::Entry`]通过[`Entry::unpack`].
+迭代了[`Archive::entries`]。使用[`Path::strip_prefix`]删除指定的路径前缀（`bundle/logs`）。最后，提取出来[`tar::Entry`]通过[`Entry::unpack`]。
 
 ```rust,no_run
 # #[macro_use]

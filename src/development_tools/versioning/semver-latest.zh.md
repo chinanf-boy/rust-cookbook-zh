@@ -1,9 +1,8 @@
-
-## 找到满足给定范围的最新版本
+## 查找满足给定范围的最新版本
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-给出版本和strs的列表,找到最新的[`semver::Version`].[`semver::VersionReq`]过滤列表[`VersionReq::matches`].还演示`semver`预发布首选项.
+给定版本和str的列表，查找最新的[`semver::Version`]. [`semver::VersionReq`]用筛选列表[`VersionReq::matches`]. 同时证明`semver`预发布首选项。
 
 ```rust
 # #[macro_use]

@@ -1,13 +1,12 @@
-
-## 使用HTTP范围标头进行部分下载
+## 使用HTTP范围头进行部分下载
 
 [![reqwest-badge]][reqwest] [![cat-net-badge]][cat-net]
 
-使用[`reqwest::Client::head`]得到[内容长度-]的反应.
+使用[`reqwest::Client::head`]得到[内容长度-]响应。
 
-代码然后使用[`reqwest::Client::get`]在打印进度消息的同时,以10240字节的块下载内容.这个[范围]标头指定块大小和位置.
+然后代码使用[`reqwest::Client::get`]在打印进度消息的同时下载10240字节的内容。这个[范围]header指定块的大小和位置。
 
-范围标头定义在[射频识别芯片][http range rfc7233].
+范围标题在中定义[射频识别芯片][http range rfc7233].
 
 ```rust,no_run
 # #[macro_use]

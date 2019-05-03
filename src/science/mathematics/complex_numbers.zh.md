@@ -1,6 +1,5 @@
-
 # 复数
 
-{{include.\_number/create-..zh.md}}{{{include.\_./add-..zh.md}}{{{include.\_./math.al-function.zh.md}}}
+包括复数/创建复数.md包括复数数字/添加复数.md包括复数数字/数学函数.md
 
-{{包含…//.. /链接.zh.md }
+包括../。/links.md

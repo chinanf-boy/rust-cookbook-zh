@@ -1,13 +1,12 @@
-
-## 解析HTTP响应的MIME类型
+## 分析HTTP响应的mime类型
 
 [![reqwest-badge]][reqwest] [![mime-badge]][mime] [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding]
 
-当接收到HTTP响应时`reqwest`这个[哑剧类型]或媒体类型可以在[内容类型-]标题.[`reqwest::header::HeaderMap::get`]将标题检索为[`reqwest::header::HeaderValue`],可以转换为字符串.这个`mime`然后,板条箱可以解析,产生一个[`mime::Mime`]价值.
+接收来自的HTTP响应时`reqwest`这个[哑剧类型]或媒体类型可以在[内容类型-]标题。[`reqwest::header::HeaderMap::get`]将头检索为[`reqwest::header::HeaderValue`]，可以转换为字符串。这个`mime`然后板条箱就可以分析它，产生一个[`mime::Mime`]价值。
 
-这个`mime`板条还定义了一些常用的MIME类型.
+这个`mime`板条箱还定义了一些常用的mime类型。
 
-请注意[`reqwest::header`]模块从[`http`]机箱.
+请注意[`reqwest::header`]模块从导出[`http`]机箱。
 
 ```rust,no_run
 # #[macro_use]

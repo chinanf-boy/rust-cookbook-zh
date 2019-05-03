@@ -1,14 +1,12 @@
-
-## 使用不同的分隔符读取CSV记录
+## 读取具有不同分隔符的csv记录
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-使用选项卡读取CSV记录[`delimiter`].
+用制表符读取csv记录[`delimiter`].
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate csv;
+use csv::Error;
 #[macro_use]
 extern crate serde_derive;
 
@@ -21,27 +19,19 @@ struct Record {
 }
 
 use csv::ReaderBuilder;
-#
-# error_chain! {
-#     foreign_links {
-#         CsvError(csv::Error);
-#     }
-# }
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let data = "name\tplace\tid
-Mark\tMelbourne\t46
-Ashley\tZurich\t92";
+		Mark\tMelbourne\t46
+		Ashley\tZurich\t92";
 
     let mut reader = ReaderBuilder::new().delimiter(b'\t').from_reader(data.as_bytes());
-    for result in reader.records() {
+    for result in reader.deserialize::<Record>() {
         println!("{:?}", result?);
     }
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`delimiter`]: https://docs.rs/csv/1.0.0-beta.3/csv/struct.ReaderBuilder.html#method.delimiter

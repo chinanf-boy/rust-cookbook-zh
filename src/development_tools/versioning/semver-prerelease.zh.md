@@ -1,24 +1,15 @@
-
-## 检查给定版本是否预先发布.
+## 检查给定版本是否为预发布版本。
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-鉴于两个版本,[`is_prerelease`]断言一个是预发布而另一个不是.
+给出两个版本，[`is_prerelease`]断言一个是预发布，另一个不是。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate semver;
 
-use semver::Version;
-#
-# error_chain! {
-#     foreign_links {
-#         SemVer(semver::SemVerError);
-#     }
-# }
+use semver::{Version, SemVerError};
 
-fn run() -> Result<()> {
+fn main() -> Result<(), SemVerError> {
     let version_1 = Version::parse("1.0.0-alpha")?;
     let version_2 = Version::parse("1.0.0")?;
 
@@ -27,8 +18,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`is_prerelease`]: https://docs.rs/semver/*/semver/struct.Version.html#method.is_prerelease

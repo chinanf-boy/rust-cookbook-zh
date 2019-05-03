@@ -1,9 +1,8 @@
-
 ## 生成自定义类型的随机值
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-随机生成一个元组`(i32, bool, f64)`和用户定义类型的变量`Point`.实现[`Distribution`]特征点类型为[`Standard`]为了允许随机生成.
+随机生成一个元组`(i32, bool, f64)`和用户定义类型的变量`Point`。实现[`Distribution`]特征点类型为[`Standard`]为了允许随机生成。
 
 ```rust
 extern crate rand;

@@ -1,24 +1,14 @@
-
-## 监听未使用的端口TCP/IP
+## 侦听未使用的端口TCP/IP
 
 [![std-badge]][std] [![cat-net-badge]][cat-net]
 
-在这个例子中,端口显示在控制台上,程序将侦听直到请求被发出.`SocketAddrV4`将端口设置为0时分配一个随机端口.
+在本例中，端口显示在控制台上，程序将监听，直到发出请求。`SocketAddrV4`将端口设置为0时分配随机端口。
 
 ```rust,no_run
-# #[macro_use]
-# extern crate error_chain;
-#
 use std::net::{SocketAddrV4, Ipv4Addr, TcpListener};
-use std::io::Read;
-#
-# error_chain! {
-#     foreign_links {
-#         Io(::std::io::Error);
-#     }
-# }
+use std::io::{Read, Error};
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let loopback = Ipv4Addr::new(127, 0, 0, 1);
     let socket = SocketAddrV4::new(loopback, 0);
     let listener = TcpListener::bind(socket)?;
@@ -31,6 +21,4 @@ fn run() -> Result<()> {
     println!("{:?} says {}", addr, input);
     Ok(())
 }
-#
-# quick_main!(run);
 ```

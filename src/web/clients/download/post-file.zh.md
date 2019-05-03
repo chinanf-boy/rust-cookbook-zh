@@ -1,9 +1,8 @@
-
-## 将文件发布到巴斯德RS.
+## 发布文件以粘贴rs
 
 [![reqwest-badge]][reqwest] [![cat-net-badge]][cat-net]
 
-[`reqwest::Client`]建立连接<https://paste.rs>跟随[`reqwest::RequestBuilder`]模式.打电话[`Client::post`]用URL建立目的地,[`RequestBuilder::body`]通过读取文件来设置要发送的内容,以及[`RequestBuilder::send`]块,直到文件上载和响应返回为止.[`read_to_string`]返回响应并在控制台中显示.
+[`reqwest::Client`]建立到的连接<https://paste.rs>跟随[`reqwest::RequestBuilder`]模式。打电话[`Client::post`]通过URL建立目的地，[`RequestBuilder::body`]通过读取文件设置要发送的内容，以及[`RequestBuilder::send`]阻止，直到文件上载并返回响应。[`read_to_string`]返回响应并显示在控制台中。
 
 ```rust,no_run
 extern crate reqwest;

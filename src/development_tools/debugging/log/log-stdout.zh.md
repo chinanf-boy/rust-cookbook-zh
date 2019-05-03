@@ -1,9 +1,8 @@
-
-## 记录到stdout而不是stderr
+## 登录到stdout而不是stderr
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-使用.创建自定义记录器配置[`Builder::target`]将日志输出的目标设置为[`Target::Stdout`].
+使用创建自定义记录器配置[`Builder::target`]将日志输出的目标设置为[`Target::Stdout`].
 
 ```rust
 #[macro_use]

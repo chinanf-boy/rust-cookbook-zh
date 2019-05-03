@@ -1,9 +1,8 @@
-
 ## 解压缩tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-解压缩([`GzDecoder`])和提取物([`Archive::unpack`])来自压缩tarball命名的所有文件`archive.tar.gz`位于当前工作目录中的同一位置.
+解压缩（[`GzDecoder`]）和提取物（[`Archive::unpack`]）来自压缩tarball命名的所有文件`archive.tar.gz`位于当前工作目录中的同一位置。
 
 ```rust,no_run
 extern crate flate2;

@@ -1,9 +1,8 @@
-
-## 使用Serde将记录序列化为CSV
+## 使用serde将记录序列化为csv
 
 [![csv-badge]][csv] [![serde-badge]][serde] [![cat-encoding-badge]][cat-encoding]
 
-以下示例显示如何使用自定义结构将自定义结构序列化为CSV记录[serde]箱.
+下面的示例演示如何使用[塞尔德]机箱。
 
 ```rust
 # #[macro_use]

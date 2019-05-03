@@ -1,14 +1,13 @@
-
 # 正则表达式
 
-{{包括正则表达式/电子邮件.zh.md }
+包括regex/email.md
 
-{{包含正则表达式/哈希标签.zh.md }
+包括regex/hashtags.md
 
-{{包括正则表达式/电话.zh.md }
+包括regex/phone.md
 
-{{包括正则表达式/过滤日志.zh.md }
+包括regex/filter log.md
 
-{{包括正则表达式/Me}}.
+包括regex/replace.md
 
-{{包含…/Link.zh.md}}
+包括../links.md

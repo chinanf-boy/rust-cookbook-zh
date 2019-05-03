@@ -1,11 +1,10 @@
-
-## 跳过dotfiles时遍历目录
+## 跳过点文件时遍历目录
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-用途[`filter_entry`]以递归方式下降到传递的条目中`is_not_hidden`谓词因此跳过隐藏的文件和目录.[`Iterator::filter`]适用于每个[`WalkDir::DirEntry`]即使父级是隐藏目录.
+使用[`filter_entry`]递归下降到通过`is_not_hidden`谓词因此跳过隐藏的文件和目录。[`Iterator::filter`]适用于每个[`WalkDir::DirEntry`]即使父目录是隐藏目录。
 
-根目录`"."`收益率[`WalkDir::depth`]用法`is_not_hidden`谓语.
+根目录`"."`通过收益[`WalkDir::depth`]在使用中`is_not_hidden`谓语。
 
 ```rust,no_run
 extern crate walkdir;

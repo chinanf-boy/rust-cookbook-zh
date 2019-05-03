@@ -1,9 +1,8 @@
-
 ## 显示格式化的日期和时间
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-以UTC为单位获取并显示当前时间[`Utc::now`].以众所周知的格式格式化当前时间[RFC 2822]运用[`DateTime::to_rfc2822`]和[RFC 3339]运用[`DateTime::to_rfc3339`],并以自定义格式使用[`DateTime::format`].
+获取并显示当前时间（以UTC为单位），使用[`Utc::now`]. 以众所周知的格式格式化当前时间[RFC 2822]使用[`DateTime::to_rfc2822`]和[RFC 3339]使用[`DateTime::to_rfc3339`]，并以自定义格式使用[`DateTime::format`].
 
 ```rust
 extern crate chrono;

@@ -1,6 +1,9 @@
+# 数据库
 
-# SQLite的
+包括sqlite/initialization.md
 
-{{#include sqlite/initialization.zh.md}}
+包括sqlite/insert_select.md
 
-{{#include ../links.zh.md}}
+包括sqlite/transactions.md
+
+包括../links.md

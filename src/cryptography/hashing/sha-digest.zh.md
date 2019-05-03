@@ -1,9 +1,8 @@
-
 ## 计算文件的SHA-256摘要
 
 [![ring-badge]][ring] [![data-encoding-badge]][data-encoding] [![cat-cryptography-badge]][cat-cryptography]
 
-将一些数据写入文件,然后计算SHA-256[`digest::Digest`]使用的文件内容[`digest::Context`].
+将一些数据写入文件，然后计算SHA-256[`digest::Digest`]文件的内容使用[`digest::Context`].
 
 ```rust
 # #[macro_use]

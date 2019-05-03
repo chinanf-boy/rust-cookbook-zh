@@ -1,27 +1,18 @@
-
-## 同时计算iso文件的SHA1总和
+## 同时计算iso文件的sha1和
 
 [![threadpool-badge]][threadpool] [![num_cpus-badge]][num_cpus] [![walkdir-badge]][walkdir] [![ring-badge]][ring] [![cat-concurrency-badge]][cat-concurrency][![cat-filesystem-badge]][cat-filesystem]
 
-此示例计算当前目录中具有iso扩展名的每个文件的SHA1.线程池生成的线程数等于系统中存在的核心数[`num_cpus::get`].[`Walkdir::new`]迭代当前目录并调用[`execute`]执行读取和计算SHA1哈希的操作.
+此示例为当前目录中具有ISO扩展名的每个文件计算sha1。线程池生成的线程数等于系统中使用[`num_cpus::get`].  [`Walkdir::new`]迭代当前目录并调用[`execute`]执行读取和计算sha1哈希的操作。
 
 ```rust,no_run
-# #[macro_use]
-# extern crate error_chain;
 extern crate walkdir;
 extern crate ring;
 extern crate num_cpus;
 extern crate threadpool;
 
-# error_chain! {
-#     foreign_links {
-#         Io(std::io::Error);
-#     }
-# }
-#
 use walkdir::WalkDir;
 use std::fs::File;
-use std::io::{BufReader, Read};
+use std::io::{BufReader, Read, Error};
 use std::path::Path;
 use threadpool::ThreadPool;
 use std::sync::mpsc::channel;
@@ -34,8 +25,8 @@ use ring::digest::{Context, Digest, SHA1};
 #         _ => false,
 #     }
 # }
-#
-fn compute_digest<P: AsRef<Path>>(filepath: P) -> Result<(Digest, P)> {
+
+fn compute_digest<P: AsRef<Path>>(filepath: P) -> Result<(Digest, P), Error> {
     let mut buf_reader = BufReader::new(File::open(&filepath)?);
     let mut context = Context::new(&SHA1);
     let mut buffer = [0; 1024];
@@ -51,7 +42,7 @@ fn compute_digest<P: AsRef<Path>>(filepath: P) -> Result<(Digest, P)> {
     Ok((context.finish(), filepath))
 }
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let pool = ThreadPool::new(num_cpus::get());
 
     let (tx, rx) = channel();
@@ -76,8 +67,6 @@ fn run() -> Result<()> {
     }
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`execute`]: https://docs.rs/threadpool/*/threadpool/struct.ThreadPool.html#method.execute

@@ -1,11 +1,10 @@
-
 ## 将消息记录到自定义位置
 
 [![log-badge]][log] [![log4rs-badge]][log4rs] [![cat-debugging-badge]][cat-debugging]
 
-[log4rs]将日志输出配置到自定义位置.[log4rs]可以使用外部YAML文件或构建器配置.
+[log4rs]将日志输出配置到自定义位置。[log4rs]可以使用外部yaml文件或生成器配置。
 
-使用创建日志配置[`log4rs::append::file::FileAppender`].appender定义日志记录目标.配置继续使用自定义模式进行编码[`log4rs::encode::pattern`].将配置分配给[`log4rs::config::Config`]并设置默认值[`log::LevelFilter`].
+使用创建日志配置[`log4rs::append::file::FileAppender`]. 附加器定义日志记录目标。配置继续使用来自的自定义模式进行编码[`log4rs::encode::pattern`]. 将配置分配给[`log4rs::config::Config`]并设置默认值[`log::LevelFilter`].
 
 ```rust,no_run
 # #[macro_use]

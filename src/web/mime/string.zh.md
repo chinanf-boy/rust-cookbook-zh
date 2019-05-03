@@ -1,9 +1,8 @@
-
-## 从字符串中获取MIME类型
+## 从字符串获取mime类型
 
 [![mime-badge]][mime] [![cat-encoding-badge]][cat-encoding]
 
-下面的示例演示如何解析[`MIME`]使用字符串从[哑剧演员]机箱.[`FromStrError`]产生默认值[`MIME`]键入`unwrap_or`条款.
+下面的示例演示如何分析[`MIME`]从字符串中键入[哑剧演员]机箱。[`FromStrError`]生成默认值[`MIME`]键入`unwrap_or`条款。
 
 ```rust
 extern crate mime;

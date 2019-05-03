@@ -1,24 +1,15 @@
-
-## 反序列化TOML配置文件
+## 反序列化toml配置文件
 
 [![toml-badge]][toml] [![cat-encoding-badge]][cat-encoding]
 
-将一些TOML解析成通用的`toml::Value`能够表示任何有效的TOML数据.
+把一些toml解析成一个通用的`toml::Value`它能够表示任何有效的TOML数据。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate toml;
 
-use toml::Value;
-#
-# error_chain! {
-#     foreign_links {
-#         Toml(toml::de::Error);
-#     }
-# }
+use toml::{Value, de::Error};
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let toml_content = r#"
           [package]
           name = "your_package"
@@ -37,11 +28,9 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
-使用将POML解析为您自己的结构[Serde].
+使用将toml解析为您自己的结构[塞尔德].
 
 ```rust
 # #[macro_use]

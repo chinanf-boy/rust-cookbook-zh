@@ -1,25 +1,17 @@
-
-## 读取CSV记录
+## 读取csv记录
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-将标准CSV记录读入[`csv::StringRecord`]- 弱类型数据表示,需要有效的UTF-8行.或者,[`csv::ByteRecord`]不做任何关于UTF-8的假设.
+将标准csv记录读取到[`csv::StringRecord`]-弱类型数据表示形式，需要有效的UTF-8行。或者，[`csv::ByteRecord`]对UTF-8不做任何假设。
 
 ```rust
 extern crate csv;
-# #[macro_use]
-# extern crate error_chain;
-#
-# error_chain! {
-#     foreign_links {
-#         Reader(csv::Error);
-#     }
-# }
+use csv::Error;
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let csv = "year,make,model,description
-1948,Porsche,356,Luxury sports car
-1967,Ford,Mustang fastback 1967,American car";
+		1948,Porsche,356,Luxury sports car
+		1967,Ford,Mustang fastback 1967,American car";
 
     let mut reader = csv::Reader::from_reader(csv.as_bytes());
     for record in reader.records() {
@@ -35,11 +27,9 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
-Serde将数据反序列化为强类型结构.见[`csv::Reader::deserialize`]方法.
+serde将数据反序列化为强类型结构。见[`csv::Reader::deserialize`]方法。
 
 ```rust
 extern crate csv;

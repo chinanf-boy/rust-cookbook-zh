@@ -1,9 +1,8 @@
-
-## 从电子邮件地址验证和提取登录
+## 验证并从电子邮件地址提取登录名
 
 [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] [![cat-text-processing-badge]][cat-text-processing]
 
-验证电子邮件地址的格式是否正确,并在@符号之前提取所有内容.
+验证电子邮件地址的格式是否正确，并提取@符号之前的所有内容。
 
 ```rust
 #[macro_use]

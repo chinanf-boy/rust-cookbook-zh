@@ -1,11 +1,10 @@
-
-## 从文本中提取一个唯一的哈希标签列表
+## 从文本中提取唯一的哈希标记列表
 
 [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] [![cat-text-processing-badge]][cat-text-processing]
 
-从文本中提取、排序和删除哈希标签列表.
+从文本中提取、排序和消除哈希标记的列表。
 
-这里给出的HayTeAG标签只捕获从字母开始的拉丁哈希标签.完整的[正则表达式]要复杂得多.
+这里给出的hashtag regex只捕获以字母开头的拉丁hashtags。完整的[Twitter标签regex]更复杂。
 
 ```rust
 extern crate regex;

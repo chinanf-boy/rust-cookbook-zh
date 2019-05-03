@@ -1,11 +1,10 @@
-
-## 查找给定模式忽略文件名大小写的所有文件.
+## 查找具有给定模式的所有文件，忽略文件名大小写。
 
 [![glob-badge]][glob] [![cat-filesystem-badge]][cat-filesystem]
 
-查找中的所有图像文件`/media/`目录匹配`img_[0-9]*.png`模式.
+在中查找所有图像文件`/media/`目录匹配`img_[0-9]*.png`模式。
 
-一个习俗[`MatchOptions`]struct传递给[`glob_with`]函数使glob模式不区分大小写,同时保留其他选项[`Default`].
+风俗习惯[`MatchOptions`]结构传递给[`glob_with`]函数使全局模式不区分大小写，同时保留其他选项[`Default`].
 
 ```rust,no_run
 # #[macro_use]

@@ -1,11 +1,10 @@
-
-## 地球上两点之间的距离
+## 地球两点之间的距离
 
 [![std-badge]][std]
 
-默认情况下,生锈提供数学.[浮法]如三角函数、平方根、弧度和度之间的转换函数等等.
+默认情况下，rust提供数学[浮法]如三角函数、平方根、弧度和度数之间的转换函数等。
 
-下面的例子计算了地球上两点之间的距离[半正矢]. 点表示为纬度和经度对的程度.然后,[`to_radians`]把它们转换成弧度.[`sin`],[`cos`],[`powi`]和[`sqrt`]计算中心角.最后,计算距离是可能的.
+下面的示例使用[半正矢]. 点用经纬度对表示。然后，[`to_radians`]把它们转换成弧度。[`sin`]，[`cos`]，[`powi`]和[`sqrt`]计算中心角。最后，可以计算距离。
 
 ```rust
 fn main() {
@@ -19,8 +18,8 @@ fn main() {
     let delta_latitude = (paris_latitude_degrees - london_latitude_degrees).to_radians();
     let delta_longitude = (paris_longitude_degrees - london_longitude_degrees).to_radians();
 
-    let central_angle_inner = (delta_latitude/2.0).sin().powi(2)
-        + paris_latitude.cos() * london_latitude.cos() * (delta_longitude/2.0).sin().powi(2);
+    let central_angle_inner = (delta_latitude / 2.0).sin().powi(2)
+        + paris_latitude.cos() * london_latitude.cos() * (delta_longitude / 2.0).sin().powi(2);
     let central_angle = 2.0 * central_angle_inner.sqrt().asin();
 
     let distance = earth_radius_kilometer * central_angle;

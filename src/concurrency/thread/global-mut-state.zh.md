@@ -1,9 +1,8 @@
-
 ## 保持全球可变状态
 
 [![lazy_static-badge]][lazy_static] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-使用声明全局状态[lazy_static].[lazy_static]创造全球可用`static ref`这需要一个[`Mutex`]允许变异(也参见[`RwLock`]).该[`Mutex`]wrap确保多个线程不能同时访问状态,从而防止竞争条件.一个[`MutexGuard`]必须获取以读取或改变存储在a中的值[`Mutex`].
+使用声明全局状态[lazy_static]。[lazy_static]创造全球可用`static ref`这需要一个[`Mutex`]允许变异（也参见[`RwLock`]）。该[`Mutex`]wrap确保多个线程不能同时访问状态，从而防止竞争条件。一个[`MutexGuard`]必须获取以读取或改变存储在a中的值[`Mutex`]。
 
 ```rust
 # #[macro_use]

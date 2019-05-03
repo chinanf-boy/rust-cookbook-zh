@@ -1,11 +1,10 @@
-
-## 用GITHUB API创建和删除GIST
+## 使用GitHub API创建和删除Gist
 
 [![reqwest-badge]][reqwest] [![serde-badge]][serde] [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding]
 
-创建一个带有POST请求的GITHUB主旨[gists API v3](https://developer.github.com/v3/gists/)使用[`Client::post`]并使用删除请求将其删除[`Client::delete`].
+创建一个向Github发出POST请求的Gist[gists API v3](https://developer.github.com/v3/gists/)使用[`Client::post`]并使用删除请求将其删除[`Client::delete`].
 
-这个[`reqwest::Client`]负责请求的详细信息,包括URL、正文和身份验证.柱体[`serde_json::json!`]宏提供任意的JSON体.打电话给[`RequestBuilder::json`]设置请求正文.[`RequestBuilder::basic_auth`]处理身份验证.呼唤[`RequestBuilder::send`]同步执行请求.
+这个[`reqwest::Client`]负责两个请求的详细信息，包括URL、主体和身份验证。柱体来自[`serde_json::json!`]宏提供任意JSON主体。打电话给[`RequestBuilder::json`]设置请求正文。[`RequestBuilder::basic_auth`]处理身份验证。呼唤[`RequestBuilder::send`]同步执行请求。
 
 ```rust,no_run
 # #[macro_use]
@@ -68,7 +67,7 @@ fn run() -> Result<()> {
 # quick_main!(run);
 ```
 
-示例使用[HTTP基本AUTH]为了授权访问[GitHub API]. 典型的用例将采用更复杂的方法之一.[奥瑙]授权流.
+示例使用[HTTP基本AUTH]为了授权访问[GitHub API]. 典型的用例将使用更复杂的[奥瑙]授权流程。
 
 [`client::delete`]: https://docs.rs/reqwest/*/reqwest/struct.Client.html#method.delete
 

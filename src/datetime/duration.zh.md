@@ -1,10 +1,9 @@
+# 工期及计算
 
-# 持续时间和计算
+包括持续时间/配置文件.md
 
-{{#include duration/profile.zh.md}}
+包括持续时间/检查时间.md
 
-{{#include duration/checked.zh.md}}
+包括持续时间/时区.md
 
-{{#include duration/timezone.zh.md}}
-
-{{#include ../links.zh.md}}
+包括../links.md

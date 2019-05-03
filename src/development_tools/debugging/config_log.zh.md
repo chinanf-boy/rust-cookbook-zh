@@ -1,12 +1,11 @@
-
 # 配置日志记录
 
-{{#include config_log/log-mod.zh.md}}
+include config_log/log mod.md\_
 
-{{#include config_log/log-env-variable.zh.md}}
+include config_log/log env variable.md
 
-{{#include config_log/log-timestamp.zh.md}}
+包括config_log/log timestamp.md
 
-{{#include config_log/log-custom.zh.md}}
+包括config_log/log custom.md
 
-{{#include ../../links.zh.md}}
+包括../。/links.md

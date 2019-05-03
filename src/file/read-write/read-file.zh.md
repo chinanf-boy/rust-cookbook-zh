@@ -1,24 +1,14 @@
-
-## 从文件读取字符串行
+## 从文件中读取字符串行
 
 [![std-badge]][std] [![cat-filesystem-badge]][cat-filesystem]
 
-将三行消息写入文件,然后一次读取一行[`Lines`]创建的迭代器[`BufRead::lines`]. [`File`]器具[`Read`]提供[`BufReader`]特质.[`File::create`]打开一个[`File`]为了写作,[`File::open`]阅读.
+将三行消息写入文件，然后使用[`Lines`]迭代器创建者[`BufRead::lines`]. [`File`]器具[`Read`]提供[`BufReader`]特质。[`File::create`]打开一个[`File`]为了写作，[`File::open`]阅读。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
-#
 use std::fs::File;
-use std::io::{Write, BufReader, BufRead};
-#
-# error_chain! {
-#     foreign_links {
-#         Io(std::io::Error);
-#     }
-# }
+use std::io::{Write, BufReader, BufRead, Error};
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let path = "lines.txt";
 
     let mut output = File::create(path)?;
@@ -33,8 +23,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`bufread::lines`]: https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines

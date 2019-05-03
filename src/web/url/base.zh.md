@@ -1,9 +1,8 @@
-
-## 通过删除路径段创建基本URL
+## 通过删除路径段创建基URL
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-基本URL包括协议和域.基本URL没有文件夹、文件或查询字符串.这些项目中的每一个都是从给定的URL中剥离出来的.[`PathSegmentsMut::clear`]移除路径和[`Url::set_query`]移除查询字符串.
+基本URL包括协议和域。基本URL没有文件夹、文件或查询字符串。这些项中的每一项都将从给定的URL中剥离出来。[`PathSegmentsMut::clear`]删除路径和[`Url::set_query`]删除查询字符串。
 
 ```rust
 # #[macro_use]

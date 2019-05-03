@@ -1,9 +1,8 @@
-
-## 递归计算给定深度的文件大小
+## 在给定深度递归计算文件大小
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-递归深度可以灵活设置[`WalkDir::min_depth`]&[`WalkDir::max_depth`]方法.计算所有文件大小的总和为3个子文件夹深度,忽略根文件夹中的文件.
+递归深度可以通过以下方式灵活设置：[`WalkDir::min_depth`] & [`WalkDir::max_depth`]方法。将所有文件大小的总和计算为3个子文件夹深度，忽略根文件夹中的文件。
 
 ```rust
 extern crate walkdir;

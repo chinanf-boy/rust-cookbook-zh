@@ -1,12 +1,11 @@
-
 # 解析和显示
 
-{{#include parse/current.zh.md}}
+包括parse/current.md
 
-{{#include parse/timestamp.zh.md}}
+包括parse/timestamp.md
 
-{{#include parse/format.zh.md}}
+包括parse/format.md
 
-{{#include parse/string.zh.md}}
+包括parse/string.md
 
-{{#include ../links.zh.md}}
+包括../links.md

@@ -1,6 +1,5 @@
-
 # 排序向量
 
-{{#include sorting/sort.zh.md}} {{#include sorting/sort_float.zh.md}} {{#include sorting/sort_struct.zh.md}}
+{{#include sorting / sort.md}} {{#include sorting / sort_float.md}} {{#include sorting / sort_struct.md}}
 
-{{#include ../links.zh.md}}
+{{#include ../links.md}}

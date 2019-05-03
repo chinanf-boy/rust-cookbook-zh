@@ -2,7 +2,7 @@ table {
   width: 100%;
 }
 
-table td:first-child {
+/* table td:first-child {
   width: 65%;
 }
 
@@ -13,7 +13,7 @@ table td:nth-child(2) {
 
 table td:nth-child(3) {
   padding: 3px;
-}
+} */
 
 /* underline hyperlinked inline code items */
 a:hover > .hljs {
@@ -21,10 +21,10 @@ a:hover > .hljs {
 }
 
 /* color hyperlinked inline code items
-   identically to normal links */
+     identically to normal links */
 .rust a > .hljs,
 .navy a > .hljs,
-.coal a > .hljs{
+.coal a > .hljs {
   color: #2b79a2;
 }
 

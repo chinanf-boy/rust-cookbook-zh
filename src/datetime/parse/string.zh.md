@@ -1,26 +1,18 @@
-
-## 将字符串解析为DateTime结构
+## 将字符串解析为datetime结构
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-解析一个[`DateTime`]来自表示众所周知格式的字符串的结构[RFC 2822],[RFC 3339]和自定义格式,使用[`DateTime::parse_from_rfc2822`],[`DateTime::parse_from_rfc3339`],和[`DateTime::parse_from_str`]分别.
+解析A[`DateTime`]来自表示已知格式的字符串的结构[RFC 2822]，[RFC 3339]和自定义格式，使用[`DateTime::parse_from_rfc2822`]，[`DateTime::parse_from_rfc3339`]和[`DateTime::parse_from_str`]分别。
 
-转义序列可用于[`DateTime::parse_from_str`]可以在[`chrono::format::strftime`].请注意[`DateTime::parse_from_str`]要求这样的DateTime结构必须是可创建的,它唯一地标识日期和时间.用于解析没有使用时区的日期和时间[`NaiveDate`],[`NaiveTime`],和[`NaiveDateTime`].
+可用于[`DateTime::parse_from_str`]可以在[`chrono::format::strftime`]. 请注意[`DateTime::parse_from_str`]要求这样的日期时间结构必须是可创建的，以便它唯一地标识日期和时间。用于分析没有时区的日期和时间，请使用[`NaiveDate`]，[`NaiveTime`]和[`NaiveDateTime`].
 
 ```rust
 extern crate chrono;
-# #[macro_use]
-# extern crate error_chain;
-#
 use chrono::{DateTime, NaiveDate, NaiveDateTime, NaiveTime};
-#
-# error_chain! {
-#     foreign_links {
-#         DateParse(chrono::format::ParseError);
-#     }
-# }
+use chrono::format::ParseError;
 
-fn run() -> Result<()> {
+
+fn main() -> Result<(), ParseError> {
     let rfc2822 = DateTime::parse_from_rfc2822("Tue, 1 Jul 2003 10:52:37 +0200")?;
     println!("{}", rfc2822);
 
@@ -41,8 +33,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`chrono::format::strftime`]: https://docs.rs/chrono/*/chrono/format/strftime/index.html

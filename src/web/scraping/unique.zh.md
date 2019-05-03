@@ -1,11 +1,10 @@
-
-## 从MyaWiKi标记提取所有唯一链接
+## 从Mediawiki标记中提取所有唯一链接
 
 [![reqwest-badge]][reqwest] [![regex-badge]][regex] [![cat-net-badge]][cat-net]
 
-使用MyaWiKi页面的源代码[`reqwest::get`]然后查找内部和外部链接的所有条目[`Regex::captures_iter`]. 使用[`Cow`]避免过度[`String`]分配.
+使用[`reqwest::get`]然后查找内部和外部链接的所有条目[`Regex::captures_iter`]. 使用[`Cow`]避免过度[`String`]分配。
 
-描述了MyaWiKi链接语法[在这里][mediawiki link syntax].
+描述了Mediawiki链接语法[在这里][mediawiki link syntax].
 
 ```rust,no_run
 # #[macro_use]

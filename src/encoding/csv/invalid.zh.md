@@ -1,14 +1,12 @@
-
-## 使用Serde处理无效的CSV数据
+## 使用serde处理无效的csv数据
 
 [![csv-badge]][csv] [![serde-badge]][serde] [![cat-encoding-badge]][cat-encoding]
 
-CSV文件通常包含无效数据.对于这些情况,`csv`crate提供自定义反序列化器,[`csv::invalid_option`],自动将无效数据转换为无值.
+csv文件通常包含无效数据。对于这些情况，`csv`板条箱提供自定义反序列化程序，[`csv::invalid_option`]，自动将无效数据转换为无值。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate csv;
+use csv::Error;
 #[macro_use]
 extern crate serde_derive;
 
@@ -19,14 +17,8 @@ struct Record {
     #[serde(deserialize_with = "csv::invalid_option")]
     id: Option<u64>,
 }
-#
-# error_chain! {
-#     foreign_links {
-#         CsvError(csv::Error);
-#     }
-# }
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Error> {
     let data = "name,place,id
 mark,sydney,46.5
 ashley,zurich,92
@@ -41,8 +33,6 @@ alisha,colombo,xyz";
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`csv::invalid_option`]: https://docs.rs/csv/*/csv/fn.invalid_option.html

@@ -1,12 +1,11 @@
-
 ## 运行管道外部命令
 
 [![std-badge]][std] [![cat-os-badge]][cat-os]
 
-显示到10<sup>钍</sup>当前工作目录中的最大文件和子目录.它相当于跑步:`du -ah . |
+显示到10<sup>钍</sup>当前工作目录中最大的文件和子目录。它相当于运行：`du -ah . |
 sort -hr | head -n 10`.
 
-[`Command`]S代表一个过程.子进程的输出用[`Stdio::piped`]介于父母与孩子之间.
+[`Command`]S代表一个过程。子进程的输出用[`Stdio::piped`]在父级和子级之间。
 
 ```rust,no_run
 # #[macro_use]

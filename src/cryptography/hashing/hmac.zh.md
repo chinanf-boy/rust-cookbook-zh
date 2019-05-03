@@ -1,25 +1,17 @@
-
-## 使用HMAC摘要签名并验证消息
+## 与HMAC Digest签署并验证消息
 
 [![ring-badge]][ring] [![cat-cryptography-badge]][cat-cryptography]
 
-用途[`ring::hmac`]创造一个[`hmac::Signature`]然后验证字符串是否正确.
+使用[`ring::hmac`]创建一个[`hmac::Signature`]然后验证签名是否正确。
 
 ```rust
-# #[macro_use]
-# extern crate error_chain;
 extern crate ring;
-#
-# error_chain! {
-#     foreign_links {
-#         Ring(ring::error::Unspecified);
-#     }
-# }
 
 use ring::{digest, hmac, rand};
 use ring::rand::SecureRandom;
+use ring::error::Unspecified;
 
-fn run() -> Result<()> {
+fn main() -> Result<(), Unspecified> {
     let mut key_value = [0u8; 48];
     let rng = rand::SystemRandom::new();
     rng.fill(&mut key_value)?;
@@ -31,8 +23,6 @@ fn run() -> Result<()> {
 
     Ok(())
 }
-#
-# quick_main!(run);
 ```
 
 [`hmac::signature`]: https://briansmith.org/rustdoc/ring/hmac/struct.Signature.html

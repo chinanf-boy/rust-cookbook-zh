@@ -1,10 +1,9 @@
-
 # 读写
 
-{{#include read-write/read-file.zh.md}}
+包括读写/读文件.md
 
-{{#include read-write/same-file.zh.md}}
+包括读写/同一文件.md
 
-{{#include read-write/memmap.zh.md}}
+包括读写/memmap.md
 
-{{#include ../links.zh.md}}
+包括../links.md

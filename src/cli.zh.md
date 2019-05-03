@@ -1,4 +1,3 @@
-
 # 命令行
 
 | 食谱 | 包装箱 | 分类 |
@@ -10,4 +9,4 @@
 
 [ex-ansi_term-basic]: cli/ansi_terminal.html#ansi-terminal
 
-{{#include links.zh.md}}
+{{#include links.md}}
