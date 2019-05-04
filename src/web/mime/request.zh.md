@@ -1,10 +1,10 @@
-## 分析HTTP响应的mime类型
+## 分析 HTTP 响应的 mime 类型
 
 [![reqwest-badge]][reqwest] [![mime-badge]][mime] [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding]
 
-接收来自的HTTP响应时`reqwest`这个[哑剧类型]或媒体类型可以在[内容类型-]标题。[`reqwest::header::HeaderMap::get`]将头检索为[`reqwest::header::HeaderValue`]，可以转换为字符串。这个`mime`然后板条箱就可以分析它，产生一个[`mime::Mime`]价值。
+接收来自的 HTTP 响应时`reqwest`这个[哑剧类型]或媒体类型可以在[内容类型-]标题。[`reqwest::header::HeaderMap::get`]将头检索为[`reqwest::header::HeaderValue`]，可以转换为字符串。这个`mime`然后箱子就可以分析它，产生一个[`mime::Mime`]价值。
 
-这个`mime`板条箱还定义了一些常用的mime类型。
+这个`mime`箱子还定义了一些常用的 mime 类型。
 
 请注意[`reqwest::header`]模块从导出[`http`]机箱。
 
@@ -56,15 +56,9 @@ fn run() -> Result<()> {
 ```
 
 [`http`]: https://docs.rs/http/*/http/
-
 [`mime::mime`]: https://docs.rs/mime/*/mime/struct.Mime.html
-
 [`reqwest::header::headermap::get`]: https://docs.rs/reqwest/*/reqwest/header/struct.HeaderMap.html#method.get
-
 [`reqwest::header::headervalue`]: https://docs.rs/reqwest/*/reqwest/header/struct.HeaderValue.html
-
 [`reqwest::header`]: https://docs.rs/reqwest/*/reqwest/header/index.html
-
 [content-type]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type
-
 [mime type]: https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types

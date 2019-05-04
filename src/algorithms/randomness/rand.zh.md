@@ -2,7 +2,7 @@
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-在随机数生成器的帮助下生成随机数[`rand::Rng`]通过。获得[`rand::thread_rng`]。每个线程都有一个初始化的生成器。整数在该类型的范围内均匀分布，并且浮点数从0到1但不包括1均匀分布。
+通过[`rand::thread_rng`]，在随机数生成器[`rand::Rng`]的帮助下，生成随机数。每个线程都有一个初始化的生成器。整数在该类型的范围（最大值 ～ 最小值）内，均匀分布，还有，浮点数是从 0 到 1，但不包括 1 的 均匀分布。
 
 ```rust
 extern crate rand;

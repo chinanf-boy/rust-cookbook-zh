@@ -1,8 +1,8 @@
 # 硬件支持
 
-| 食谱 | 板条箱 | 类别 |
-| --- | --- | --- |
-| [检查逻辑CPU核数][ex-check-cpu-cores] | [![num_cpus-badge]][num_cpus] | [![cat-hardware-support-badge]][cat-hardware-support] |
+| 烹饪书                                  | 箱子                          | 类别                                                  |
+| --------------------------------------- | ----------------------------- | ----------------------------------------------------- |
+| [检查逻辑 CPU 核数][ex-check-cpu-cores] | [![num_cpus-badge]][num_cpus] | [![cat-hardware-support-badge]][cat-hardware-support] |
 
 [ex-check-cpu-cores]: hardware/processor.html#check-number-of-logical-cpu-cores
 

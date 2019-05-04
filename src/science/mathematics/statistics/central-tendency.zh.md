@@ -14,7 +14,7 @@ fn main() {
     let count = data.len();
 
     let mean = match count {
-       positive if positive > 0 => Some(sum  / count as f32),
+       positive if positive > 0 => Some(sum /count as f32),
        _ => None
     };
 
@@ -22,7 +22,7 @@ fn main() {
 }
 ```
 
-第二个示例使用QuickSelect算法计算中间值，这避免了[`sort`]只对已知可能包含中间值的数据集分区进行排序。这种用途[`cmp`]和[`Ordering`]简洁地决定要检查的下一个分区，以及[`split_at`]在每个步骤中为下一个分区选择任意透视。
+第二个示例使用 QuickSelect 算法计算中间值，这避免了[`sort`]只对已知可能包含中间值的数据集分区进行排序。这种用途[`cmp`]和[`Ordering`]简洁地决定要检查的下一个分区，以及[`split_at`]在每个步骤中为下一个分区选择任意透视。
 
 ```rust
 use std::cmp::Ordering;
@@ -73,15 +73,15 @@ fn median(data: &[i32]) -> Option<f32> {
 
     match size {
         even if even % 2 == 0 => {
-            let fst_med = select(data, (even / 2) - 1);
-            let snd_med = select(data, even / 2);
+            let fst_med = select(data, (even/2) - 1);
+            let snd_med = select(data, even/2);
 
             match (fst_med, snd_med) {
-                (Some(fst), Some(snd)) => Some((fst + snd) as f32 / 2.0),
+                (Some(fst), Some(snd)) => Some((fst + snd) as f32/2.0),
                 _ => None
             }
         },
-        odd => select(data, odd / 2).map(|x| x as f32)
+        odd => select(data, odd/2).map(|x| x as f32)
     }
 }
 
@@ -122,23 +122,13 @@ fn main() {
 ```
 
 [option]: https://doc.rust-lang.org/std/option/enum.Option.html
-
 [sum]: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.sum
-
 [len]: https://doc.rust-lang.org/std/primitive.slice.html#method.len
-
 [sort]: https://doc.rust-lang.org/std/primitive.slice.html#method.sort
-
 [cmp]: https://doc.rust-lang.org/beta/std/cmp/trait.Ord.html#tymethod.cmp
-
 [ordering]: https://doc.rust-lang.org/beta/std/cmp/enum.Ordering.html
-
 [split_at]: https://doc.rust-lang.org/std/primitive.slice.html#method.split_at
-
 [hashmap]: https://doc.rust-lang.org/std/collections/struct.HashMap.html
-
 [fold]: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold
-
 [entry]: https://doc.rust-lang.org/std/collections/hash_map/enum.Entry.html
-
 [max_by_key]: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.max_by_key

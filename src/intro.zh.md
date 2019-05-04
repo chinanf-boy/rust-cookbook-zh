@@ -1,47 +1,47 @@
-# 用铁锈烹饪
+# Rust 烹饪书
 
-这个*锈菜谱*是一组简单的例子，演示了如何使用Rust生态系统的板条箱完成常见编程任务的良好实践。
+这个*Rust 烹饪书*是一组简单的例子，演示了如何使用 Rust 生态系统的箱子，完成常见编程任务的良好实践。
 
-[Read more about *Rust Cookbook*](about.html)包括如何阅读这本书的提示、如何使用示例以及关于约定的注释。
+[了解 _Rust 烹饪书_ 更多](about.zh.html)，包括如何阅读这本书的提示、如何使用示例，以及约定好的注释风格。
 
 ## 贡献
 
-这个项目的目的是让新的Rust程序员很容易做出贡献，并且是一个很容易与Rust社区接触的方法。它需要并欢迎帮助。详情见[MD的贡献.].
+这个项目的目的是，让新的 Rust 程序员能够容易做出贡献，帮个小忙，并且是一个与 Rust 社区接触的简单方法。本库十分欢迎帮助。详情见[CONTRIBUTING.md].
 
 [contributing.md]: https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.md
 
-包括算法.md
+{{#include algorithms.zh.md}}
 
-包括cli.md
+{{#include cli.zh.md}}
 
-包括压缩.md
+{{#include compression.zh.md}}
 
-包括并发性.md
+{{#include concurrency.zh.md}}
 
-包括密码学.md
+{{#include cryptography.zh.md}}
 
-包括数据结构.md
+{{#include data_structures.zh.md}}
 
-包括database.md
+{{#include database.zh.md}}
 
-包括日期时间.md
+{{#include datetime.zh.md}}
 
-包括开发工具.md
+{{#include development_tools.zh.md}}
 
-包括encoding.md
+{{#include encoding.zh.md}}
 
-包括file.md
+{{#include file.zh.md}}
 
-包括硬件.md
+{{#include hardware.zh.md}}
 
-包括mem.md
+{{#include mem.zh.md}}
 
-包括net.md
+{{#include net.zh.md}}
 
-包括os.md
+{{#include os.zh.md}}
 
-包括science.md
+{{#include science.zh.md}}
 
-包括文本.md
+{{#include text.zh.md}}
 
-包括web.md
+{{#include web.zh.md}}

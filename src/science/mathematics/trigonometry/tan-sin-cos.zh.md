@@ -1,15 +1,15 @@
-## 验证tan等于sin除以cos
+## 验证 tan 等于 sin 除以 cos
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-验证tan（x）是否等于sin（x）/cos（x），对于x=6。
+验证 tan（x）是否等于 sin（x）/cos（x），对于 x=6。
 
 ```rust
 fn main() {
     let x: f64 = 6.0;
 
     let a = x.tan();
-    let b = x.sin() / x.cos();
+    let b = x.sin()/x.cos();
 
     assert_eq!(a, b);
 }

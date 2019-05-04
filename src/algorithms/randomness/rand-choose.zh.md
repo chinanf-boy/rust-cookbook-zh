@@ -1,8 +1,8 @@
-## 从一组用户定义的字符创建随机密码
+## 从一组用户定义的字符，创建随机密码
 
 [![rand-badge]][rand] [![cat-os-badge]][cat-os]
 
-使用自定义用户定义的字节字符串随机生成给定长度ASCII字符的字符串[`gen_range`]。
+使用用户自定义的字节字符串，随机生成给定长度的 ASCII 字符串，运用[`gen_range`]。
 
 ```rust
 extern crate rand;
@@ -18,8 +18,8 @@ fn main() {
     let password: String = (0..PASSWORD_LEN)
         .map(|_| {
             let idx = rng.gen_range(0, CHARSET.len());
-            // This is safe because `idx` is in range of `CHARSET`
-            char::from(unsafe { *CHARSET.get_unchecked(idx) })
+            // 这是安全的，因为 `idx` 会在 `CHARSET` 的范围内。
+            char::from(unsafe { *CHARSET.get_unchecked(idx) }) // 来自用户的所有输入，最好都定义为不安全的。
         })
         .collect();
 

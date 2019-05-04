@@ -2,7 +2,7 @@
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-在半开放内生成随机值`[0, 10)`范围（不包括`10`）[`Rng::gen_range`]。
+用[`Rng::gen_range`]，在半开放`[0, 10)`范围（不包括`10`）生成随机值。
 
 ```rust
 extern crate rand;
@@ -16,7 +16,7 @@ fn main() {
 }
 ```
 
-[`Uniform`]可以用。获得价值[均匀分布]。这具有相同的效果，但是当在相同范围内重复生成数字时可能更快。
+[`Uniform`]可以用来获得[均匀分布][uniform distribution]的值。下面的代码是相同作用，但是当在相同范围内，重复生成数字时可能更快。
 
 ```rust
 extern crate rand;

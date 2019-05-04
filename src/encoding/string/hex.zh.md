@@ -2,7 +2,7 @@
 
 [![data-encoding-badge]][data-encoding] [![cat-encoding-badge]][cat-encoding]
 
-这个[`data_encoding`]板条箱提供`HEXUPPER::encode`采用的方法`&[u8]`返回一个`String`包含数据的十六进制表示形式。
+这个[`data_encoding`]箱子提供`HEXUPPER::encode`采用的方法`&[u8]`返回一个`String`包含数据的十六进制表示形式。
 
 类似地，A`HEXUPPER::decode`提供的方法`&[u8]`返回一个`Vec<u8>`如果输入数据解码成功。
 

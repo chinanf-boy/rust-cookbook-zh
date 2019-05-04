@@ -2,11 +2,11 @@
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-此示例计算一组测量的标准偏差和z分数。
+此示例计算一组测量的标准偏差和 z 分数。
 
-标准偏差定义为方差的平方根（此处用f32计算）[`sqrt`]，方差是[`sum`]每次测量与之间的平方差异[`mean`]，除以测量次数。
+标准偏差定义为方差的平方根（此处用 f32 计算）[`sqrt`]，方差是[`sum`]每次测量与之间的平方差异[`mean`]，除以测量次数。
 
-z分数是单次测量偏离的标准差的数量[`mean`]的数据集。
+z 分数是单次测量偏离的标准差的数量[`mean`]的数据集。
 
 ```rust
 fn mean(data: &[i32]) -> Option<f32> {
@@ -14,7 +14,7 @@ fn mean(data: &[i32]) -> Option<f32> {
     let count = data.len();
 
     match count {
-        positive if positive > 0 => Some(sum / count as f32),
+        positive if positive > 0 => Some(sum/count as f32),
         _ => None,
     }
 }
@@ -26,7 +26,7 @@ fn std_deviation(data: &[i32]) -> Option<f32> {
                 let diff = data_mean - (*value as f32);
 
                 diff * diff
-            }).sum::<f32>() / count as f32;
+            }).sum::<f32>()/count as f32;
 
             Some(variance.sqrt())
         },
@@ -47,7 +47,7 @@ fn main() {
         (Some(mean), Some(std_deviation)) => {
             let diff = data[4] as f32 - mean;
 
-            Some(diff / std_deviation)
+            Some(diff/std_deviation)
         },
         _ => None
     };
@@ -56,7 +56,5 @@ fn main() {
 ```
 
 [sqrt]: https://doc.rust-lang.org/std/primitive.f32.html#method.sqrt
-
 [sum]: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.sum
-
 [mean]: science/mathematics/statistics/central-tendency.html

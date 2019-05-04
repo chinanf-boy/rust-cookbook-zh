@@ -1,8 +1,8 @@
-## 排序浮动矢量
+## 排序浮动向量
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-可以使用f32或f64的矢量进行排序[`vec::sort_by`]和[`PartialOrd::partial_cmp`]。
+可以使用 f32 或 f64 的向量进行排序[`vec::sort_by`]和[`PartialOrd::partial_cmp`]。
 
 ```rust
 fn main() {
@@ -15,5 +15,4 @@ fn main() {
 ```
 
 [`vec::sort_by`]: https://doc.rust-lang.org/std/primitive.slice.html#method.sort_by
-
 [`partialord::partial_cmp`]: https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html#tymethod.partial_cmp

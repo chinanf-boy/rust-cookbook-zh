@@ -1,5 +1,5 @@
-# ANSI终端
+# ANSI 终端
 
-{{#include ansi_terminal / ansi_term-basic.md}}
+{{#include ansi_terminal/ansi_term-basic.md}}
 
-{{#include ../links.md}}
+{{#include ../links.zh.md}}

@@ -1,8 +1,8 @@
-## 创建sqlite数据库
+## 创建 sqlite 数据库
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-使用`rusqlite`板条箱打开sqlite数据库。见[机箱][documentation]用于在Windows上编译。
+使用`rusqlite`箱子打开 sqlite 数据库。见[机箱][documentation]用于在 Windows 上编译。
 
 [`Connection::open`]如果数据库不存在，将创建该数据库。
 
@@ -36,5 +36,4 @@ fn main() -> Result<()> {
 ```
 
 [`connection::open`]: https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.open
-
 [documentation]: https://github.com/jgallagher/rusqlite#user-content-notes-on-building-rusqlite-and-libsqlite3-sys

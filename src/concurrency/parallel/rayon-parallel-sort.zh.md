@@ -1,4 +1,4 @@
-## 并行排序矢量
+## 并行排序向量
 
 [![rayon-badge]][rayon] [![rand-badge]][rand] [![cat-concurrency-badge]][cat-concurrency]
 
@@ -25,7 +25,5 @@ fn main() {
 ```
 
 [`par_sort_unstable`]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html#method.par_sort_unstable
-
 [multiple options]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html
-
 [stable sorting]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html#method.par_sort

@@ -1,10 +1,10 @@
-## 将URL从字符串解析为`Url`类型
+## 将 URL 从字符串解析为`Url`类型
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-这个[`parse`]方法从`url`板条箱验证并分析`&str`变成一个[`Url`]结构。输入字符串可能格式不正确，因此此方法返回`Result<Url, ParseError>`.
+这个[`parse`]方法从`url`箱子验证并分析`&str`变成一个[`Url`]结构。输入字符串可能格式不正确，因此此方法返回`Result<Url, ParseError>`.
 
-一旦解析了URL，它就可以与`Url`类型。
+一旦解析了 URL，它就可以与`Url`类型。
 
 ```rust
 extern crate url;
@@ -22,5 +22,4 @@ fn main() -> Result<(), ParseError> {
 ```
 
 [`parse`]: https://docs.rs/url/*/url/struct.Url.html#method.parse
-
 [`url`]: https://docs.rs/url/*/url/struct.Url.html

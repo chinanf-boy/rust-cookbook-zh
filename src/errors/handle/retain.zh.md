@@ -2,9 +2,9 @@
 
 [![error-chain-badge]][error-chain] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-这个[误差链-]板条箱[匹配]对于函数返回的不同错误类型，可能是相对紧凑的。[`ErrorKind`]确定错误类型。
+这个[误差链-]箱子[匹配]对于函数返回的不同错误类型，可能是相对紧凑的。[`ErrorKind`]确定错误类型。
 
-使用[雷克韦斯特]查询随机整数生成器Web服务。将字符串响应转换为整数。Rust标准库，[雷克韦斯特]和Web服务都会产生错误。明确定义的生锈错误使用[`foreign_links`]. 额外的[`ErrorKind`]Web服务错误变量使用`errors`方块`error_chain!`宏。
+使用[雷克韦斯特]查询随机整数生成器 Web 服务。将字符串响应转换为整数。Rust 标准库，[雷克韦斯特]和 Web 服务都会产生错误。明确定义的生锈错误使用[`foreign_links`]. 额外的[`ErrorKind`]Web 服务错误变量使用`errors`方块`error_chain!`宏。
 
 ```rust
 #[macro_use]
@@ -56,7 +56,5 @@ fn main() {
 ```
 
 [`errorkind`]: https://docs.rs/error-chain/*/error_chain/example_generated/enum.ErrorKind.html
-
 [`foreign_links`]: https://docs.rs/error-chain/*/error_chain/#foreign-links
-
 [matching]: https://docs.rs/error-chain/*/error_chain/#matching-errors

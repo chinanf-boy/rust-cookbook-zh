@@ -1,9 +1,8 @@
-## 从一组字母数字字符创建随机密码
+## 从一组字母+数字的字符，创建随机密码
 
 [![rand-badge]][rand] [![cat-os-badge]][cat-os]
 
-随机生成范围内给定长度ASCII字符的字符串`A-Z,
-a-z, 0-9`，与[`Alphanumeric`]样品。
+随机生成，给定长度的 ASCII 字符串，字符范围是`A-Z, a-z, 0-9`，运用[`Alphanumeric`] （字母+数字）样品。
 
 ```rust
 extern crate rand;

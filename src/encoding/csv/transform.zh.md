@@ -1,8 +1,8 @@
-## 转换csv列
+## 转换 csv 列
 
 [![csv-badge]][csv] [![serde-badge]][serde] [![cat-encoding-badge]][cat-encoding]
 
-将包含颜色名称和十六进制颜色的csv文件转换为具有颜色名称和RGB颜色的文件。利用[猪瘟病毒]板条箱读取和写入csv文件，以及[塞尔德]对字节之间的行进行反序列化和序列化。
+将包含颜色名称和十六进制颜色的 csv 文件转换为具有颜色名称和 RGB 颜色的文件。利用[猪瘟病毒]箱子读取和写入 csv 文件，以及[塞尔德]对字节之间的行进行反序列化和序列化。
 
 见[`csv::Reader::deserialize`]，[`serde::Deserialize`]和[`std::str::FromStr`]
 
@@ -97,9 +97,6 @@ magenta,#ff00ff"
 ```
 
 [`csv::reader::deserialize`]: https://docs.rs/csv/*/csv/struct.Reader.html#method.deserialize
-
 [`csv::invalid_option`]: https://docs.rs/csv/*/csv/fn.invalid_option.html
-
 [`serde::deserialize`]: https://docs.rs/serde/*/serde/trait.Deserialize.html
-
 [`std::str::fromstr`]: https://doc.rust-lang.org/std/str/trait.FromStr.html

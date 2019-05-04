@@ -2,7 +2,7 @@
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-这个`log`板条箱提供测井工具。这个`env_logger`板条箱通过环境变量配置日志记录。这个[`debug!`]宏与其他宏一样工作[`std::fmt`]格式化字符串。
+这个`log`箱子提供测井工具。这个`env_logger`箱子通过环境变量配置日志记录。这个[`debug!`]宏与其他宏一样工作[`std::fmt`]格式化字符串。
 
 ```rust
 #[macro_use]
@@ -28,12 +28,11 @@ fn main() {
 $ RUST_LOG=debug cargo run
 ```
 
-货物打印调试信息，然后在输出的最后一行打印以下内容：
+货物(cargo)打印调试信息，然后在输出的最后一行打印以下内容：
 
 ```
 DEBUG:main: Executing query: DROP TABLE students
 ```
 
 [`debug!`]: https://docs.rs/log/*/log/macro.debug.html
-
 [`std::fmt`]: https://doc.rust-lang.org/std/fmt/
