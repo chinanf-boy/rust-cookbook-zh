@@ -2,9 +2,9 @@
 
 [![clap-badge]][clap] [![cat-command-line-badge]][cat-command-line]
 
-该应用程序描述了其命令行界面的结构`clap`的建设者风格。该[文件]提供了另外两种可能的实例化应用程序的方法。
+通过`clap`的构建风格，该应用程序描述了其命令行界面的结构。该[文档]提供了，另外两种可能的方法，去实例化应用程序。
 
-在构建器样式中，`with_name`是唯一的标识符`value_of`将用于检索传递的值。该`short`和`long`options控制用户将要键入的标志;短旗看起来像`-f`和长旗看起来像`--file`。
+在构建风格中，`with_name`是唯一标识符，而`value_of`则用于检索传递的值。该`short`和`long`选项控制用户将要键入的标志; `short`标志`-f`和`long`标志`--file`是同个标志。
 
 ```rust
 extern crate clap;
@@ -44,9 +44,9 @@ fn main() {
 }
 ```
 
-使用信息由生成`clap`。示例应用程序的用法如下所示。
+`help`信息，由`clap`生成。该示例应用程序的用法，如下所示。
 
-```
+```bash
 My Test Program 0.1.0
 Hackerman Jones <hckrmnjones@hack.gov>
 Teaches argument parsing
@@ -63,7 +63,7 @@ OPTIONS:
     -n, --number <num>    Five less than your favorite number
 ```
 
-我们可以通过运行如下命令来测试应用程序。
+我们可以通过运行如下命令，来测试应用程序。
 
 ```
 $ cargo run -- -f myfile.txt -n 251

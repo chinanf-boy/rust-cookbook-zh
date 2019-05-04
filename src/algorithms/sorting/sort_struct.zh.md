@@ -2,7 +2,7 @@
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-使用属性对 Person 结构的 Vector 进行排序`name`和`age`按其自然顺序（按名称和年龄）。为了使 Person 可排序，你需要四个特征[`Eq`]，[`PartialEq`]，[`Ord`]和[`PartialOrd`]。可以简单地推导出这些特征。您还可以使用 a 提供自定义比较器功能[`vec:sort_by`]方法，只按年龄排序。
+对 Person 结构的 Vector 进行排序，通过属性`name`和`age`的自然顺序（按名称和年龄）。为了使 Person 可排序，你需要四个 trait[`Eq`]，[`PartialEq`]，[`Ord`]和[`PartialOrd`]。可以简单地`derive`出这些特征。您还可以使用一个[`vec:sort_by`]方法，提供自定义比较函数：只按年龄排序。
 
 ```rust
 #[derive(Debug, Eq, Ord, PartialEq, PartialOrd)]
@@ -27,7 +27,7 @@ fn main() {
         Person::new("John".to_string(), 1),
     ];
 
-    // Sort people by derived natural order (Name and age)
+    // 自然顺序，排序 people  (名字 和 年龄)
     people.sort();
 
     assert_eq!(
@@ -38,7 +38,7 @@ fn main() {
             Person::new("Zoe".to_string(), 25),
         ]);
 
-    // Sort people by age
+    // 用 年龄 排序 
     people.sort_by(|a, b| b.age.cmp(&a.age));
 
     assert_eq!(
