@@ -4,7 +4,7 @@
 
 在[Run an external command and process stdout](#run-an-external-command-and-process-stdout)，直到外部[`Command`]完成了。下面的方法调用[`Stdio::piped`]创建管道并读取`stdout`一旦[`BufReader`]更新。
 
-下面的配方相当于unix shell命令`journalctl | grep usb`.
+下面的食谱相当于 unix shell 命令`journalctl | grep usb`.
 
 ```rust,no_run
 use std::process::{Command, Stdio};
@@ -30,7 +30,5 @@ fn main() -> Result<(), Error> {
 ```
 
 [`bufreader`]: https://doc.rust-lang.org/std/io/struct.BufReader.html
-
 [`command`]: https://doc.rust-lang.org/std/process/struct.Command.html
-
 [`stdio::piped`]: https://doc.rust-lang.org/std/process/struct.Stdio.html

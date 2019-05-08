@@ -8,7 +8,7 @@
 | [对 base64 进行编码和解码][ex-base64]                             | [![base64-badge]][base64]                   | [![cat-encoding-badge]][cat-encoding] |
 | [读取 csv 记录][ex-csv-read]                                      | [![csv-badge]][csv]                         | [![cat-encoding-badge]][cat-encoding] |
 | [读取具有不同分隔符的 csv 记录][ex-csv-delimiter]                 | [![csv-badge]][csv]                         | [![cat-encoding-badge]][cat-encoding] |
-| [筛选与谓词匹配的 csv 记录][ex-csv-filter]                        | [![csv-badge]][csv]                         | [![cat-encoding-badge]][cat-encoding] |
+| [筛选与断言匹配的 csv 记录][ex-csv-filter]                        | [![csv-badge]][csv]                         | [![cat-encoding-badge]][cat-encoding] |
 | [使用 serde 处理无效的 csv 数据][ex-invalid-csv]                  | [![csv-badge]][csv] [![serde-badge]][serde] | [![cat-encoding-badge]][cat-encoding] |
 | [将记录序列化为 csv][ex-serialize-csv]                            | [![csv-badge]][csv]                         | [![cat-encoding-badge]][cat-encoding] |
 | [使用 serde 将记录序列化为 csv][ex-csv-serde]                     | [![csv-badge]][csv] [![serde-badge]][serde] | [![cat-encoding-badge]][cat-encoding] |
@@ -32,4 +32,4 @@
 [ex-toml-config]: encoding/complex.html#deserialize-a-toml-configuration-file
 [ex-byteorder-le]: encoding/complex.html#read-and-write-integers-in-little-endian-byte-order
 
-包含链接.md
+{{#include links.zh.md}}

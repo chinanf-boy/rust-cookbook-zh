@@ -1,12 +1,12 @@
-## 使用给定谓词并行搜索项目
+## 使用给定断言，并行搜索项目
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-这个例子使用[`rayon::find_any`]和[`par_iter`]并行地搜索满足给定闭包中谓词的元素的向量。
+这个例子使用[`rayon::find_any`]和[`par_iter`]获得一个，通过并行搜索，满足给定闭包中断言的元素向量。
 
-如果有多个元素满足闭包参数中定义的谓词[`rayon::find_any`]，`rayon`返回找到的第一个，不一定是第一个。
+如果，有多个元素满足[`rayon::find_any`]闭包参数中，定义的断言，`rayon`返回找到的第一个，但不一定是(顺序上的)第一个。
 
-另请注意，闭包的参数是对引用的引用（`&&x`）。请参阅讨论[`std::find`]了解更多细节。
+另请注意，闭包的参数是对一个引用的一个引用（`&&x`）。请查阅[`std::find`]的讨论，了解更多细节。
 
 ```rust
 extern crate rayon;
@@ -27,7 +27,5 @@ fn main() {
 ```
 
 [`par_iter`]: https://docs.rs/rayon/*/rayon/iter/trait.IntoParallelRefIterator.html#tymethod.par_iter
-
 [`rayon::find_any`]: https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.find_any
-
 [`std::find`]: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.find

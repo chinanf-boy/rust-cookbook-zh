@@ -2,7 +2,7 @@
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-使用[`filter_entry`]递归下降到通过`is_not_hidden`谓词因此跳过隐藏的文件和目录。[`Iterator::filter`]适用于每个[`WalkDir::DirEntry`]即使父目录是隐藏目录。
+使用[`filter_entry`]递归下降到通过`is_not_hidden`断言因此跳过隐藏的文件和目录。[`Iterator::filter`]适用于每个[`WalkDir::DirEntry`]即使父目录是隐藏目录。
 
 根目录`"."`通过收益[`WalkDir::depth`]在使用中`is_not_hidden`谓语。
 
@@ -29,9 +29,6 @@ fn main() {
 ```
 
 [`filter_entry`]: https://docs.rs/walkdir/*/walkdir/struct.IntoIter.html#method.filter_entry
-
 [`iterator::filter`]: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter
-
 [`walkdir::depth`]: https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html#method.depth
-
 [`walkdir::direntry`]: https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html

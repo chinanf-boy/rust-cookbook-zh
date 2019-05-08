@@ -12,9 +12,9 @@ extern crate postgres;
 use postgres::{Connection, TlsMode, Error};
 
 fn main() -> Result<(), Error> {
-    let conn = Connection::connect("postgresql://postgres:postgres@localhost/library", 
+    let conn = Connection::connect("postgresql://postgres:postgres@localhost/library",
                                     TlsMode::None)?;
-    
+
      conn.execute("CREATE TABLE IF NOT EXISTS author (
                     id              SERIAL PRIMARY KEY,
                     name            VARCHAR NOT NULL,
@@ -33,4 +33,4 @@ fn main() -> Result<(), Error> {
 ```
 
 [`postgres`]: https://docs.rs/postgres/0.15.2/postgres/
-[`Connection::connect`]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.connect
+[`connection::connect`]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.connect

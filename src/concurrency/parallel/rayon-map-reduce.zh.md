@@ -2,9 +2,9 @@
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-这个例子使用[`rayon::filter`]，[`rayon::map`]，和[`rayon::reduce`]计算平均年龄`Person`年龄超过 30 岁的物品。
+这个例子使用[`rayon::filter`]，[`rayon::map`]，和[`rayon::reduce`]，计算`Person`对象的平均年龄，哪个年龄超过 30 。
 
-[`rayon::filter`]返回满足给定谓词的集合中的元素。[`rayon::map`]对每个元素执行一个操作，创建一个新的迭代，然后[`rayon::reduce`]给定先前的减少和当前元素执行操作。还显示了使用[`rayon::sum`]，与本例中的 reduce 操作具有相同的结果。
+[`rayon::filter`]返回满足给定断言的集合，其中的元素。[`rayon::map`]对每个元素执行一个操作，创建一个新的迭代，然后[`rayon::reduce`]：执行带有一个当前元素，和前一个(执行结果)的操作。还显示了使用[`rayon::sum`]，与本例中的 reduce 操作，具有相同的结果。
 
 ```rust
 extern crate rayon;

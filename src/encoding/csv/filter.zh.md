@@ -1,4 +1,4 @@
-## 筛选与谓词匹配的csv记录
+## 筛选与断言匹配的 csv 记录
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
@@ -46,4 +46,4 @@ West Hollywood,CA,37031,34.0900000,-118.3608333";
 # quick_main!(run);
 ```
 
-*免责声明：本示例改编自[the csv crate tutorial](https://docs.rs/csv/*/csv/tutorial/index.html#filter-by-search)*.
+_免责声明：本示例改编自[the csv crate tutorial](https://docs.rs/csv/_/csv/tutorial/index.html#filter-by-search)\*.

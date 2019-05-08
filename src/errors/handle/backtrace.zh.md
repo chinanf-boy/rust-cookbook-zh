@@ -4,7 +4,7 @@
 
 这个方法演示了如何处理复杂的错误场景，然后打印回溯。它依赖于[`chain_err`]通过附加新错误来扩展错误。可以解开错误堆栈，从而提供更好的上下文来理解引发错误的原因。
 
-以下配方尝试反序列化值`256`变成一个`u8`. 错误将从serde冒泡，然后是csv，最后是用户代码。
+以下食谱尝试反序列化值`256`变成一个`u8`. 错误将从 serde 冒泡，然后是 csv，最后是用户代码。
 
 ```rust
 # extern crate csv;
@@ -88,5 +88,4 @@ Error level - description
 使用`RUST_BACKTRACE=1`显示详细信息[`backtrace`]与此错误关联。
 
 [`backtrace`]: https://docs.rs/error-chain/*/error_chain/trait.ChainedError.html#tymethod.backtrace
-
 [`chain_err`]: https://docs.rs/error-chain/*/error_chain/index.html#chaining-errors

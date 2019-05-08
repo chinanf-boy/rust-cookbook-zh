@@ -10,4 +10,4 @@
 
 包括外部/连续.md
 
-包括../links.md
+{{#include links.zh.md}}

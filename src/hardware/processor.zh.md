@@ -1,5 +1,5 @@
 # 处理器
 
-包括处理器/CPU计数.md
+包括处理器/CPU 计数.md
 
-包括../links.md
+{{#include links.zh.md}}

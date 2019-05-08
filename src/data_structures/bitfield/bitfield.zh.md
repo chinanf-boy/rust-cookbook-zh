@@ -1,8 +1,8 @@
-## 对表示为位字段的类型定义和操作
+## 定义表示为位字段的类型，并操作
 
 [![bitflags-badge]][bitflags] [![cat-no-std-badge]][cat-no-std]
 
-创建类型安全位域类型`MyFlags`借助于[`bitflags!`]宏和实现元素`clear`操作以及[`Display`]它的特点。随后，显示基本的位操作和格式设置。
+创建，类型安全位字段的类型`MyFlags`，这是借助于[`bitflags!`]宏，和实现元素的`clear`操作，还有[`Display`]。随后，显示基本的位操作和格式设置。
 
 ```rust
 #[macro_use]
@@ -23,7 +23,7 @@ bitflags! {
 
 impl MyFlags {
     pub fn clear(&mut self) -> &mut MyFlags {
-        self.bits = 0;  
+        self.bits = 0;
         self
     }
 }
@@ -37,10 +37,10 @@ impl fmt::Display for MyFlags {
 fn main() {
     let e1 = MyFlags::FLAG_A | MyFlags::FLAG_C;
     let e2 = MyFlags::FLAG_B | MyFlags::FLAG_C;
-    assert_eq!((e1 | e2), MyFlags::FLAG_ABC);   
-    assert_eq!((e1 & e2), MyFlags::FLAG_C);    
-    assert_eq!((e1 - e2), MyFlags::FLAG_A);    
-    assert_eq!(!e2, MyFlags::FLAG_A);           
+    assert_eq!((e1 | e2), MyFlags::FLAG_ABC);
+    assert_eq!((e1 & e2), MyFlags::FLAG_C);
+    assert_eq!((e1 - e2), MyFlags::FLAG_A);
+    assert_eq!(!e2, MyFlags::FLAG_A);
 
     let mut flags = MyFlags::FLAG_ABC;
     assert_eq!(format!("{}", flags), "00000000000000000000000000000111");
@@ -51,5 +51,4 @@ fn main() {
 ```
 
 [`bitflags!`]: https://docs.rs/bitflags/*/bitflags/macro.bitflags.html
-
 [`display`]: https://doc.rust-lang.org/std/fmt/trait.Display.html

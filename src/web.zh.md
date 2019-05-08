@@ -40,4 +40,4 @@
 [ex-mime-from-filename]: web/mime.html#get-mime-type-from-filename
 [ex-http-response-mime-type]: web/mime.html#parse-the-mime-type-of-a-http-response
 
-包含链接.md
+{{#include links.zh.md}}

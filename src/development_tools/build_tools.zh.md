@@ -8,6 +8,6 @@
 
 包括构建工具/cc-defines.md
 
-包括../links.md
+{{#include links.zh.md}}
 
 [build-script-docs]: http://doc.crates.io/build-script.html

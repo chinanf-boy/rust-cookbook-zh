@@ -6,4 +6,4 @@
 
 包括刮削/唯一.md
 
-包括../links.md
+{{#include links.zh.md}}

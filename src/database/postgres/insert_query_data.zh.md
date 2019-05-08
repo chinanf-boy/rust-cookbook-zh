@@ -2,7 +2,7 @@
 
 [![postgres-badge]][postgres] [![cat-database-badge]][cat-database]
 
-配方将数据插入`author`表使用[`execute`]方法`Connection`. 然后，显示`author`表使用[`query`]方法`Connection`.
+该食谱，用`Connection`的[`execute`]方法，将数据插入`author`表。 然后，用`Connection`的[`query`]方法，显示`author`表。
 
 ```rust,no_run
 extern crate postgres;
@@ -17,9 +17,9 @@ struct Author {
 }
 
 fn main() -> Result<(), Error> {
-    let conn = Connection::connect("postgresql://postgres:postgres@localhost/library", 
+    let conn = Connection::connect("postgresql://postgres:postgres@localhost/library",
                                     TlsMode::None)?;
-    
+
     let mut authors = HashMap::new();
     authors.insert(String::from("Chinua Achebe"), "Nigeria");
     authors.insert(String::from("Rabindranath Tagore"), "India");
@@ -51,5 +51,4 @@ fn main() -> Result<(), Error> {
 ```
 
 [`execute`]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.execute
-
 [`query`]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.query

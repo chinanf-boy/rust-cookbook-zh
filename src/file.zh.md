@@ -8,7 +8,7 @@
 | [过去 24 小时内修改过的文件名][ex-file-24-hours-modified]  | [![std-badge]][std]             | [![cat-filesystem-badge]][cat-filesystem] [![cat-os-badge]][cat-os] |
 | [查找给定路径的循环][ex-find-file-loops]                   | [![same_file-badge]][same_file] | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [递归查找重复的文件名][ex-dedup-filenames]                 | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
-| [递归查找具有给定谓词的所有文件][ex-file-predicate]        | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
+| [递归查找具有给定断言的所有文件][ex-file-predicate]        | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [跳过点文件时遍历目录][ex-file-skip-dot]                   | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [在给定深度递归计算文件大小][ex-file-sizes]                | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [递归查找所有 PNG 文件][ex-glob-recursive]                 | [![glob-badge]][glob]           | [![cat-filesystem-badge]][cat-filesystem]                           |
@@ -26,4 +26,4 @@
 [ex-glob-recursive]: file/dir.html#find-all-png-files-recursively
 [ex-glob-with]: file/dir.html#find-all-files-with-given-pattern-ignoring-filename-case
 
-包含链接.md
+{{#include links.zh.md}}

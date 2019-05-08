@@ -1,10 +1,10 @@
-## 测量两个代码段之间经过的时间
+## 测量两个代码段间，已用的时间
 
 [![std-badge]][std] [![cat-time-badge]][cat-time]
 
-措施[`time::Instant::elapsed`]自从[`time::Instant::now`].
+测量[`time::Instant::elapsed`]，从[`time::Instant::now`]开始。
 
-打电话[`time::Instant::elapsed`]返回A[`time::Duration`]我们在示例末尾打印的。此方法不会改变或重置[`time::Instant`]对象。
+调用[`time::Instant::elapsed`]，会返回一个[`time::Duration`]，这个，我们将在示例末尾打印。此方法不会改变或重置[`time::Instant`]对象。
 
 ```rust
 use std::time::{Duration, Instant};
@@ -24,9 +24,6 @@ fn main() {
 ```
 
 [`time::duration`]: https://doc.rust-lang.org/std/time/struct.Duration.html
-
 [`time::instant::elapsed`]: https://doc.rust-lang.org/std/time/struct.Instant.html#method.elapsed
-
 [`time::instant::now`]: https://doc.rust-lang.org/std/time/struct.Instant.html#method.now
-
 [`time::instant`]: https://doc.rust-lang.org/std/time/struct.Instant.html

@@ -1,8 +1,8 @@
-## 解压缩tarball
+## 解压缩 一个 tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-解压缩（[`GzDecoder`]）和提取物（[`Archive::unpack`]）来自压缩tarball命名的所有文件`archive.tar.gz`位于当前工作目录中的同一位置。
+解压缩（[`GzDecoder`]）和提取（[`Archive::unpack`]）当前工作目录中的压缩包`archive.tar.gz`的所有文件，并放在同一位置。
 
 ```rust,no_run
 extern crate flate2;
@@ -25,5 +25,4 @@ fn main() -> Result<(), std::io::Error> {
 ```
 
 [`archive::unpack`]: https://docs.rs/tar/*/tar/struct.Archive.html#method.unpack
-
 [`gzdecoder`]: https://docs.rs/flate2/*/flate2/read/struct.GzDecoder.html

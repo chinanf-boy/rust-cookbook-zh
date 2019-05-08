@@ -1,8 +1,8 @@
-## 从路径中删除前缀时解压缩tarball
+## 从路径中删除前缀时，解压缩一个 tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-迭代了[`Archive::entries`]。使用[`Path::strip_prefix`]删除指定的路径前缀（`bundle/logs`）。最后，提取出来[`tar::Entry`]通过[`Entry::unpack`]。
+迭代[`Archive::entries`]。使用[`Path::strip_prefix`]删除指定的路径前缀（`bundle/logs`）。最后，通过[`Entry::unpack`]，提取出[`tar::Entry`] - 压缩中的项。
 
 ```rust,no_run
 # #[macro_use]
@@ -14,7 +14,7 @@ use std::fs::File;
 use std::path::PathBuf;
 use flate2::read::GzDecoder;
 use tar::Archive;
-# 
+#
 # error_chain! {
 #   foreign_links {
 #     Io(std::io::Error);
@@ -44,9 +44,6 @@ fn main() -> Result<()> {
 ```
 
 [`archive::entries`]: https://docs.rs/tar/*/tar/struct.Archive.html#method.entries
-
 [`entry::unpack`]: https://docs.rs/tar/*/tar/struct.Entry.html#method.unpack
-
 [`path::strip_prefix`]: https://doc.rust-lang.org/std/path/struct.Path.html#method.strip_prefix
-
 [`tar::entry`]: https://docs.rs/tar/*/tar/struct.Entry.html

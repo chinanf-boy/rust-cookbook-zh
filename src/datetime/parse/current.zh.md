@@ -2,7 +2,7 @@
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-获取当前的UTC[`DateTime`]它的小时/分钟/秒通过[`Timelike`]它的年/月/日/工作日通过[`Datelike`].
+[`DateTime`]获取当前的 UTC，还有[`Timelike`]，能得到它的小时/分钟/秒（hour/minute/second），通过[`Datelike`]，则能获得它的年/月/日/周末（year/month/day/weekday）。
 
 ```rust
 extern crate chrono;
@@ -41,7 +41,5 @@ fn main() {
 ```
 
 [`datelike`]: https://docs.rs/chrono/*/chrono/trait.Datelike.html
-
 [`datetime`]: https://docs.rs/chrono/*/chrono/struct.DateTime.html
-
 [`timelike`]: https://docs.rs/chrono/*/chrono/trait.Timelike.html

@@ -1,10 +1,10 @@
-## 产生一个短命的线程
+## 生成一个短命的线程
 
 [![crossbeam-badge]][crossbeam] [![cat-concurrency-badge]][cat-concurrency]
 
-该示例使用了[横梁]crate，为并发和并行编程提供数据结构和函数。[`Scope::spawn`]生成一个新的作用域线程，保证在从传入的闭包返回之前终止[`crossbeam::scope`]功能，意味着您可以从调用函数引用数据。
+该示例使用了[crossbeam]箱子，为并发和并行编程，提供数据结构和函数。[`Scope::spawn`]生成一个新的作用域线程，保证[`crossbeam::scope`]函数的闭包(参数)返回之前终止，意味着，您可以从调用的函数中，引用数据。
 
-此示例将数组拆分为一半，并在单独的线程中执行工作。
+此示例将数组拆分为一半，并在单独的线程中，执行工作。
 
 ```rust
 extern crate crossbeam;

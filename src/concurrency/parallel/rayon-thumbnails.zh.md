@@ -1,10 +1,10 @@
-## 并行生成jpg缩略图
+## 并行，生成 jpg 缩略图
 
 [![rayon-badge]][rayon] [![glob-badge]][glob] [![image-badge]][image] [![cat-concurrency-badge]][cat-concurrency] [![cat-filesystem-badge]][cat-filesystem]
 
-此示例为当前目录中的所有.jpg文件生成缩略图，然后将其保存在名为的新文件夹中`thumbnails`。
+此示例：帮当前目录中的所有`.jpg` 文件生成缩略图，然后将其保存在名为`thumbnails`的新文件夹中。
 
-[`glob::glob_with`]在当前目录中查找jpeg文件。`rayon`使用平行调整图像大小[`par_iter`]调用[`DynamicImage::resize`]。
+[`glob::glob_with`]在当前目录中，查找 jpeg 文件。`rayon`使用[`par_iter`]，并发调整图像大小，每次都调用[`DynamicImage::resize`]。
 
 ```rust,no_run
 # #[macro_use]
@@ -75,7 +75,5 @@ where
 ```
 
 [`glob::glob_with`]: https://docs.rs/glob/*/glob/fn.glob_with.html
-
 [`par_iter`]: https://docs.rs/rayon/*/rayon/iter/trait.IntoParallelRefIterator.html#tymethod.par_iter
-
 [`dynamicimage::resize`]: https://docs.rs/image/*/image/enum.DynamicImage.html#method.resize

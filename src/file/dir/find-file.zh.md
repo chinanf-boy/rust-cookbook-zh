@@ -1,8 +1,8 @@
-## 递归查找具有给定谓词的所有文件
+## 递归查找具有给定断言的所有文件
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-在当前目录中查找在最后一天内修改的JSON文件。使用[`follow_links`]确保符号链接像普通目录和文件一样被跟踪。
+在当前目录中查找在最后一天内修改的 JSON 文件。使用[`follow_links`]确保符号链接像普通目录和文件一样被跟踪。
 
 ```rust,no_run
 # #[macro_use]

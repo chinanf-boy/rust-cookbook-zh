@@ -1,14 +1,14 @@
-## 将分形调度工作绘制到线程池
+## 将绘制分形工作，分派到线程池
 
 [![threadpool-badge]][threadpool] [![num-badge]][num] [![num_cpus-badge]][num_cpus] [![image-badge]][image] [![cat-concurrency-badge]][cat-concurrency][![cat-science-badge]][cat-science][![cat-rendering-badge]][cat-rendering]
 
-此示例通过从中绘制分形来生成图像[朱莉娅设定]用于分布式计算的线程池。
+本示例：绘制[朱利亚集合]的一个分形，生成一个图像，会用到分布式计算的线程池。
 
 <a href="https://cloud.githubusercontent.com/assets/221000/26546700/9be34e80-446b-11e7-81dc-dd9871614ea1.png"><img src="https://cloud.githubusercontent.com/assets/221000/26546700/9be34e80-446b-11e7-81dc-dd9871614ea1.png" width="150" /></a>
 
-为给定宽度和高度的输出图像分配内存[`ImageBuffer::new`]。[`Rgb::from_channels`]计算 RGB 像素值。创建[`ThreadPool`]线程数等于核心数[`num_cpus::get`]。[`ThreadPool::execute`]接收每个像素作为单独的工作。
+通过[`ImageBuffer::new`]，为给定宽度和高度的输出图像，分配内存。[`Rgb::from_channels`]计算 RGB 像素值。创建[`ThreadPool`]线程数，等于[`num_cpus::get`]核心数。[`ThreadPool::execute`]收到的每个像素，都作为一个单独的工作。
 
-[`mpsc::channel`]收到工作和[`Receiver::recv`]检索它们。[`ImageBuffer::put_pixel`]使用数据设置像素颜色。[`ImageBuffer::save`]将图像写入`output.png`。
+[`mpsc::channel`]收到工作，还有[`Receiver::recv`]会检索它们。[`ImageBuffer::put_pixel`]使用数据，设置像素颜色。[`ImageBuffer::save`]就将图像写入`output.png`。
 
 ```rust,no_run
 # #[macro_use]

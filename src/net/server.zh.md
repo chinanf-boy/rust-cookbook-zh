@@ -2,4 +2,4 @@
 
 包括服务器/监听未使用的.md
 
-包括../links.md
+{{#include links.zh.md}}

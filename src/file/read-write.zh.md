@@ -6,4 +6,4 @@
 
 包括读写/memmap.md
 
-包括../links.md
+{{#include links.zh.md}}

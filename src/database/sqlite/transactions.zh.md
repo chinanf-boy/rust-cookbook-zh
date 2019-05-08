@@ -2,11 +2,13 @@
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-[`Connection::open`]将打开`cats.db`来自顶级配方的数据库。
+[`Connection::open`]将打开`cats.db` —— 来自之前食谱的数据库。
 
-以开始事务[`Connection::transaction`]. 事务将回滚，除非使用[`Transaction::commit`].
+用[`Connection::transaction`]开始一个事务（transaction）。事务将回滚，除非明确使用[`Transaction::commit`]提交。
 
-在下面的示例中，颜色添加到对颜色名称具有唯一约束的表中。当尝试插入重复的颜色时，事务将回滚。
+> 一次事务，就是一系列对数据库的操作，且明确`commit`后才会执行。
+
+在下面的示例中，将颜色添加表，该表对颜色名称要唯一，进行约束。当尝试插入重复的颜色时，事务将回滚。
 
 ```rust,no_run
 extern crate rusqlite;
@@ -47,5 +49,4 @@ fn rolled_back_tx(conn: &mut Connection) -> Result<()> {
 ```
 
 [`connection::transaction`]: https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.transaction
-
 [`transaction::commit`]: https://docs.rs/rusqlite/*/rusqlite/struct.Transaction.html#method.commit

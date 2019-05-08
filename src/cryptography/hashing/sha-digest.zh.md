@@ -1,8 +1,8 @@
-## 计算文件的SHA-256摘要
+## 计算文件的 SHA-256 码
 
 [![ring-badge]][ring] [![data-encoding-badge]][data-encoding] [![cat-cryptography-badge]][cat-cryptography]
 
-将一些数据写入文件，然后计算SHA-256[`digest::Digest`]文件的内容使用[`digest::Context`].
+将一些数据写入文件，然后获得文件的内容，再用使用[`digest::Context`]，[`digest::Digest`]计算 SHA-256 码。
 
 ```rust
 # #[macro_use]
@@ -56,5 +56,4 @@ fn run() -> Result<()> {
 ```
 
 [`digest::context`]: https://briansmith.org/rustdoc/ring/digest/struct.Context.html
-
 [`digest::digest`]: https://briansmith.org/rustdoc/ring/digest/struct.Digest.html

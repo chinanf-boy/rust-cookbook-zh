@@ -1,10 +1,12 @@
 <a name="ex-pbkdf2"></a>
 
-## 用pbkdf2对密码进行salt和hash操作
+## 用 PBKDF2 对密码，进行 加盐 和 哈希 操作
 
 [![ring-badge]][ring] [![data-encoding-badge]][data-encoding] [![cat-cryptography-badge]][cat-cryptography]
 
-使用[`ring::pbkdf2`]使用pbkdf2密钥派生函数散列salt密码[`pbkdf2::derive`].  用验证哈希是否正确[`pbkdf2::verify`]. 盐是用[`SecureRandom::fill`]，它用安全生成的随机数填充salt字节数组。
+[`ring::pbkdf2`]的用法是，使用 PBKDF2 密钥派生函数[`pbkdf2::derive`]，哈希 腌制的密码。 用[`pbkdf2::verify`]验证哈希是否正确。 盐是用[`SecureRandom::fill`]生成的，它用安全生成的随机数，填充 salt 字节数组。
+
+> 这个在哈希中加入字符串的方式称为“加盐”。其作用是让加盐后的哈希结果和没有加盐的结果不相同，在不同的应用情景中，这个处理可以增加额外的安全性。
 
 ```rust
 extern crate ring;
@@ -59,9 +61,6 @@ fn main() -> Result<(), Unspecified> {
 ```
 
 [`pbkdf2::derive`]: https://briansmith.org/rustdoc/ring/pbkdf2/fn.derive.html
-
 [`pbkdf2::verify`]: https://briansmith.org/rustdoc/ring/pbkdf2/fn.verify.html
-
 [`ring::pbkdf2`]: https://briansmith.org/rustdoc/ring/pbkdf2/index.html
-
 [`securerandom::fill`]: https://briansmith.org/rustdoc/ring/rand/trait.SecureRandom.html#tymethod.fill

@@ -1,9 +1,10 @@
 # 数据库
 
-包括sqlite/initialization.md
+{{#include sqlite/initialization.zh.md}}
 
-包括sqlite/insert_select.md
+{{#include sqlite/insert_select.zh.md}}
 
-包括sqlite/transactions.md
+{{#include sqlite/transactions.zh.md}}
 
-包括../links.md
+{{#include ../links.zh.md}}
+

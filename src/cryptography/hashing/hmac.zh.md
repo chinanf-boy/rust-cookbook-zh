@@ -1,8 +1,8 @@
-## 与HMAC Digest签署并验证消息
+## 与 HMAC 码，签署并验证消息
 
 [![ring-badge]][ring] [![cat-cryptography-badge]][cat-cryptography]
 
-使用[`ring::hmac`]创建一个[`hmac::Signature`]然后验证签名是否正确。
+使用[`ring::hmac`]创建一个[`hmac::Signature`]，然后验证签名是否正确。
 
 ```rust
 extern crate ring;
@@ -26,5 +26,4 @@ fn main() -> Result<(), Unspecified> {
 ```
 
 [`hmac::signature`]: https://briansmith.org/rustdoc/ring/hmac/struct.Signature.html
-
 [`ring::hmac`]: https://briansmith.org/rustdoc/ring/hmac/

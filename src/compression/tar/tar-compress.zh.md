@@ -1,10 +1,13 @@
-## 将目录压缩为tarball
+## 将目录压缩为一个 tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-压缩`/var/log`目录进入`archive.tar.gz`。
+把`/var/log`目录压缩，为`archive.tar.gz`。
 
-创建一个[`File`]包装成[`GzEncoder`]和[`tar::Builder`]。</br>添加内容`/var/log`目录递归进入归档下`backup/logs`路径[`Builder::append_dir_all`]。[`GzEncoder`]负责在写入数据之前透明地压缩数据`archive.tar.gz`。
+创建一个[`File`]，包进[`GzEncoder`]，在包入[`tar::Builder`]。
+
+- 用[`Builder::append_dir_all`]递归添加`/var/log`目录中的内容，归档到`backup/logs`路径下。
+- [`GzEncoder`]负责在数据写入`archive.tar.gz`之前，透明地压缩数据。
 
 ```rust,no_run
 extern crate tar;
@@ -24,9 +27,6 @@ fn main() -> Result<(), std::io::Error> {
 ```
 
 [`builder::append_dir_all`]: https://docs.rs/tar/*/tar/struct.Builder.html#method.append_dir_all
-
 [`file`]: https://doc.rust-lang.org/std/fs/struct.File.html
-
 [`gzencoder`]: https://docs.rs/flate2/*/flate2/write/struct.GzEncoder.html
-
 [`tar::builder`]: https://docs.rs/tar/*/tar/struct.Builder.html

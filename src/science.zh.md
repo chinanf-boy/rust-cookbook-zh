@@ -2,4 +2,4 @@
 
 包括科学/数学.md
 
-包含链接.md
+{{#include links.zh.md}}

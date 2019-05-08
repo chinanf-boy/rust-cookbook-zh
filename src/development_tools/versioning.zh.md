@@ -8,6 +8,6 @@
 
 包括最新版本/semver.md
 
-包括版本控制/semver命令.md
+包括版本控制/semver 命令.md
 
-包括../links.md
+{{#include links.zh.md}}

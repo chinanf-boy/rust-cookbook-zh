@@ -2,7 +2,7 @@
 
 [![postgres-badge]][postgres] [![cat-database-badge]][cat-database]
 
-这个烹饪书列出了数据库中的前 7999 名艺术家的国籍[`Museum of Modern Art`]按降序排列。
+该食谱，列出了数据库中，[现代艺术博物馆][`museum of modern art`]的前 7999 名艺术家的国籍，按降序排列。
 
 ```rust,no_run
 extern crate postgres;

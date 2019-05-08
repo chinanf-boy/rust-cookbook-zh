@@ -1,11 +1,11 @@
-# 螺纹
+# 线程
 
-包括螺纹/横梁生成.md
+{{#include thread/crossbeam-spawn.zh.md}}
 
-包括线程/全局mut状态.md
+{{#include thread/global-mut-state.zh.md}}
 
-包括thread/threadpool walk.md
+{{#include thread/threadpool-walk.zh.md}}
 
-包括thread/threadpool fractal.md
+{{#include thread/threadpool-fractal.zh.md}}
 
-包括../links.md
+{{#include ../links.zh.md}}

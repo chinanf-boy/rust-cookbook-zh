@@ -18,4 +18,4 @@
 [ex-unicode-graphemes]: text/string_parsing.html#collect-unicode-graphemes
 [string_parsing-from_str]: text/string_parsing.html#implement-the-fromstr-trait-for-a-custom-struct
 
-包含链接.md
+{{#include links.zh.md}}

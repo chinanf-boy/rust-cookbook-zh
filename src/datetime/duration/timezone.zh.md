@@ -1,8 +1,8 @@
-## 将本地时间转换为其他时区
+## 将本地时间，转换为其他时区
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-获取本地时间并使用[`offset::Local::now`]然后使用[`DateTime::from_utc`]结构方法。然后使用[`offset::FixedOffset`]然后结构和UTC时间转换为UTC+8和UTC-2。
+用[`offset::Local::now`]，获取本地时间并展示。然后用[`DateTime::from_utc`]结构方法，转换成 UTC 标准格式。之后会用到[`offset::FixedOffset`]结构，这样 UTC 时间就能转换为 UTC+8 和 UTC-2。
 
 ```rust
 extern crate chrono;
@@ -25,7 +25,5 @@ fn main() {
 ```
 
 [`datetime::from_utc`]: https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.from_utc
-
 [`offset::fixedoffset`]: https://docs.rs/chrono/*/chrono/offset/struct.FixedOffset.html
-
 [`offset::local::now`]: https://docs.rs/chrono/*/chrono/offset/struct.Local.html#method.now

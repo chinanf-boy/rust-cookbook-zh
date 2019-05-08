@@ -1,10 +1,10 @@
-## 在Postgres数据库中创建表
+## 在 Postgres 数据库中，创建表
 
 [![postgres-badge]][postgres] [![cat-database-badge]][cat-database]
 
-使用[`postgres`]在Postgres数据库中创建表。
+使用[`postgres`]在 Postgres 数据库中，创建表。
 
-[`Connection::connect`]帮助连接到现有数据库。配方使用URL字符串格式`Connection::connect`. 它假定一个名为`library`，用户名是`postgres`密码是`postgres`.
+[`Connection::connect`]帮助连接到现有数据库。该食谱的`Connection::connect`使用一个 URL 字符串格式。 它假定一个名为`library`，用户名是`postgres`，密码是`postgres`.
 
 ```rust,no_run
 extern crate postgres;
@@ -12,9 +12,9 @@ extern crate postgres;
 use postgres::{Connection, TlsMode, Error};
 
 fn main() -> Result<(), Error> {
-    let conn = Connection::connect("postgresql://postgres:postgres@localhost/library", 
+    let conn = Connection::connect("postgresql://postgres:postgres@localhost/library",
                                     TlsMode::None)?;
-    
+
      conn.execute("CREATE TABLE IF NOT EXISTS author (
                     id              SERIAL PRIMARY KEY,
                     name            VARCHAR NOT NULL,
@@ -33,5 +33,4 @@ fn main() -> Result<(), Error> {
 ```
 
 [`postgres`]: https://docs.rs/postgres/0.15.2/postgres/
-
 [`connection::connect`]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.connect
