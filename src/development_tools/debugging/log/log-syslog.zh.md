@@ -1,8 +1,8 @@
-## 登录到Unix系统日志
+## 登录到 Unix 系统日志
 
 [![log-badge]][log] [![syslog-badge]][syslog] [![cat-debugging-badge]][cat-debugging]
 
-将消息记录到[UNIX系统日志]. 用初始化记录器后端[`syslog::init`]. [`syslog::Facility`]记录提交日志条目分类的程序，[`log::LevelFilter`]表示允许的日志详细性和`Option<&str>`保留可选的应用程序名称。
+将消息记录到[UNIX 系统日志][unix syslog]。用[`syslog::init`]初始化记录器后端。 [`syslog::Facility`]表明该程序，添加的日志条目分类，[`log::LevelFilter`]表示允许的日志等级，和`Option<&str>`持有可选的应用程序名称。
 
 ```rust
 #[macro_use]
@@ -30,9 +30,6 @@ fn main() -> Result<(), Error> {
 ```
 
 [`log::levelfilter`]: https://docs.rs/log/*/log/enum.LevelFilter.html
-
 [`syslog::facility`]: https://docs.rs/syslog/*/syslog/enum.Facility.html
-
 [`syslog::init`]: https://docs.rs/syslog/*/syslog/fn.init.html
-
 [unix syslog]: https://www.gnu.org/software/libc/manual/html_node/Overview-of-Syslog.html

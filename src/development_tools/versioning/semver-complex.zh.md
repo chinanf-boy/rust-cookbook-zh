@@ -2,9 +2,9 @@
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-构建一个[`semver::Version`]从复杂版本字符串使用[`Version::parse`]. 该字符串包含预发布和生成元数据，如[语义版本规范].
+使用[`Version::parse`]从复杂版本字符串，构建一个[`semver::Version`]。 该字符串包含预发布和构建的元数据，正如[语义版本规范]所定义的。
 
-注意，根据规范，构建元数据是解析的，但在比较版本时不考虑。换句话说，即使构建字符串不同，两个版本也可能相同。
+注意，根据规范，构建元数据虽然解析了，但在比较版本时，不考虑。换句话说，即使构建字符串不同，两个版本也可能相同。
 
 ```rust
 extern crate semver;
@@ -38,7 +38,5 @@ fn main() -> Result<(), SemVerError> {
 ```
 
 [`semver::version`]: https://docs.rs/semver/*/semver/struct.Version.html
-
 [`version::parse`]: https://docs.rs/semver/*/semver/struct.Version.html#method.parse
-
 [semantic versioning specification]: http://semver.org/

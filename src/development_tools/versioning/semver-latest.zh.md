@@ -2,7 +2,7 @@
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-给定版本和str的列表，查找最新的[`semver::Version`]. [`semver::VersionReq`]用筛选列表[`VersionReq::matches`]. 同时证明`semver`预发布首选项。
+给定版本 `&str` 的一个列表，查找最新的[`semver::Version`]。 [`semver::VersionReq`]能用[`VersionReq::matches`]筛选列表。还可以，给出预发布`semver`的首选项。
 
 ```rust
 # #[macro_use]
@@ -60,7 +60,5 @@ fn run() -> Result<()> {
 ```
 
 [`semver::version`]: https://docs.rs/semver/*/semver/struct.Version.html
-
 [`semver::versionreq`]: https://docs.rs/semver/*/semver/struct.VersionReq.html
-
 [`versionreq::matches`]: https://docs.rs/semver/*/semver/struct.VersionReq.html#method.matches

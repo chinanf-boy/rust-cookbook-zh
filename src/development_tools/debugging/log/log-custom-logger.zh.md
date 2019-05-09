@@ -1,8 +1,8 @@
-## 使用自定义记录器记录消息
+## 使用自定义记录器，记录消息
 
 [![log-badge]][log] [![cat-debugging-badge]][cat-debugging]
 
-实现自定义记录器`ConsoleLogger`打印到stdout。为了使用日志宏，`ConsoleLogger`实现[`log::Log`]性状与[`log::set_logger`]安装它。
+实现一个自定义记录器`ConsoleLogger`，它打印到 stdout。为了使用记录的宏，`ConsoleLogger`实现[`log::Log`] trait，那么[`log::set_logger`]就能安装它了。
 
 ```rust
 #[macro_use]
@@ -40,5 +40,4 @@ fn main() -> Result<(), SetLoggerError> {
 ```
 
 [`log::log`]: https://docs.rs/log/*/log/trait.Log.html
-
 [`log::set_logger`]: https://docs.rs/log/*/log/fn.set_logger.html

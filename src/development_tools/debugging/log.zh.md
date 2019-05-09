@@ -1,13 +1,13 @@
 # 日志消息
 
-包括日志/日志调试.md
+{{#include log/log-debug.zh.md}}
 
-包括日志/日志错误.md
+{{#include log/log-error.zh.md}}
 
-包括日志/日志stdout.md
+{{#include log/log-stdout.zh.md}}
 
-包括日志/日志自定义记录器.md
+{{#include log/log-custom-logger.zh.md}}
 
-include log/log syslog.md
+{{#include log/log-syslog.zh.md}}
 
-包括../。/links.md
+{{#include ../../links.zh.md}}

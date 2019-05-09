@@ -2,7 +2,7 @@
 
 [![semver-badge]][semver] [![cat-text-processing-badge]][cat-text-processing] [![cat-os-badge]][cat-os]
 
-跑`git --version`使用[`Command`]，然后将版本号解析为[`semver::Version`]使用[`Version::parse`]. [`VersionReq::matches`]比较[`semver::VersionReq`]到已分析的版本。命令输出类似于“git版本x.y.z”。
+使用[`Command`]运行`git --version`，然后用[`Version::parse`]，将版本号解析为[`semver::Version`]。 [`VersionReq::matches`]会比较[`semver::VersionReq`]与已解析的版本。命令输出，类似于"git version x.y.z"。
 
 ```rust,no_run
 # #[macro_use]
@@ -48,11 +48,7 @@ fn run() -> Result<()> {
 ```
 
 [`command`]: https://doc.rust-lang.org/std/process/struct.Command.html
-
 [`semver::version`]: https://docs.rs/semver/*/semver/struct.Version.html
-
 [`semver::versionreq`]: https://docs.rs/semver/*/semver/struct.VersionReq.html
-
 [`version::parse`]: https://docs.rs/semver/*/semver/struct.Version.html#method.parse
-
 [`versionreq::matches`]: https://docs.rs/semver/*/semver/struct.VersionReq.html#method.matches

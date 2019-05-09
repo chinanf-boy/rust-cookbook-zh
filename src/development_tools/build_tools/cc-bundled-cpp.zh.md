@@ -1,8 +1,8 @@
-## 编译并链接到捆绑的C++库
+## 编译，并静态链接到捆绑的 C++库
 
 [![cc-badge]][cc] [![cat-development-tools-badge]][cat-development-tools]
 
-链接捆绑的C++库非常类似于链接捆绑的C库。编译和静态链接捆绑的C++库时的两个核心区别是通过Builder方法指定C++编译器。[`cpp(true)`][cc-build-cpp]通过添加C++编译器防止名称篡改`extern "C"`节在我们的C++源文件的顶部。
+链接捆绑的 C++库，非常类似于链接捆绑的 C 库。编译和静态链接捆绑的 C++库的两个核心区别，是通过构建器方法[`cpp(true)`][cc-build-cpp]指定 C++编译器。通过在我们的 C++源文件的顶部，添加`extern "C"`部分，防止 C++编译器的名称篡改。
 
 ### `Cargo.toml`
 
@@ -24,7 +24,7 @@ fn main() {
     cc::Build::new()
         .cpp(true)
         .file("src/foo.cpp")
-        .compile("foo");   
+        .compile("foo");
 }
 ```
 
@@ -50,7 +50,7 @@ extern {
 fn main(){
     unsafe {
         println!("{}", multiply(5,7));
-    }   
+    }
 }
 ```
 

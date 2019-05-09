@@ -6,4 +6,4 @@
 
 包括下载/部分.md
 
-包括../。/links.md
+{{#include ../../links.zh.md}}

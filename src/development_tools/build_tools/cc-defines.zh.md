@@ -1,8 +1,8 @@
-## 在设置自定义定义时编译C库
+## 带自定义设置，编译 C 库
 
 [![cc-badge]][cc] [![cat-development-tools-badge]][cat-development-tools]
 
-使用自定义定义构建捆绑的C代码很简单[`cc::Build::define`]. 该方法采用[`Option`]值，因此可以创建定义，例如`#define APP_NAME "foo"`以及`#define WELCOME`（通过）`None`作为值减去定义）。这个例子构建了一个带有动态定义集的捆绑C文件`build.rs`印刷品**欢迎使用foo-版本1.0.2**“跑步的时候。货装一些[环境变量][cargo-env]这对于某些自定义定义可能很有用。
+使用[`cc::Build::define`]自定义构建，捆绑的 C 代码很简单。 该方法采用[`Option`]值，因此可以创建如下定义：`#define APP_NAME "foo"`，以及`#define WELCOME`（传递 `None`作为一个缺乏值的定义）。这个例子构建了一个动态定义集的捆绑 C 文件，而定义集在`build.rs`中，并会在运行使，打印**欢迎使用 foo-版本 1.0.2**“。Cargo 会设置一些[环境变量][cargo-env]，这对于某些自定义设置可能很有用。
 
 ### `Cargo.toml`
 
@@ -54,7 +54,7 @@ extern {
 fn main(){
     unsafe {
         print_app_info();
-    }   
+    }
 }
 ```
 

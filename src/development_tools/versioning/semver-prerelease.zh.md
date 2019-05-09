@@ -1,4 +1,4 @@
-## 检查给定版本是否为预发布版本。
+## 检查给定版本，是否为预发布版本。
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 

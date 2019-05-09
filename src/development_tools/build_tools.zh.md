@@ -1,12 +1,12 @@
-# 构建时间工具
+# 构建时工具
 
-本节介绍在编译箱子源代码之前运行的“构建时”工具或代码。通常，构建时代码位于**建筑工人**文件，通常称为“构建脚本”。常见的用例包括锈代码生成和捆绑的 C/C++/ASM 代码的编译。看箱子[有关此事的文件][build-script-docs]更多信息。
+本节介绍在编译箱子源代码之前，运行的“构建时”工具或代码。通常，构建时代码，位于**build.rs**文件，通常称为“构建脚本”。常见的用例，包括：Rust 代码生成，和捆绑的 C/C++/ASM 代码的编译。查看 crates.io 的 [主分支文档][build-script-docs]，了解更多信息。
 
-包括 build_tools/cc bundled static.md
+{{#include build_tools/cc-bundled-static.zh.md}}
 
-包括构建工具/cc 捆绑 cpp.md
+{{#include build_tools/cc-bundled-cpp.zh.md}}
 
-包括构建工具/cc-defines.md
+{{#include build_tools/cc-defines.zh.md}}
 
 {{#include links.zh.md}}
 

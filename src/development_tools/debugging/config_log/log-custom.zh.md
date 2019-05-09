@@ -1,10 +1,10 @@
-## 将消息记录到自定义位置
+## 将消息记录，到自定义位置
 
 [![log-badge]][log] [![log4rs-badge]][log4rs] [![cat-debugging-badge]][cat-debugging]
 
-[log4rs]将日志输出配置到自定义位置。[log4rs]可以使用外部yaml文件或生成器配置。
+[log4rs]能配置日志记录，输出到自定义的位置。[log4rs]可以使用外部 yaml 文件，或一个生成器配置。
 
-使用创建日志配置[`log4rs::append::file::FileAppender`]. 附加器定义日志记录目标。配置继续使用来自的自定义模式进行编码[`log4rs::encode::pattern`]. 将配置分配给[`log4rs::config::Config`]并设置默认值[`log::LevelFilter`].
+使用[`log4rs::append::file::FileAppender`]创建一个日志配置。该配置继续使用来自[`log4rs::encode::pattern`]的自定义模式，进行编码，要知道，这个配置其实是定义日录记录目标的附加项。待会，还要将附加项配置，分配给[`log4rs::config::Config`]，并设置默认值[`log::LevelFilter`]。
 
 ```rust,no_run
 # #[macro_use]
@@ -48,9 +48,6 @@ fn run() -> Result<()> {
 ```
 
 [`log4rs::append::file::fileappender`]: https://docs.rs/log4rs/*/log4rs/append/file/struct.FileAppender.html
-
 [`log4rs::config::config`]: https://docs.rs/log4rs/*/log4rs/config/struct.Config.html
-
 [`log4rs::encode::pattern`]: https://docs.rs/log4rs/*/log4rs/encode/pattern/index.html
-
 [`log::levelfilter`]: https://docs.rs/log/*/log/enum.LevelFilter.html

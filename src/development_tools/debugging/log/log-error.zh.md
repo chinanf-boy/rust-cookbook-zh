@@ -1,8 +1,8 @@
-## 将错误消息记录到控制台
+## 将错误消息，记录到控制台
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-正确的错误处理将异常视为异常。此处，错误日志记录到stderr`log`的便利宏[`error!`].
+正确的错误处理，会异常情况，视为错误。此处，`log`的方便宏[`error!`]，把错误日志记录到 stderr。
 
 ```rust
 #[macro_use]
