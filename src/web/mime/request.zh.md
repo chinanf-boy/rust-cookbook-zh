@@ -6,7 +6,7 @@
 
 这个`mime`箱子还定义了一些常用的 mime 类型。
 
-请注意[`reqwest::header`]模块从导出[`http`]机箱。
+请注意[`reqwest::header`]模块从导出[`http`]箱子。
 
 ```rust,no_run
 # #[macro_use]

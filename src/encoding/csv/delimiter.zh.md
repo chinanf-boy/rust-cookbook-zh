@@ -1,8 +1,8 @@
-## 读取具有不同分隔符的csv记录
+## 读取具有不同分隔符的 csv 记录
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-用制表符读取csv记录[`delimiter`].
+用一个 tab(分隔符) [`delimiter`] 读取 csv 记录。
 
 ```rust
 extern crate csv;

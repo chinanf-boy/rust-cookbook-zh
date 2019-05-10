@@ -1,8 +1,8 @@
-## 百分比编码字符串
+## URL 编码字符串
 
 [![url-badge]][url] [![cat-encoding-badge]][cat-encoding]
 
-输入字符串的编码方式[百分比编码-]使用[`utf8_percent_encode`]函数来自`url`机箱。然后使用[`percent_decode`]功能。
+编码一个输入字符串，编码方式为[URL 编码][percent-encoding]，可通过使用来自`url`箱子的[`utf8_percent_encode`]函数完成。然后再使用[`percent_decode`]函数。
 
 ```rust
 extern crate url;
@@ -25,12 +25,10 @@ fn main() -> Result<(), Utf8Error> {
 }
 ```
 
-编码集定义哪些字节（除了非ASCII和控件之外）需要百分比编码。此集合的选择取决于上下文。例如，`url`编码`?`在URL路径中，但不在查询字符串中。
+该编码集定义哪些字节（除了非 ASCII 和控制键位之外）需要 URL 编码。此集合的选择取决于上下文。例如，`url`会编码 URL 路径中的`?`，但不会在查询字符串。
 
-编码的返回值是的迭代器`&str`切片收集成`String`.
+编码的返回值是，`&str`切片的迭代器，这能收集（collect）成一个`String`。
 
 [`percent_decode`]: https://docs.rs/percent-encoding/*/percent_encoding/fn.percent_decode.html
-
 [`utf8_percent_encode`]: https://docs.rs/percent-encoding/*/percent_encoding/fn.utf8_percent_encode.html
-
 [percent-encoding]: https://en.wikipedia.org/wiki/Percent-encoding

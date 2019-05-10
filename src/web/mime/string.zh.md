@@ -1,8 +1,8 @@
-## 从字符串获取mime类型
+## 从字符串获取 mime 类型
 
 [![mime-badge]][mime] [![cat-encoding-badge]][cat-encoding]
 
-下面的示例演示如何分析[`MIME`]从字符串中键入[哑剧演员]机箱。[`FromStrError`]生成默认值[`MIME`]键入`unwrap_or`条款。
+下面的示例演示如何分析[`MIME`]从字符串中键入[哑剧演员]箱子。[`FromStrError`]生成默认值[`MIME`]键入`unwrap_or`条款。
 
 ```rust
 extern crate mime;
@@ -32,5 +32,4 @@ fn main() {
 ```
 
 [`fromstrerror`]: https://docs.rs/mime/*/mime/struct.FromStrError.html
-
 [`mime`]: https://docs.rs/mime/*/mime/struct.Mime.html

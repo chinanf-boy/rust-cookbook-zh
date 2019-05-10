@@ -1,8 +1,8 @@
-## 对base64进行编码和解码
+## 对 base64 进行编码和解码
 
 [![base64-badge]][base64] [![cat-encoding-badge]][cat-encoding]
 
-将字节片编码为`base64`使用字符串[`encode`]并用[`decode`].
+将字节切片编码为`base64`字符串，通过[`encode`]完成，还能用[`decode`]解码。
 
 ```rust
 # #[macro_use]
@@ -35,5 +35,4 @@ fn run() -> Result<()> {
 ```
 
 [`decode`]: https://docs.rs/base64/*/base64/fn.decode.html
-
 [`encode`]: https://docs.rs/base64/*/base64/fn.encode.html

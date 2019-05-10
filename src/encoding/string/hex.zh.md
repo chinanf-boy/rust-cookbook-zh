@@ -2,11 +2,11 @@
 
 [![data-encoding-badge]][data-encoding] [![cat-encoding-badge]][cat-encoding]
 
-这个[`data_encoding`]箱子提供`HEXUPPER::encode`采用的方法`&[u8]`返回一个`String`包含数据的十六进制表示形式。
+这个[`data_encoding`]箱子提供一个`HEXUPPER::encode`方法，它会获取一个`&[u8]`，并返回一个`String`，其中包含数据的十六进制表示形式。
 
-类似地，A`HEXUPPER::decode`提供的方法`&[u8]`返回一个`Vec<u8>`如果输入数据解码成功。
+类似地，一个`HEXUPPER::decode`提供的方法，也获取一个`&[u8]`，并如果输入数据解码成功的话，就返回一个`Vec<u8>`。
 
-下面的例子涵盖`&[u8]`数据转换为十六进制等效值。将此值与预期值进行比较。
+下面的例子，将`&[u8]`数据转换为等效十六进制。将此值与预期值，进行比较。
 
 ```rust
 extern crate data_encoding;

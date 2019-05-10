@@ -1,8 +1,8 @@
-## 读取csv记录
+## 读取 csv 记录
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-将标准csv记录读取到[`csv::StringRecord`]-弱类型数据表示形式，需要有效的UTF-8行。或者，[`csv::ByteRecord`]对UTF-8不做任何假设。
+将标准 csv 记录，读取到[`csv::StringRecord`]：一种弱类型数据表示形式，这需要有效的 UTF-8 行。或者，[`csv::ByteRecord`]，它不会对 UTF-8 有任何假设。
 
 ```rust
 extern crate csv;
@@ -29,7 +29,7 @@ fn main() -> Result<(), Error> {
 }
 ```
 
-serde将数据反序列化为强类型结构。见[`csv::Reader::deserialize`]方法。
+`serde` 将数据反序列化，为强类型结构。见[`csv::Reader::deserialize`]方法。
 
 ```rust
 extern crate csv;
@@ -77,7 +77,5 @@ fn run() -> Result<()> {
 ```
 
 [`csv::byterecord`]: https://docs.rs/csv/*/csv/struct.ByteRecord.html
-
 [`csv::reader::deserialize`]: https://docs.rs/csv/*/csv/struct.Reader.html#method.deserialize
-
 [`csv::stringrecord`]: https://docs.rs/csv/*/csv/struct.StringRecord.html

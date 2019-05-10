@@ -1,8 +1,8 @@
-## 将字符串编码为application/x-www-form-urlencoded
+## 将字符串编码为 application/x-www-form-urlencoded
 
 [![url-badge]][url] [![cat-encoding-badge]][cat-encoding]
 
-将字符串编码为[应用程序/X-WWW-FORM-URLENCODED]语法使用[`form_urlencoded::byte_serialize`]然后用[`form_urlencoded::parse`]. 两个函数都返回迭代器，这些迭代器收集到`String`.
+将字符串，编码为[application/x-www-form-urlencoded]语法，通过[`form_urlencoded::byte_serialize`]，然后用[`form_urlencoded::parse`]完成。 两个函数都返回迭代器，这些迭代器能收集成一个`String`。
 
 ```rust
 extern crate url;
@@ -22,7 +22,5 @@ fn main() {
 ```
 
 [`form_urlencoded::byte_serialize`]: https://docs.rs/url/*/url/form_urlencoded/fn.byte_serialize.html
-
 [`form_urlencoded::parse`]: https://docs.rs/url/*/url/form_urlencoded/fn.parse.html
-
 [application/x-www-form-urlencoded]: https://url.spec.whatwg.org/#application/x-www-form-urlencoded

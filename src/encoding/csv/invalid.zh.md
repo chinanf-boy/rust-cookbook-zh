@@ -1,8 +1,8 @@
-## 使用 serde 处理无效的 csv 数据
+## 使用 `serde` 处理无效的 csv 数据
 
 [![csv-badge]][csv] [![serde-badge]][serde] [![cat-encoding-badge]][cat-encoding]
 
-csv 文件通常包含无效数据。对于这些情况，`csv`箱子提供自定义反序列化程序，[`csv::invalid_option`]，自动将无效数据转换为无值。
+csv 文件通常包含无效数据。对于这些情况，`csv`箱子提供一个自定义反序列化程序，[`csv::invalid_option`]，自动将无效数据转换为 `None`值。
 
 ```rust
 extern crate csv;

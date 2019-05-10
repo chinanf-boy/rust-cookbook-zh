@@ -38,7 +38,7 @@ fn run() -> Result<()> {
 # quick_main!(run);
 ```
 
-[`csv::Writer`]: https://docs.rs/csv/*/csv/struct.Writer.html
+[`csv::writer`]: https://docs.rs/csv/*/csv/struct.Writer.html
 [`flush`]: https://docs.rs/csv/*/csv/struct.Writer.html#method.flush
 [`serialize`]: https://docs.rs/csv/*/csv/struct.Writer.html#method.serialize
 [`write_record`]: https://docs.rs/csv/*/csv/struct.Writer.html#method.write_record

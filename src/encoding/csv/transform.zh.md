@@ -2,7 +2,7 @@
 
 [![csv-badge]][csv] [![serde-badge]][serde] [![cat-encoding-badge]][cat-encoding]
 
-将包含颜色名称和十六进制颜色的 csv 文件转换为具有颜色名称和 RGB 颜色的文件。利用[猪瘟病毒]箱子读取和写入 csv 文件，以及[塞尔德]对字节之间的行进行反序列化和序列化。
+将包含颜色名称和十六进制颜色的 csv 文件，转换为具有颜色名称和 RGB 颜色的文件。利用[csv]箱子，读取和写入 csv 文件，以及[serde]对文件的一行，在字节之间进行反序列化和序列化。
 
 见[`csv::Reader::deserialize`]，[`serde::Deserialize`]和[`std::str::FromStr`]
 

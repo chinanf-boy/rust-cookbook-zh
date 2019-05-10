@@ -2,7 +2,7 @@
 
 [![csv-badge]][csv] [![cat-encoding-badge]][cat-encoding]
 
-退换商品*只有*行从`data`与匹配的字段`query`.
+*只*返回`data`中字段(field)行，匹配`query`的。
 
 ```rust
 # #[macro_use]

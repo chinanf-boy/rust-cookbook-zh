@@ -1,11 +1,11 @@
 # 字符集
 
-include string/percent encode.md
+{{#include string/percent-encode.zh.md}}
 
-包括 string/url encode.md
+{{#include string/url-encode.zh.md}}
 
-包括 string/hex.md
+{{#include string/hex.zh.md}}
 
-包括 string/base64.md
+{{#include string/base64.zh.md}}
 
 {{#include links.zh.md}}
