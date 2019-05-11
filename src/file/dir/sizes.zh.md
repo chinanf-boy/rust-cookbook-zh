@@ -1,8 +1,8 @@
-## 在给定深度递归计算文件大小
+## 在给定深度(目录)，递归计算文件大小
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-递归深度可以通过以下方式灵活设置：[`WalkDir::min_depth`] & [`WalkDir::max_depth`]方法。将所有文件大小的总和计算为3个子文件夹深度，忽略根文件夹中的文件。
+递归一定深度的目录，可以通过以下方式灵活设置：[`WalkDir::min_depth`] & [`WalkDir::max_depth`]方法。 3 个子文件夹深度的所有文件，其总和大小的计算，忽略根文件夹中的文件。
 
 ```rust
 extern crate walkdir;
@@ -24,5 +24,4 @@ fn main() {
 ```
 
 [`walkdir::max_depth`]: https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.max_depth
-
 [`walkdir::min_depth`]: https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.min_depth

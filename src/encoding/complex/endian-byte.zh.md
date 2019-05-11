@@ -1,8 +1,8 @@
-## 以小端字节顺序读取和写入整数
+## 以小端序，读取和写入整数
 
 [![byteorder-badge]][byteorder] [![cat-encoding-badge]][cat-encoding]
 
-`byteorder`可以反转结构化数据的有效字节。当通过网络接收信息时，这可能是必要的，这样接收到的字节就来自另一个系统。
+`byteorder`可以反转，结构化数据的有效字节。这对网络上的信息接收，还有类似另一个系统的字节来说，可能会有必要。
 
 ```rust
 extern crate byteorder;

@@ -1,14 +1,14 @@
-## 主要正确处理错误
+## main 中的正确处理错误
 
 [![error-chain-badge]][error-chain] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-处理尝试打开不存在的文件时发生的错误。它是通过使用[误差链-]，一个处理大量样板代码的库[处理生锈的错误].
+要处理尝试打开不存在的文件时，发生的错误。我们会用到[error-chain]，这是一个大量样板代码的库，用来[处理 Rust 的错误]。
 
-`Io(std::io::Error)`里面[`foreign_links`]允许自动转换自[`std::io::Error`]进入之内[`error_chain!`]定义的类型实现[`Error`]特质。
+[`foreign_links`]里面的`Io(std::io::Error)`，允许从[`std::io::Error`]到[`error_chain!`]所定义类型的自动转换，这些类型会实现[`Error`] trait。
 
-下面的方法将通过打开 unix 文件来告诉系统运行了多长时间。`/proc/uptime`然后分析内容得到第一个数字。返回正常运行时间，除非出现错误。
+下面的食谱是，在打开 unix 文件`/proc/uptime`，然后分析内容得到第一个数字期间，告诉我们系统运行了多长时间。要返回 uptime，除非出现错误。
 
-本书中的其他烹饪书将隐藏[误差链-]样板文件，可以通过按钮展开代码来查看。
+本书中的其他食谱，会隐藏[error-chain]样板文件，可以通过按钮（展开代码）来查看。
 
 ```rust
 #[macro_use]

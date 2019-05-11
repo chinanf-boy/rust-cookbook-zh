@@ -1,5 +1,5 @@
 # 处理器
 
-包括处理器/CPU 计数.md
+{{#include processor/cpu-count.zh.md}}
 
 {{#include links.zh.md}}

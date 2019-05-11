@@ -1,9 +1,9 @@
 # 错误处理
 
-包括手柄/main.md
+{{#include handle/main.zh.md}}
 
-包括 handle/retain.md
+{{#include handle/retain.zh.md}}
 
-包括 handle/backtrace.md
+{{#include handle/backtrace.zh.md}}
 
 {{#include links.zh.md}}

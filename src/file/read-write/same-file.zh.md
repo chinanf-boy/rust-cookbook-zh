@@ -1,10 +1,10 @@
-## 避免写入和读取同一文件
+## 避免写入和读取，同一文件
 
 [![same_file-badge]][same_file] [![cat-filesystem-badge]][cat-filesystem]
 
-使用[`same_file::Handle`]到一个文件，该文件可以测试是否与其他句柄相等。在这个例子中，要读取和写入的文件句柄被测试是否相等。
+使用[`same_file::Handle`] 控制一个文件，这样，该文件可以测试是否与其他 Handle(控制)的文件相等。在这个例子中，要读取和写入的文件 handle，被测试是否相等。
 
-```rust,no_run
+```rust
 extern crate same_file;
 
 use same_file::Handle;
@@ -39,7 +39,7 @@ fn main() -> Result<(), Error> {
 cargo run
 ```
 
-显示文件new.txt的内容。
+显示文件 `new.txt` 的内容。
 
 ```bash
 cargo run >> ./new.txt

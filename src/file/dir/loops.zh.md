@@ -2,14 +2,16 @@
 
 [![same_file-badge]][same_file] [![cat-filesystem-badge]][cat-filesystem]
 
-使用[`same_file::is_same_file`]检测给定路径的循环。例如，可以通过符号链接在UNIX系统上创建循环：
+使用[`same_file::is_same_file`]检测给定路径的循环。例如，可以通过符号链接，在 UNIX 系统上，创建一个循环：
 
 ```bash
 mkdir -p /tmp/foo/bar/baz
 ln -s /tmp/foo/  /tmp/foo/bar/baz/qux
 ```
 
-下面将断言存在循环。
+> /tmp/foo/bar/baz/qux == /tmp/foo/ => /tmp/foo/bar/baz => /tmp/foo/bar/baz/qux (重复循环)
+
+下面将断言，存在一个循环。
 
 ```rust,no_run
 extern crate same_file;

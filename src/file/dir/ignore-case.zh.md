@@ -2,9 +2,9 @@
 
 [![glob-badge]][glob] [![cat-filesystem-badge]][cat-filesystem]
 
-在中查找所有图像文件`/media/`目录匹配`img_[0-9]*.png`模式。
+在`/media/`目录中查找所有图像文件，要匹配`img_[0-9]*.png`模式。
 
-风俗习惯[`MatchOptions`]结构传递给[`glob_with`]函数使全局模式不区分大小写，同时保留其他选项[`Default`].
+一个自定义的[`MatchOptions`]结构，传递给[`glob_with`]函数，可以使全局模式不区分大小写，同时保留其他选项的默认[`Default`]。
 
 ```rust,no_run
 # #[macro_use]
@@ -37,7 +37,5 @@ fn run() -> Result<()> {
 ```
 
 [`default`]: https://doc.rust-lang.org/std/default/trait.Default.html
-
 [`glob_with`]: https://docs.rs/glob/*/glob/fn.glob_with.html
-
 [`matchoptions`]: https://docs.rs/glob/*/glob/struct.MatchOptions.html

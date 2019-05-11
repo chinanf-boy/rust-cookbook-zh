@@ -1,19 +1,19 @@
-# 目录穿越漏洞
+# 目录穿梭
 
-包括 dir/modified.md
+{{#include dir/modified.zh.md}}
 
-包括 dir/loops.md
+{{#include dir/loops.zh.md}}
 
-包括 dir/duplicate name.md
+{{#include dir/duplicate-name.zh.md}}
 
-包括 dir/find file.md
+{{#include dir/find-file.zh.md}}
 
-包括 dir/skip dot.md
+{{#include dir/skip-dot.zh.md}}
 
-包括目录/尺寸.md
+{{#include dir/sizes.zh.md}}
 
-包括 dir/png.md
+{{#include dir/png.zh.md}}
 
-include dir/ignore case.md
+{{#include dir/ignore-case.zh.md}}
 
 {{#include links.zh.md}}

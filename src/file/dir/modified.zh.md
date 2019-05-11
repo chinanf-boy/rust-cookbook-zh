@@ -1,8 +1,8 @@
-## 过去24小时内修改过的文件名
+## 过去 24 小时内，修改过的文件名
 
 [![std-badge]][std] [![cat-filesystem-badge]][cat-filesystem]
 
-通过调用[`env::current_dir`]，然后针对中的每个条目[`fs::read_dir`]提取[`DirEntry::path`]并通过[`fs::Metadata`]. 这个[`Metadata::modified`]返回[`SystemTime::elapsed`]上次修改后的时间。[`Duration::as_secs`]将时间转换为秒，并与24小时（24*六十*60秒）。[`Metadata::is_file`]筛选出目录。
+通过调用[`env::current_dir`]，获得当前工作目录，然后针对[`fs::read_dir`]中的每个条目，提取[`DirEntry::path`]，并通过[`fs::Metadata`]得到元信息。 这个[`Metadata::modified`]返回上次修改后的[`SystemTime::elapsed`]时间。[`Duration::as_secs`]会将时间转换为秒，并与 24 小时（24 _ 60 _ 60 秒）比较。[`Metadata::is_file`]则是筛选出目录。
 
 ```rust
 # #[macro_use]
@@ -49,17 +49,10 @@ fn run() -> Result<()> {
 ```
 
 [`direntry::path`]: https://doc.rust-lang.org/std/fs/struct.DirEntry.html#method.path
-
 [`duration::as_secs`]: https://doc.rust-lang.org/std/time/struct.Duration.html#method.as_secs
-
 [`env::current_dir`]: https://doc.rust-lang.org/std/env/fn.current_dir.html
-
 [`fs::metadata`]: https://doc.rust-lang.org/std/fs/struct.Metadata.html
-
 [`fs::read_dir`]: https://doc.rust-lang.org/std/fs/fn.read_dir.html
-
 [`metadata::is_file`]: https://doc.rust-lang.org/std/fs/struct.Metadata.html#method.is_file
-
 [`metadata::modified`]: https://doc.rust-lang.org/std/fs/struct.Metadata.html#method.modified
-
 [`systemtime::elapsed`]: https://doc.rust-lang.org/std/time/struct.SystemTime.html#method.elapsed

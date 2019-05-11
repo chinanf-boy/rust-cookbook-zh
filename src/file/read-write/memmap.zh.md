@@ -1,10 +1,10 @@
-## 使用内存映射随机访问文件
+## 使用内存映射，随机访问文件
 
 [![memmap-badge]][memmap] [![cat-filesystem-badge]][cat-filesystem]
 
-使用创建文件的内存映射[记忆地图]并模拟从文件中进行的一些非顺序读取。使用内存映射意味着您只需要索引到一个切片，而不是处理[`seek`]导航文件。
+使用[memmap]创建文件的内存映射，并模拟一些文件的非顺序读取。使用内存映射，意味着您只需要索引到一个切片，而不是处理导航文件的[`seek`]。
 
-这个[`Mmap::map`]函数假定内存映射后面的文件不会同时被另一个进程修改，或者[竞争条件]发生。
+这个[`Mmap::map`]函数假定内存映射后面的文件，不会同时被另一个进程修改，或者[竞争条件][race condition]发生。
 
 ```rust
 extern crate memmap;
@@ -30,7 +30,5 @@ fn main() -> Result<(), Error> {
 ```
 
 [`mmap::map`]: https://docs.rs/memmap/*/memmap/struct.Mmap.html#method.map
-
 [`seek`]: https://doc.rust-lang.org/std/fs/struct.File.html#method.seek
-
 [race condition]: https://en.wikipedia.org/wiki/Race_condition#File_systems
