@@ -1,5 +1,6 @@
 # 统计
 
-{{#include statistics/central-tendency.md}} {{#include statistics/standard-deviation.md}}
+{{#include statistics/central-tendency.zh.md}}
+{{#include statistics/standard-deviation.zh.md}}
 
-{{#include ../../links.md}}
+{{#include ../../links.zh.md}}

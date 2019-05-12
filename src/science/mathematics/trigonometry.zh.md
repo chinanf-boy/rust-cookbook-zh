@@ -1,5 +1,9 @@
 # 三角法
 
-包括三角法/边长.md 包括三角法/tan sin cos.md 包括三角法/纬度经度.md
+{{#include trigonometry/side-length.zh.md}}
+
+{{#include trigonometry/tan-sin-cos.zh.md}}
+
+{{#include trigonometry/latitude-longitude.zh.md}}
 
 {{#include ../../links.zh.md}}

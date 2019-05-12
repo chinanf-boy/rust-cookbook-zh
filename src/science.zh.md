@@ -1,5 +1,5 @@
 # 科学类
 
-包括科学/数学.md
+{{#include science/mathematics.zh.md}}
 
 {{#include links.zh.md}}

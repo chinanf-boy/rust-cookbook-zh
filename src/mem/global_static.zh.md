@@ -1,5 +1,5 @@
 # 常量
 
-包括全局\_static/lazy constant.md\_
+{{#include global_static/lazy-constant.zh.md}}
 
 {{#include links.zh.md}}

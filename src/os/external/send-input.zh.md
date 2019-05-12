@@ -1,8 +1,8 @@
-## 运行传递stdin的外部命令并检查错误代码
+## 运行传递 stdin 的外部命令，并检查错误代码
 
 [![std-badge]][std] [![cat-os-badge]][cat-os]
 
-打开`python`使用外部语言的解释程序[`Command`]并将python语句传递给它以供执行。[`Output`]然后解析OF语句。
+使用外部[`Command`]，打开`python`解释程序，并将 python (语言)语句传递给它，以供执行。之后的输出[`Output`]会被解析。
 
 ```rust,no_run
 # #[macro_use]
@@ -51,5 +51,4 @@ fn run() -> Result<()> {
 ```
 
 [`command`]: https://doc.rust-lang.org/std/process/struct.Command.html
-
 [`output`]: https://doc.rust-lang.org/std/process/struct.Output.html

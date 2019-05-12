@@ -1,8 +1,8 @@
-## 侦听未使用的端口TCP/IP
+## 侦听，未使用的端口 TCP/IP
 
 [![std-badge]][std] [![cat-net-badge]][cat-net]
 
-在本例中，端口显示在控制台上，程序将监听，直到发出请求。`SocketAddrV4`将端口设置为0时分配随机端口。
+在本例中，端口会显示在控制台。且程序会一直监听，直到一个请求发出。`SocketAddrV4`会在端口(第二参数)设为 0 时，分配一个随机端口。
 
 ```rust,no_run
 use std::net::{SocketAddrV4, Ipv4Addr, TcpListener};

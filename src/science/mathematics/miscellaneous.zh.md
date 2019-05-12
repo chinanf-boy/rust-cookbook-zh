@@ -1,5 +1,5 @@
 # 杂
 
-{{#include杂项/ big-integers.md}}
+{{#include miscellaneous/big-integers.zh.md}}
 
-{{#include ../../links.md}}
+{{#include ../../links.zh.md}}

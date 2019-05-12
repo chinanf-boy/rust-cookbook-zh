@@ -1,8 +1,8 @@
-## 声明延迟计算的常量
+## 声明，延迟计算的常量
 
 [![lazy_static-badge]][lazy_static] [![cat-caching-badge]][cat-caching] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-声明延迟计算的常量[`HashMap`]. 这个[`HashMap`]将被计算一次并存储在全局静态引用之后。
+声明一个延迟计算的[`HashMap`]常量。 这个[`HashMap`]会执行一次，在之后，会存储在全局的静态引用（PRIVILEGES）背后。
 
 ```rust
 #[macro_use]

@@ -1,11 +1,10 @@
-## 运行管道外部命令
+## 运行管道的外部命令
 
 [![std-badge]][std] [![cat-os-badge]][cat-os]
 
-显示到10<sup>钍</sup>当前工作目录中最大的文件和子目录。它相当于运行：`du -ah . |
-sort -hr | head -n 10`.
+显示，当前工作目录中，10<sup>个</sup>最大的文件和子目录。它相当于运行：`du -ah . | sort -hr | head -n 10`。
 
-[`Command`]S代表一个过程。子进程的输出用[`Stdio::piped`]在父级和子级之间。
+[`Command`]们代表一个过程。一个子进程的输出用[`Stdio::piped`]，在父级和子级之间捕获。
 
 ```rust,no_run
 # #[macro_use]
@@ -63,5 +62,4 @@ fn run() -> Result<()> {
 ```
 
 [`command`]: https://doc.rust-lang.org/std/process/struct.Command.html
-
 [`stdio::piped`]: https://doc.rust-lang.org/std/process/struct.Stdio.html

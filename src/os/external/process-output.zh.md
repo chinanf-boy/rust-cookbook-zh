@@ -1,8 +1,8 @@
-## 运行外部命令并处理stdout
+## 运行外部命令，并处理 stdout
 
 [![regex-badge]][regex] [![cat-os-badge]][cat-os] [![cat-text-processing-badge]][cat-text-processing]
 
-跑`git log --oneline`作为一个外部[`Command`]并检查其[`Output`]使用[`Regex`]获取最后5次提交的哈希和消息。
+把`git log --oneline`，作为一个外部[`Command`]，并检查其[`Output`]，和用[`Regex`]获取最后 5 次提交的哈希与消息。
 
 ```rust,no_run
 # #[macro_use]
@@ -56,7 +56,5 @@ fn run() -> Result<()> {
 ```
 
 [`command`]: https://doc.rust-lang.org/std/process/struct.Command.html
-
 [`output`]: https://doc.rust-lang.org/std/process/struct.Output.html
-
 [`regex`]: https://docs.rs/regex/*/regex/struct.Regex.html

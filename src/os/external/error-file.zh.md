@@ -1,11 +1,10 @@
-## 将子进程的 stdout 和 stderr 重定向到同一文件
+## 将子进程的 stdout 和 stderr ，重定向到同一文件
 
 [![std-badge]][std] [![cat-os-badge]][cat-os]
 
-生成子进程并重定向`stdout`和`stderr`到同一个文件。它遵循与[run piped external
-commands](#run-piped-external-commands)然而[`process::Stdio`]写入指定的文件。[`File::try_clone`]引用相同的文件句柄`stdout`和`stderr`. 它将确保两个句柄使用相同的光标位置写入。
+生成（Spawns）一个子进程，并重定向`stdout`和`stderr`到同一个文件。它与[运行管道的外部命令](#run-piped-external-commands)差不多的想法，但会用[`process::Stdio`]，把输出写入到指定的文件。[`File::try_clone`]引用相同文件的`stdout`和`stderr`控制（Handle）。它将确保两个 Handles 使用相同的光标位置写入。
 
-下面的食谱相当于运行 unix shell 命令`ls . oops >out.txt 2>&1`.
+下面的食谱，相当于运行 unix shell 命令：`ls . oops >out.txt 2>&1`.
 
 ```rust,no_run
 use std::fs::File;

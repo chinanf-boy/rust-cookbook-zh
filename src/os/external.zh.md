@@ -1,13 +1,13 @@
 # 外部命令
 
-包括外部/过程输出.md
+{{#include external/process-output.zh.md}}
 
-包括外部/发送输入.md
+{{#include external/send-input.zh.md}}
 
-包括外部/管道.md
+{{#include external/piped.zh.md}}
 
-包括外部/错误文件.md
+{{#include external/error-file.zh.md}}
 
-包括外部/连续.md
+{{#include external/continuous.zh.md}}
 
 {{#include links.zh.md}}
