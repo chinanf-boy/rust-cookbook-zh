@@ -1,11 +1,11 @@
 # 调用 Web API
 
-包括 api/rest get.md
+{{#include api/rest-get.zh.md}}
 
-包括 api/rest head.md
+{{#include api/rest-head.zh.md}}
 
-包括 api/rest post.md
+{{#include api/rest-post.zh.md}}
 
-包括 api/paginated.md
+{{#include api/paginated.zh.md}}
 
 {{#include ../../links.zh.md}}

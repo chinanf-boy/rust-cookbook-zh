@@ -2,7 +2,7 @@
 
 [![num-badge]][num] [![cat-science-badge]][cat-science]
 
-创建类型的复数[`num::complex::Complex`]. 复数的实部和虚部必须是同一类型。
+创建[`num::complex::Complex`]类型的复数。复数的实部和虚部必须是同一类型。
 
 ```rust
 extern crate num;

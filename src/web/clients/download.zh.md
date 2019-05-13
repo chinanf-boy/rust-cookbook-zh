@@ -1,9 +1,9 @@
 # 下载
 
-包括下载/basic.md
+{{#include download/basic.zh.md}}
 
-包括下载/发布文件.md
+{{#include download/post-file.zh.md}}
 
-包括下载/部分.md
+{{#include download/partial.zh.md}}
 
 {{#include ../../links.zh.md}}

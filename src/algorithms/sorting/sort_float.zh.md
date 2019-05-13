@@ -1,8 +1,8 @@
-## 排序浮点数向量
+## 排序浮点数 vector
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-可以使用[`vec::sort_by`]和[`PartialOrd::partial_cmp`]，对 `f32` 或 `f64` 的向量进行排序。
+可以使用[`vec::sort_by`]和[`PartialOrd::partial_cmp`]，对 `f32` 或 `f64` 的 vector 进行排序。
 
 ```rust
 fn main() {

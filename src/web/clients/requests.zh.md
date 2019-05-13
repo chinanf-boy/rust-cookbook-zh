@@ -1,5 +1,5 @@
 # 提出请求
 
-包括请求/get.md
+{{#include requests/get.zh.md}}
 
 {{#include ../../links.zh.md}}

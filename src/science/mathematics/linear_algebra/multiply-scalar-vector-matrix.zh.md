@@ -1,8 +1,8 @@
-## 用向量和矩阵相乘一个标量
+## 用 vector 和 矩阵，乘一个标量
 
 [![ndarray-badge]][ndarray] [![cat-science-badge]][cat-science]
 
-创建一个一维数组（向量），其中[`ndarray::arr1`]和二维数组（矩阵）[`ndarray::arr2`]. 首先，将一个标量乘以向量得到另一个向量。然后，矩阵乘以新的向量[`ndarray::Array2::dot`]. （`dot`执行矩阵乘法，而`*`运算符执行逐元素乘法。）in`ndarray`，根据上下文，一维数组可以解释为行或列向量。如果表示向量方向很重要，则必须使用一行或一列的二维数组。在本例中，向量是右侧的一维数组，因此`dot`将其作为列向量处理。
+用[`ndarray::arr1`]创建一个，一维数组（vector），二维数组（矩阵）就用[`ndarray::arr2`]。 首先，将一个标量乘以 vector ，得到另一个 vector。然后，矩阵用[`ndarray::Array2::dot`]，乘以这个新的 vector。 （`dot`会执行矩阵乘法，而`*`运算符`scalar * vector`，执行逐个元素的相乘。）在`ndarray`中，一维数组根据上下文，可以解释为行或列 vector。如果 vector 表示的方向很重要，则要用二维数组的一行或一列。在本例中，vector 是右手边的一维数组，因此，`dot`将其作为列 vector 处理。
 
 ```rust
 extern crate ndarray;

@@ -2,7 +2,7 @@
 
 [![num-badge]][num] [![cat-science-badge]][cat-science]
 
-可以使用计算超过128位的整数[`BigInt`]。
+可以使用[`BigInt`]，计算超过 128 位的整数。
 
 ```rust
 extern crate num;

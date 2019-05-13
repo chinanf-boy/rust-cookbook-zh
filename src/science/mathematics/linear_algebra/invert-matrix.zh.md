@@ -2,7 +2,7 @@
 
 [![nalgebra-badge]][nalgebra] [![cat-science-badge]][cat-science]
 
-使用创建3x3矩阵[`nalgebra::Matrix3`]如果可能的话，将其反转。
+使用[`nalgebra::Matrix3`]创建 3x3 矩阵，如果可能的话，将其反转。
 
 ```rust
 extern crate nalgebra;

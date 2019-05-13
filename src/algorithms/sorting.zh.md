@@ -1,4 +1,4 @@
-# 排序向量
+# 排序 vector
 
 {{#include sorting/sort.zh.md}}
 

@@ -1,9 +1,9 @@
 # 媒体类型
 
-包括 mime/string.md
+{{#include mime/string.zh.md}}
 
-包括 mime/filename.md
+{{#include mime/filename.zh.md}}
 
-包括 mime/request.md
+{{#include mime/request.zh.md}}
 
 {{#include links.zh.md}}

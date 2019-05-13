@@ -2,7 +2,7 @@
 
 [![ndarray-badge]][ndarray] [![cat-science-badge]][cat-science]
 
-创建两个矩阵[`ndarray::arr2`]对它们执行矩阵乘法[`ndarray::ArrayBase::dot`].
+[`ndarray::arr2`]创建两个矩阵，并用[`ndarray::ArrayBase::dot`]对它们执行矩阵乘法。
 
 ```rust
 extern crate ndarray;
@@ -22,5 +22,4 @@ fn main() {
 ```
 
 [`ndarray::arr2`]: https://docs.rs/ndarray/*/ndarray/fn.arr2.html
-
 [`ndarray::arraybase::dot`]: https://docs.rs/ndarray/*/ndarray/struct.ArrayBase.html#method.dot-1

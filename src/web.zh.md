@@ -26,18 +26,18 @@
 | [从文件名获取 mime 类型][ex-mime-from-filename]          | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |
 | [分析 HTTP 响应的 mime 类型][ex-http-response-mime-type] | [![mime-badge]][mime] [![reqwest-badge]][reqwest] | [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding] |
 
-包括 web/clients.md
+{{#include web/clients.zh.md}}
 
-[ex-extract-links-webpage]: web/scraping.html#extract-all-links-from-a-webpage-html
-[ex-check-broken-links]: web/scraping.html#check-a-webpage-for-broken-links
-[ex-extract-mediawiki-links]: web/scraping.html#extract-all-unique-links-from-a-mediawiki-markup
-[ex-url-parse]: web/url.html#parse-a-url-from-a-string-to-a-url-type
-[ex-url-base]: web/url.html#create-a-base-url-by-removing-path-segments
-[ex-url-new-from-base]: web/url.html#create-new-urls-from-a-base-url
-[ex-url-origin]: web/url.html#extract-the-url-origin-scheme--host--port
-[ex-url-rm-frag]: web/url.html#remove-fragment-identifiers-and-query-pairs-from-a-url
-[ex-mime-from-string]: web/mime.html#get-mime-type-from-string
-[ex-mime-from-filename]: web/mime.html#get-mime-type-from-filename
-[ex-http-response-mime-type]: web/mime.html#parse-the-mime-type-of-a-http-response
+[ex-extract-links-webpage]: web/scraping.zh.html#extract-all-links-from-a-webpage-html
+[ex-check-broken-links]: web/scraping.zh.html#check-a-webpage-for-broken-links
+[ex-extract-mediawiki-links]: web/scraping.zh.html#extract-all-unique-links-from-a-mediawiki-markup
+[ex-url-parse]: web/url.zh.html#parse-a-url-from-a-string-to-a-url-type
+[ex-url-base]: web/url.zh.html#create-a-base-url-by-removing-path-segments
+[ex-url-new-from-base]: web/url.zh.html#create-new-urls-from-a-base-url
+[ex-url-origin]: web/url.zh.html#extract-the-url-origin-scheme--host--port
+[ex-url-rm-frag]: web/url.zh.html#remove-fragment-identifiers-and-query-pairs-from-a-url
+[ex-mime-from-string]: web/mime.zh.html#get-mime-type-from-string
+[ex-mime-from-filename]: web/mime.zh.html#get-mime-type-from-filename
+[ex-http-response-mime-type]: web/mime.zh.html#parse-the-mime-type-of-a-http-response
 
 {{#include links.zh.md}}

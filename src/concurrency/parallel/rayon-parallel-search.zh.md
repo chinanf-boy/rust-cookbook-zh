@@ -2,7 +2,7 @@
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-这个例子使用[`rayon::find_any`]和[`par_iter`]获得一个，通过并行搜索，满足给定闭包中断言的元素向量。
+这个例子使用[`rayon::find_any`]和[`par_iter`]获得一个，通过并行搜索，满足给定闭包中断言的元素 vector。
 
 如果，有多个元素满足[`rayon::find_any`]闭包参数中，定义的断言，`rayon`返回找到的第一个，但不一定是(顺序上的)第一个。
 

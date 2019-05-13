@@ -1,22 +1,22 @@
 ## 数学
 
-| 烹饪书                                                    | 箱子                          | 类别                                |
-| --------------------------------------------------------- | ----------------------------- | ----------------------------------- |
-| [向量和][vector-sum]                                      | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
-| [向量范数][vector-norm]                                   | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
-| [加法矩阵][add-matrices]                                  | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
-| [矩阵乘法][multiply-matrices]                             | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
-| [用向量和矩阵，相乘一个标量][multiply-scalar-vector-matrix] | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
-| [反向 MARIX][invert-matrix]                               | [![nalgebra-badge]][nalgebra] | [![cat-science-badge]][cat-science] |
-| [计算三角形的边长][side-length]                           | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
-| [验证 tan 等于 sin 除以 cos][tan-sin-cos]                 | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
-| [地球两点之间的距离][latitude-longitude]                  | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
-| [创建复数][create-complex]                                | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
-| [加复数][add-complex]                                     | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
-| [复数的数学函数][mathematical-functions]                  | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
-| [集中趋势措施][ex-central-tendency]                       | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
-| [计算标准偏差][ex-standard-deviation]                     | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
-| [大整数][big-integers]                                    | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
+| 烹饪书                                                          | 箱子                          | 类别                                |
+| --------------------------------------------------------------- | ----------------------------- | ----------------------------------- |
+| [vector 和][vector-sum]                                         | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
+| [vector 范数][vector-norm]                                      | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
+| [加法矩阵][add-matrices]                                        | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
+| [矩阵乘法][multiply-matrices]                                   | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
+| [用 vector 和矩阵，相乘一个标量][multiply-scalar-vector-matrix] | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
+| [反向 MARIX][invert-matrix]                                     | [![nalgebra-badge]][nalgebra] | [![cat-science-badge]][cat-science] |
+| [计算三角形的边长][side-length]                                 | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
+| [验证 tan 等于 sin 除以 cos][tan-sin-cos]                       | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
+| [地球两点之间的距离][latitude-longitude]                        | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
+| [创建复数][create-complex]                                      | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
+| [加复数][add-complex]                                           | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
+| [复数的数学函数][mathematical-functions]                        | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
+| [集中趋势措施][ex-central-tendency]                             | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
+| [计算标准偏差][ex-standard-deviation]                           | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
+| [大整数][big-integers]                                          | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
 
 [vector-sum]: science/mathematics/linear_algebra.zh.html#vector-sum
 [vector-norm]: science/mathematics/linear_algebra.zh.html#vector-norm

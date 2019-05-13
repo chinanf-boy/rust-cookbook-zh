@@ -1,4 +1,4 @@
-## Mathematical functions
+  ## Mathematical functions
 
 [![num-badge]][num] [![cat-science-badge]][cat-science]
 

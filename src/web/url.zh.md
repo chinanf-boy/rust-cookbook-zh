@@ -1,13 +1,13 @@
 # 统一资源位置
 
-包括 url/parse.md
+{{#include url/parse.zh.md}}
 
-包括 url/base.md
+{{#include url/base.zh.md}}
 
-包括 url/new.md
+{{#include url/new.zh.md}}
 
-包括 url/origin.md
+{{#include url/origin.zh.md}}
 
-包括 url/fragment.md
+{{#include url/fragment.zh.md}}
 
 {{#include links.zh.md}}

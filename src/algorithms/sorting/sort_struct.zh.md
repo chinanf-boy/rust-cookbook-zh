@@ -1,4 +1,4 @@
-## 排序结构的向量
+## 排序结构的 vector
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
@@ -38,7 +38,7 @@ fn main() {
             Person::new("Zoe".to_string(), 25),
         ]);
 
-    // 用 年龄 排序 
+    // 用 年龄 排序
     people.sort_by(|a, b| b.age.cmp(&a.age));
 
     assert_eq!(

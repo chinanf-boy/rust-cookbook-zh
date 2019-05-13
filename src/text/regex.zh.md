@@ -1,13 +1,13 @@
 # 正则表达式
 
-包括 regex/email.md
+{{#include regex/email.zh.md}}
 
-包括 regex/hashtags.md
+{{#include regex/hashtags.zh.md}}
 
-包括 regex/phone.md
+{{#include regex/phone.zh.md}}
 
-包括 regex/filter log.md
+{{#include regex/filter-log.zh.md}}
 
-包括 regex/replace.md
+{{#include regex/replace.zh.md}}
 
 {{#include links.zh.md}}

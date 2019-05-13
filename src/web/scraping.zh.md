@@ -1,9 +1,9 @@
-# 正在提取链接
+# 提取链接
 
-包括刮削/提取链接.md
+{{#include scraping/extract-links.zh.md}}
 
-包括刮削/破碎.md
+{{#include scraping/broken.zh.md}}
 
-包括刮削/唯一.md
+{{#include scraping/unique.zh.md}}
 
 {{#include links.zh.md}}

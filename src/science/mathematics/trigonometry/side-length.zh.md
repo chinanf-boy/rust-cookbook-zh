@@ -1,4 +1,4 @@
-## 计算三角形的边长
+## 计算一个三角形的边长
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
