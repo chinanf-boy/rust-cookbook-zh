@@ -1,12 +1,12 @@
-## 使用HTTP范围头进行部分下载
+## 使用 HTTP range 标头，进行部分下载
 
 [![reqwest-badge]][reqwest] [![cat-net-badge]][cat-net]
 
-使用[`reqwest::Client::head`]得到[内容长度-]响应。
+使用[`reqwest::Client::head`]，得到响应的[内容长度][content-length]。
 
-然后代码使用[`reqwest::Client::get`]在打印进度消息的同时下载10240字节的内容。这个[范围]header指定块的大小和位置。
+然后，代码使用[`reqwest::Client::get`]，在打印进度消息的同时，下载 10240 字节的内容。这个[Range] 标头指定块的大小和位置。
 
-范围标题在中定义[射频识别芯片][http range rfc7233].
+Range 标头在[射频识别芯片][http range rfc7233]中定义。
 
 ```rust,no_run
 # #[macro_use]
@@ -56,9 +56,9 @@ use reqwest::StatusCode;
 #         } else {
 #             let prev_start = self.start;
 #             self.start += std::cmp::min(self.buffer_size as u64, self.end - self.start + 1);
-#             // NOTE(unwrap): `HeaderValue::from_str` will fail only if the value is not made
-#             // of visible ASCII characters. Since the format string is static and the two
-#             // values are integers, that can't happen.
+#             // 注意(unwrap): `HeaderValue::from_str` 仅在值不是 有效 ASCII 字符，才会失败
+#             // 因为，这个格式字符串是静态的，两个值是整数，
+#             // 也就是说，失败不会发生。
 #             Some(HeaderValue::from_str(&format!("bytes={}-{}", prev_start, self.start - 1)).unwrap())
 #         }
 #     }
@@ -99,11 +99,7 @@ fn run() -> Result<()> {
 ```
 
 [`reqwest::client::get`]: https://docs.rs/reqwest/*/reqwest/struct.Client.html#method.get
-
 [`reqwest::client::head`]: https://docs.rs/reqwest/*/reqwest/struct.Client.html#method.head
-
 [content-length]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length
-
 [range]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range
-
 [http range rfc7233]: https://tools.ietf.org/html/rfc7233#section-3.1

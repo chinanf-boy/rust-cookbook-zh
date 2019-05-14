@@ -1,8 +1,8 @@
-## 使用分页的RESTful API
+## 消耗一个分页的 RESTful API
 
 [![reqwest-badge]][reqwest] [![serde-badge]][serde] [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding]
 
-在方便的Rust迭代器中包装分页的Web API。迭代器在到达每一页的末尾时，从远程服务器惰性地获取下一页的结果。
+在方便的 Rust 迭代器中，包装一个分页的 Web API。迭代器在到达每一页的末尾时，从远程服务器惰性地获取下一页的结果。
 
 ```rust,no_run
 #[macro_use]

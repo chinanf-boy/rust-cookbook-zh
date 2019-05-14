@@ -9,24 +9,23 @@
 
 ---
 
-## 校对 🀄️
+## 校对 ✅
 
 <!-- doc-templite START generated -->
 <!-- repo = 'rust-lang-nursery/rust-cookbook' -->
 <!-- commit = 'cb949b04c036c8cc0f864697590d33ca2aaf349f' -->
 <!-- time = '2019-04-16' -->
-
-| 翻译的原文 | 与日期        | 最新更新 | 更多                       |
-| ---------- | ------------- | -------- | -------------------------- |
-| [commit]   | ⏰ 2018-10-10 | ![last]  | [中文翻译][translate-list] |
+翻译的原文 | 与日期 | 最新更新 | 更多
+---|---|---|---
+[commit] | ⏰ 2019-04-16 | ![last] | [中文翻译][translate-list]
 
 [last]: https://img.shields.io/github/last-commit/rust-lang-nursery/rust-cookbook.svg
-[commit]: https://github.com/rust-lang-nursery/rust-cookbook/tree/5d3f4a1e76c589c6d9c20b1cf55b104461cd09b5
+[commit]: https://github.com/rust-lang-nursery/rust-cookbook/tree/cb949b04c036c8cc0f864697590d33ca2aaf349f
 
 <!-- doc-templite END generated -->
 
 - [x] [readme]
-- [x] [src/SUMMARY.md](src/SUMMARY.md)# 概要
+- [x] [src/SUMMARY.md](src/SUMMARY.md)
 
 - [x] [目录表](/src/intro.zh.md)
 - [x] [关于](/src/about.zh.md)
@@ -191,43 +190,43 @@
       - [x] [statistics/standard-deviation.md](/src/science/mathematics/statistics/standard-deviation.zh.md)
     - [x] [杂项](/src/science/mathematics/miscellaneous.zh.md)
       - [x] [miscellaneous/big-integers.md](/src/science/mathematics/miscellaneous/big-integers.zh.md)
-- [ ] [文本处理](/src/text.zh.md)
+- [x] [文本处理](/src/text.zh.md)
   - [x] [正则表达式](/src/text/regex.zh.md)
-    - [ ] [regex/email.md](/src/text/regex/email.zh.md)
-    - [ ] [regex/hashtags.md](/src/text/regex/hashtags.zh.md)
-    - [ ] [regex/phone.md](/src/text/regex/phone.zh.md)
-    - [ ] [regex/filter-log.md](/src/text/regex/filter-log.zh.md)
-    - [ ] [regex/replace.md](/src/text/regex/replace.zh.md)
+    - [x] [regex/email.md](/src/text/regex/email.zh.md)
+    - [x] [regex/hashtags.md](/src/text/regex/hashtags.zh.md)
+    - [x] [regex/phone.md](/src/text/regex/phone.zh.md)
+    - [x] [regex/filter-log.md](/src/text/regex/filter-log.zh.md)
+    - [x] [regex/replace.md](/src/text/regex/replace.zh.md)
   - [x] [字符串解析](/src/text/string_parsing.zh.md)
-    - [ ] [string_parsing/graphemes.zh.md](/src/text/string_parsing/graphemes.zh.md)
-    - [ ] [string_parsing/from_str.zh.md](/src/text/string_parsing/from_str.zh.md)
-- [ ] [网页编程](/src/web.zh.md)
+    - [x] [string_parsing/graphemes.zh.md](/src/text/string_parsing/graphemes.zh.md)
+    - [x] [string_parsing/from_str.zh.md](/src/text/string_parsing/from_str.zh.md)
+- [x] [网页编程](/src/web.zh.md)
   - [x] [提取链接](/src/web/scraping.zh.md)
-    - [ ] [scraping/extract-links.md](/src/web/scraping/extract-links.zh.md)
-    - [ ] [scraping/broken.md](/src/web/scraping/broken.zh.md)
-    - [ ] [scraping/unique.md](/src/web/scraping/unique.zh.md)
+    - [x] [scraping/extract-links.md](/src/web/scraping/extract-links.zh.md)
+    - [x] [scraping/broken.md](/src/web/scraping/broken.zh.md)
+    - [x] [scraping/unique.md](/src/web/scraping/unique.zh.md)
   - [x] [统一资源定位地址:URL](/src/web/url.zh.md)
-    - [ ] [url/parse.md](/src/web/url/parse.zh.md)
-    - [ ] [url/base.md](/src/web/url/base.zh.md)
-    - [ ] [url/new.md](/src/web/url/new.zh.md)
-    - [ ] [url/origin.md](/src/web/url/origin.zh.md)
-    - [ ] [url/fragment.md](/src/web/url/fragment.zh.md)
+    - [x] [url/parse.md](/src/web/url/parse.zh.md)
+    - [x] [url/base.md](/src/web/url/base.zh.md)
+    - [x] [url/new.md](/src/web/url/new.zh.md)
+    - [x] [url/origin.md](/src/web/url/origin.zh.md)
+    - [x] [url/fragment.md](/src/web/url/fragment.zh.md)
   - [x] [媒体类型](/src/web/mime.zh.md)
-    - [ ] [mime/string.md](/src/web/mime/string.zh.md)
-    - [ ] [mime/filename.md](/src/web/mime/filename.zh.md)
-    - [ ] [mime/request.md](/src/web/mime/request.zh.md)
+    - [x] [mime/string.md](/src/web/mime/string.zh.md)
+    - [x] [mime/filename.md](/src/web/mime/filename.zh.md)
+    - [x] [mime/request.md](/src/web/mime/request.zh.md)
   - [x] [客户端](/src/web/clients.zh.md)
     - [x] [提出请求](/src/web/clients/requests.zh.md)
-      - [ ] [requests/get.md](/src/web/clients/requests/get.zh.md)
+      - [x] [requests/get.md](/src/web/clients/requests/get.zh.md)
     - [x] [调用 Web API](/src/web/clients/apis.zh.md)
-      - [ ] [api/rest-get.md](/src/web/clients/api/rest-get.zh.md)
-      - [ ] [api/rest-head.md](/src/web/clients/api/rest-head.zh.md)
-      - [ ] [api/rest-post.md](/src/web/clients/api/rest-post.zh.md)
-      - [ ] [api/paginated.md](/src/web/clients/api/paginated.zh.md)
+      - [x] [api/rest-get.md](/src/web/clients/api/rest-get.zh.md)
+      - [x] [api/rest-head.md](/src/web/clients/api/rest-head.zh.md)
+      - [x] [api/rest-post.md](/src/web/clients/api/rest-post.zh.md)
+      - [x] [api/paginated.md](/src/web/clients/api/paginated.zh.md)
     - [x] [下载](/src/web/clients/download.zh.md)
-      - [ ] [download/basic.md](/src/web/clients/download/basic.zh.md)
-      - [ ] [download/post-file.md](/src/web/clients/download/post-file.zh.md)
-      - [ ] [download/partial.md](/src/web/clients/download/partial.zh.md)
+      - [x] [download/basic.md](/src/web/clients/download/basic.zh.md)
+      - [x] [download/post-file.md](/src/web/clients/download/post-file.zh.md)
+      - [x] [download/partial.md](/src/web/clients/download/partial.zh.md)
 
 ### 贡献
 

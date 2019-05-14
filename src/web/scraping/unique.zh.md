@@ -1,10 +1,12 @@
-## 从Mediawiki标记中提取所有唯一链接
+## 从 Mediawiki markup 中，提取所有独一链接
 
 [![reqwest-badge]][reqwest] [![regex-badge]][regex] [![cat-net-badge]][cat-net]
 
-使用[`reqwest::get`]然后查找内部和外部链接的所有条目[`Regex::captures_iter`]. 使用[`Cow`]避免过度[`String`]分配。
+使用[`reqwest::get`]，拉取 MediaWiki 源页面，然后[`Regex::captures_iter`]查找内部和外部链接的所有条目。使用[`Cow`]避免过度[`String`]分配 (单一)。
 
-描述了Mediawiki链接语法[在这里][mediawiki link syntax].
+> [极客学院：Cow](https://wiki.jikexueyuan.com/project/rust-primer/intoborrow/cow.html)
+
+Mediawiki 链接语法，[在这里][mediawiki link syntax]有所描述。
 
 ```rust,no_run
 # #[macro_use]
@@ -65,11 +67,7 @@ fn run() -> Result<()> {
 ```
 
 [`cow`]: https://doc.rust-lang.org/std/borrow/enum.Cow.html
-
 [`reqwest::get`]: https://docs.rs/reqwest/*/reqwest/fn.get.html
-
 [`regex::captures_iter`]: https://docs.rs/regex/*/regex/struct.Regex.html#method.captures_iter
-
 [`string`]: https://doc.rust-lang.org/std/string/struct.String.html
-
 [mediawiki link syntax]: https://www.mediawiki.org/wiki/Help:Links

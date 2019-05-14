@@ -38,5 +38,5 @@ fn run() -> Result<()> {
 
 [`read_to_string`]: https://doc.rust-lang.org/std/io/trait.Read.html#method.read_to_string
 [`reqwest::get`]: https://docs.rs/reqwest/*/reqwest/fn.get.html
-[`reqwest::Response`]: https://docs.rs/reqwest/*/reqwest/struct.Response.html
-[`String`]: https://doc.rust-lang.org/std/string/struct.String.html
+[`reqwest::response`]: https://docs.rs/reqwest/*/reqwest/struct.Response.html
+[`string`]: https://doc.rust-lang.org/std/string/struct.String.html

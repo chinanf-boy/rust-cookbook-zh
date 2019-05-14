@@ -1,10 +1,10 @@
-## 通过匹配多个正则表达式筛选日志文件
+## 通过匹配多个正则表达式，筛选日志文件
 
 [![regex-badge]][regex] [![cat-text-processing-badge]][cat-text-processing]
 
-读取名为的文件`application.log`并且只输出包含“version x.x.x”、一些IP地址和端口443（例如“192.168.0.1:443”）或特定警告的行。
+读取名为`application.log`的文件，并且只输出包含“version x.x.x”、或一些 IP 地址跟着端口 443（例如“192.168.0.1:443”）或特殊 warning 的那些行。
 
-一[`regex::RegexSetBuilder`]组成一个[`regex::RegexSet`]. 因为反斜杠在正则表达式中非常常见，所以使用[原始字符串文本]使它们更可读。
+一个[`regex::RegexSetBuilder`]组成一个[`regex::RegexSet`]。 因为反斜杠在正则表达式中，非常常见，所以使用[原始字符串文本][raw string literals]能让它们更具可读性。
 
 ```rust,no_run
 # #[macro_use]
@@ -46,7 +46,5 @@ fn run() -> Result<()> {
 ```
 
 [`regex::regexset`]: https://docs.rs/regex/*/regex/struct.RegexSet.html
-
 [`regex::regexsetbuilder`]: https://docs.rs/regex/*/regex/struct.RegexSetBuilder.html
-
 [raw string literals]: https://doc.rust-lang.org/reference/tokens.html#raw-string-literals

@@ -1,10 +1,10 @@
-## 将 URL 从字符串解析为`Url`类型
+## 将字符串的一个 URL，解析为`Url`类型
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-这个[`parse`]方法从`url`箱子验证并分析`&str`变成一个[`Url`]结构。输入字符串可能格式不正确，因此此方法返回`Result<Url, ParseError>`.
+这个[`parse`]方法，它来自`url`箱子，用来验证并解析一个`&str`，变为一个[`Url`]结构。输入的字符串，可能格式不正确，因此，该方法返回`Result<Url, ParseError>`.
 
-一旦解析了 URL，它就可以与`Url`类型。
+一旦解析了 URL，它就可以使用`Url`类型的所有方法。
 
 ```rust
 extern crate url;

@@ -1,8 +1,8 @@
-## 发出HTTP GET请求
+## 发出 HTTP GET 请求
 
 [![reqwest-badge]][reqwest] [![cat-net-badge]][cat-net]
 
-分析提供的URL并使用[`reqwest::get`]. 获得的印刷品[`reqwest::Response`]状态和标题。将HTTP响应主体读取到分配的[`String`]使用[`read_to_string`].
+解析提供的 URL ，并使用[`reqwest::get`]制作一个同步 HTTP 请求。 打印获得的[`reqwest::Response`]的状态和标头。通过使用[`read_to_string`]，将 HTTP 响应主体，读取到分配的[`String`]。
 
 ```rust,no_run
 # #[macro_use]
@@ -34,9 +34,6 @@ fn run() -> Result<()> {
 ```
 
 [`read_to_string`]: https://doc.rust-lang.org/std/io/trait.Read.html#method.read_to_string
-
 [`reqwest::get`]: https://docs.rs/reqwest/*/reqwest/fn.get.html
-
 [`reqwest::response`]: https://docs.rs/reqwest/*/reqwest/struct.Response.html
-
 [`string`]: https://doc.rust-lang.org/std/string/struct.String.html

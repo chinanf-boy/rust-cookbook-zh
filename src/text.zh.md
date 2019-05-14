@@ -1,14 +1,14 @@
 # 文本处理
 
-| 烹饪书                                                                 | 箱子                                                        | 类别                                                |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------- |
-| [收集 Unicode 图形][ex-unicode-graphemes]                              | [![unicode-segmentation-badge]][unicode-segmentation]       | [![cat-encoding-badge]][cat-text-processing]        |
-| [验证并从电子邮件地址提取登录信息][ex-verify-extract-email]            | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |
-| [从文本中提取唯一的哈希标记列表][ex-extract-hashtags]                  | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |
-| [从文本中提取电话号码][ex-phone]                                       | [![regex-badge]][regex]                                     | [![cat-text-processing-badge]][cat-text-processing] |
-| [通过匹配多个正则表达式筛选日志文件][ex-regex-filter-log]              | [![regex-badge]][regex]                                     | [![cat-text-processing-badge]][cat-text-processing] |
-| [将一个文本模式的所有出现项替换为另一个模式。][ex-regex-replace-named] | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |
-| [实施`FromStr`习惯的特征`struct`][string_parsing-from_str]             | [![std-badge]][std]                                         | [![cat-text-processing-badge]][cat-text-processing] |
+| 烹饪书                                                                   | 箱子                                                        | 类别                                                |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------- |
+| [收集 Unicode 字形][ex-unicode-graphemes]                                | [![unicode-segmentation-badge]][unicode-segmentation]       | [![cat-encoding-badge]][cat-text-processing]        |
+| [从电子邮件地址，提取登录信息并验证][ex-verify-extract-email]            | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |
+| [从文本中，提取独一的`#`标签列表][ex-extract-hashtags]                   | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |
+| [从文本中，提取电话号码][ex-phone]                                       | [![regex-badge]][regex]                                     | [![cat-text-processing-badge]][cat-text-processing] |
+| [通过匹配多个正则表达式，筛选日志文件][ex-regex-filter-log]              | [![regex-badge]][regex]                                     | [![cat-text-processing-badge]][cat-text-processing] |
+| [将一个文本模式的所有出现项，替换为另一个模式。][ex-regex-replace-named] | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |
+| [为一个自定义`struct`，实现`FromStr`trait][string_parsing-from_str]      | [![std-badge]][std]                                         | [![cat-text-processing-badge]][cat-text-processing] |
 
 [ex-verify-extract-email]: text/regex.zh.html#verify-and-extract-login-from-an-email-address
 [ex-extract-hashtags]: text/regex.zh.html#extract-a-list-of-unique-hashtags-from-a-text

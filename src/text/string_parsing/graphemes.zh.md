@@ -1,8 +1,8 @@
-## 收集Unicode字形
+## 收集 Unicode 字形
 
 [![unicode-segmentation-badge]][`unicode-segmentation`] [![cat-text-processing-badge]][cat-text-processing]
 
-使用。从UTF-8字符串中收集单个Unicode字形[`UnicodeSegmentation::graphemes`]功能来自[`unicode-segmentation`]箱。
+[`unicode-segmentation`]箱子的[`UnicodeSegmentation::graphemes`]函数，可用来，从 UTF-8 字符串中，收集单个 Unicode 字形。
 
 ```rust
 #[macro_use]
@@ -18,5 +18,4 @@ fn main() {
 ```
 
 [`unicodesegmentation::graphemes`]: https://docs.rs/unicode-segmentation/*/unicode_segmentation/trait.UnicodeSegmentation.html#tymethod.graphemes
-
 [`unicode-segmentation`]: https://docs.rs/unicode-segmentation/1.2.1/unicode_segmentation/

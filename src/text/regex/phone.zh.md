@@ -1,8 +1,8 @@
-## 从文本中提取电话号码
+## 从文本中，提取电话号码
 
 [![regex-badge]][regex] [![cat-text-processing-badge]][cat-text-processing]
 
-处理字符串时使用[`Regex::captures_iter`]捕捉多个电话号码。这里的示例是美国会议电话号码。
+处理字符串时使，用[`Regex::captures_iter`]捕捉多个电话号码。这里的示例是，美国会议电话号码。
 
 ```rust
 # #[macro_use]

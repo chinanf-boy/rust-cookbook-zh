@@ -2,29 +2,29 @@
 
 ## 刮擦网页
 
-| 烹饪书                                                            | 箱子                                                                      | 类别                        |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------- |
-| [从网页 HTML 中提取所有链接][ex-extract-links-webpage]            | [![reqwest-badge]][reqwest] [![select-badge]][select]                     | [![cat-net-badge]][cat-net] |
-| [检查网页是否有断开的链接][ex-check-broken-links]                 | [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] | [![cat-net-badge]][cat-net] |
-| [从 Mediawiki 标记中提取所有唯一链接][ex-extract-mediawiki-links] | [![reqwest-badge]][reqwest] [![regex-badge]][regex]                       | [![cat-net-badge]][cat-net] |
+| 烹饪书                                                                 | 箱子                                                                      | 类别                        |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------- |
+| [从网页 HTML 中，提取所有链接][ex-extract-links-webpage]               | [![reqwest-badge]][reqwest] [![select-badge]][select]                     | [![cat-net-badge]][cat-net] |
+| [检查网页，是否有断开的链接][ex-check-broken-links]                    | [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| [从 Mediawiki markup 中，提取所有独一链接][ex-extract-mediawiki-links] | [![reqwest-badge]][reqwest] [![regex-badge]][regex]                       | [![cat-net-badge]][cat-net] |
 
 ## 统一资源位置（URL）
 
-| 烹饪书                                            | 箱子                | 类别                        |
-| ------------------------------------------------- | ------------------- | --------------------------- |
-| [将 URL 从字符串解析为`Url`类型][ex-url-parse]    | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
-| [通过删除路径段创建基 URL][ex-url-base]           | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
-| [从基 URL 创建新的 URL][ex-url-new-from-base]     | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
-| [提取 URL 源（方案/主机/端口）][ex-url-origin]    | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
-| [从 URL 中删除片段标识符和查询对][ex-url-rm-frag] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| 烹饪书                                              | 箱子                | 类别                        |
+| --------------------------------------------------- | ------------------- | --------------------------- |
+| [将字符串的一个 URL，解析为`Url`类型][ex-url-parse] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| [通过移除路径段，创建一个 base URL][ex-url-base]    | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| [从 base URL ，创建新的 URL][ex-url-new-from-base]  | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| [提取 URL 源（方案名/主机/端口）][ex-url-origin]    | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
+| [从 URL 中，删除片段标识符和查询对][ex-url-rm-frag] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
 
 ## 媒体类型（MIME）
 
 | 烹饪书                                                   | 箱子                                              | 类别                                                              |
 | -------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------- |
-| [从字符串获取 mime 类型][ex-mime-from-string]            | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |
-| [从文件名获取 mime 类型][ex-mime-from-filename]          | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |
-| [分析 HTTP 响应的 mime 类型][ex-http-response-mime-type] | [![mime-badge]][mime] [![reqwest-badge]][reqwest] | [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding] |
+| [从字符串，获取 MIME 类型][ex-mime-from-string]          | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |
+| [从文件名，获取 MIME 类型][ex-mime-from-filename]        | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |
+| [解析 HTTP 响应的 MIME 类型][ex-http-response-mime-type] | [![mime-badge]][mime] [![reqwest-badge]][reqwest] | [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding] |
 
 {{#include web/clients.zh.md}}
 

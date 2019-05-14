@@ -1,8 +1,8 @@
-## 从URL中删除片段标识符和查询对
+## 从 URL 中，删除片段标识符和查询对
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-解析[`Url`]把它切成薄片[`url::Position`]删除不需要的URL部分。
+解析[`Url`]，并[`url::Position`]把它切成片，删除不需要的 URL 部分。
 
 ```rust
 extern crate url;
@@ -18,5 +18,4 @@ fn main() -> Result<(), ParseError> {
 ```
 
 [`url::position`]: https://docs.rs/url/*/url/enum.Position.html
-
 [`url`]: https://docs.rs/url/*/url/struct.Url.html

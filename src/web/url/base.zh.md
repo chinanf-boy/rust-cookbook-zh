@@ -1,8 +1,8 @@
-## 通过删除路径段创建基URL
+## 通过移除路径段，创建一个 base URL
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-基本URL包括协议和域。基本URL没有文件夹、文件或查询字符串。这些项中的每一项都将从给定的URL中剥离出来。[`PathSegmentsMut::clear`]删除路径和[`Url::set_query`]删除查询字符串。
+base URL 包括一个协议和一个域。base URL 没有文件夹、文件或查询字符串。这每一项都将从给定的 URL 中，剥离出来。[`PathSegmentsMut::clear`]会删除路径，和[`Url::set_query`]会删除查询字符串。
 
 ```rust
 # #[macro_use]
@@ -51,5 +51,4 @@ fn base_url(mut url: Url) -> Result<Url> {
 ```
 
 [`pathsegmentsmut::clear`]: https://docs.rs/url/*/url/struct.PathSegmentsMut.html#method.clear
-
 [`url::set_query`]: https://docs.rs/url/*/url/struct.Url.html#method.set_query

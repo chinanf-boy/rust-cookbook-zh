@@ -1,8 +1,8 @@
-## 从基URL创建新的URL
+## 从一个 base URL ，创建新的 URL
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-这个[`join`]方法从基路径和相对路径创建新的URL。
+这个[`join`]方法，用 base 路径和相对路径，创建新的 URL。
 
 ```rust
 extern crate url;

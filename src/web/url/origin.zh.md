@@ -1,8 +1,8 @@
-## 提取URL源（方案/主机/端口）
+## 提取 URL 的源（协议方案名/主机/端口）
 
 [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-这个[`Url`]结构公开了各种方法来提取有关它所表示的URL的信息。
+这个[`Url`]结构，公有了各种方法，用来提取有关它所表示 URL 的信息。
 
 ```rust
 extern crate url;
@@ -59,5 +59,4 @@ fn run() -> Result<()> {
 ```
 
 [`origin`]: https://docs.rs/url/*/url/struct.Url.html#method.origin
-
 [`url`]: https://docs.rs/url/*/url/struct.Url.html

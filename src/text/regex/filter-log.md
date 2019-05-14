@@ -49,7 +49,6 @@ fn run() -> Result<()> {
 # quick_main!(run);
 ```
 
-[`regex::RegexSet`]: https://docs.rs/regex/*/regex/struct.RegexSet.html
-[`regex::RegexSetBuilder`]: https://docs.rs/regex/*/regex/struct.RegexSetBuilder.html
-
+[`regex::regexset`]: https://docs.rs/regex/*/regex/struct.RegexSet.html
+[`regex::regexsetbuilder`]: https://docs.rs/regex/*/regex/struct.RegexSetBuilder.html
 [raw string literals]: https://doc.rust-lang.org/reference/tokens.html#raw-string-literals

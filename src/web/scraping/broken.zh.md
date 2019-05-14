@@ -1,10 +1,10 @@
-## 检查网页是否有断开的链接
+## 检查网页是否，有断开的链接
 
 [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-呼叫`get_base_url`以检索基本URL。如果文档有基标记，请获取[`attr`]从基础标签。[`Position::BeforePath`]作为默认值。
+调用`get_base_url`以检索 base URL。如果文档有 base 标签，从 base 标签获取[`attr`]。[`Position::BeforePath`]作为 原始 URL 的 默认行为。
 
-遍历文档中的链接并用[`url::ParseOptions`]和[`Url::parse`]）用reqwest请求链接并验证[`StatusCode`].
+遍历文档中的链接，并用[`url::ParseOptions`]和[`Url::parse`]解析。用 `reqwest` 对链接做请求，并验证[`StatusCode`]。
 
 ```rust,no_run
 # #[macro_use]
@@ -73,11 +73,7 @@ fn run() -> Result<()> {
 ```
 
 [`attr`]: https://docs.rs/select/*/select/node/struct.Node.html#method.attr
-
 [`position::beforepath`]: https://docs.rs/url/*/url/enum.Position.html#variant.BeforePath
-
 [`statuscode`]: https://docs.rs/reqwest/*/reqwest/struct.StatusCode.html
-
 [`url::parse`]: https://docs.rs/url/*/url/struct.Url.html#method.parse
-
 [`url::parseoptions`]: https://docs.rs/url/*/url/struct.ParseOptions.html

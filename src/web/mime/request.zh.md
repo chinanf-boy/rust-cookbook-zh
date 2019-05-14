@@ -2,11 +2,11 @@
 
 [![reqwest-badge]][reqwest] [![mime-badge]][mime] [![cat-net-badge]][cat-net] [![cat-encoding-badge]][cat-encoding]
 
-接收来自的 HTTP 响应时`reqwest`这个[哑剧类型]或媒体类型可以在[内容类型-]标题。[`reqwest::header::HeaderMap::get`]将头检索为[`reqwest::header::HeaderValue`]，可以转换为字符串。这个`mime`然后箱子就可以分析它，产生一个[`mime::Mime`]价值。
+从`reqwest`那里，接收到一个 HTTP 响应的时候，这个[MIME 类型][mime type]或是媒体类型，可以在[Content-Type]标头中找到。[`reqwest::header::HeaderMap::get`]将标头检索为[`reqwest::header::HeaderValue`]，这可以转换为一个字符串。这个`mime`箱子，之后就可以解析它了，并产生一个[`mime::Mime`]值。
 
-这个`mime`箱子还定义了一些常用的 mime 类型。
+这个`mime`箱子，还定义了一些常用的 MIME 类型。
 
-请注意[`reqwest::header`]模块从导出[`http`]箱子。
+请注意[`reqwest::header`]模块，是从[`http`]箱子导出的。
 
 ```rust,no_run
 # #[macro_use]
