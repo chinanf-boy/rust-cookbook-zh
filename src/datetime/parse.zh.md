@@ -8,4 +8,4 @@
 
 {{#include parse/string.zh.md}}
 
-{{#include links.zh.zh.md}}
+{{#include ../links.zh.md}}

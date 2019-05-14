@@ -10,4 +10,4 @@
 
 {{#include versioning/semver-command.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

@@ -6,4 +6,4 @@
 
 {{#include read-write/memmap.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

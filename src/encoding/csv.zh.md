@@ -14,4 +14,4 @@
 
 {{#include csv/transform.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

@@ -8,6 +8,6 @@
 
 {{#include build_tools/cc-defines.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}
 
 [build-script-docs]: http://doc.crates.io/build-script.html

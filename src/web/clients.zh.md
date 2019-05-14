@@ -22,4 +22,4 @@
 [ex-progress-with-range]: web/clients/download.zh.html#make-a-partial-download-with-http-range-headers
 [ex-file-post]: web/clients/download.zh.html#post-a-file-to-paste-rs
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

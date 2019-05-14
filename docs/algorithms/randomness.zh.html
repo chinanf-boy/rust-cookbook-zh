@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>生成随机值 - Rust 烹饪书</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="有用的 Rust 代码 实践集合">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    
+
+    
+</head>
+
+<body class="light">
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">var path_to_root = "../";</script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = 'light'; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <ol class="chapter"><li><a href="../intro.zh.html"><strong aria-hidden="true">1.</strong> 目录表</a></li><li><a href="../about.zh.html"><strong aria-hidden="true">2.</strong> 关于</a></li><li><a href="../algorithms.zh.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li><a href="../algorithms/randomness.zh.html" class="active"><strong aria-hidden="true">3.1.</strong> 生成随机值</a></li><li><a href="../algorithms/sorting.zh.html"><strong aria-hidden="true">3.2.</strong> 排序向量</a></li></ol></li><li><a href="../cli.zh.html"><strong aria-hidden="true">4.</strong> 命令行</a></li><li><ol class="section"><li><a href="../cli/arguments.zh.html"><strong aria-hidden="true">4.1.</strong> 参数解析</a></li><li><a href="../cli/ansi_terminal.zh.html"><strong aria-hidden="true">4.2.</strong> ANSI 终端</a></li></ol></li><li><a href="../compression.zh.html"><strong aria-hidden="true">5.</strong> 压缩</a></li><li><ol class="section"><li><a href="../compression/tar.zh.html"><strong aria-hidden="true">5.1.</strong> 与 Tarballs 合作</a></li></ol></li><li><a href="../concurrency.zh.html"><strong aria-hidden="true">6.</strong> 并发性</a></li><li><ol class="section"><li><a href="../concurrency/threads.zh.html"><strong aria-hidden="true">6.1.</strong> 显式线程</a></li><li><a href="../concurrency/parallel.zh.html"><strong aria-hidden="true">6.2.</strong> 数据并行性</a></li></ol></li><li><a href="../cryptography.zh.html"><strong aria-hidden="true">7.</strong> 密码学</a></li><li><ol class="section"><li><a href="../cryptography/hashing.zh.html"><strong aria-hidden="true">7.1.</strong> 哈希</a></li><li><a href="../cryptography/encryption.zh.html"><strong aria-hidden="true">7.2.</strong> 加密</a></li></ol></li><li><a href="../data_structures.zh.html"><strong aria-hidden="true">8.</strong> 数据结构</a></li><li><ol class="section"><li><a href="../data_structures/bitfield.zh.html"><strong aria-hidden="true">8.1.</strong> 位字段</a></li></ol></li><li><a href="../database.zh.html"><strong aria-hidden="true">9.</strong> 数据库</a></li><li><ol class="section"><li><a href="../database/sqlite.zh.html"><strong aria-hidden="true">9.1.</strong> SQLite</a></li><li><a href="../database/postgres.zh.html"><strong aria-hidden="true">9.2.</strong> Postgres</a></li></ol></li><li><a href="../datetime.zh.html"><strong aria-hidden="true">10.</strong> 日期和时间</a></li><li><ol class="section"><li><a href="../datetime/duration.zh.html"><strong aria-hidden="true">10.1.</strong> 持续时间和计算</a></li><li><a href="../datetime/parse.zh.html"><strong aria-hidden="true">10.2.</strong> 解析与显示</a></li></ol></li><li><a href="../development_tools.zh.html"><strong aria-hidden="true">11.</strong> 开发工具</a></li><li><ol class="section"><li><a href="../development_tools/debugging.zh.html"><strong aria-hidden="true">11.1.</strong> 调试</a></li><li><ol class="section"><li><a href="../development_tools/debugging/log.zh.html"><strong aria-hidden="true">11.1.1.</strong> 日志消息</a></li><li><a href="../development_tools/debugging/config_log.zh.html"><strong aria-hidden="true">11.1.2.</strong> 配置日志记录</a></li></ol></li><li><a href="../development_tools/versioning.zh.html"><strong aria-hidden="true">11.2.</strong> 版本控制</a></li><li><a href="../development_tools/build_tools.zh.html"><strong aria-hidden="true">11.3.</strong> 建立时间工具</a></li></ol></li><li><a href="../encoding.zh.html"><strong aria-hidden="true">12.</strong> 编码</a></li><li><ol class="section"><li><a href="../encoding/strings.zh.html"><strong aria-hidden="true">12.1.</strong> 字符集</a></li><li><a href="../encoding/csv.zh.html"><strong aria-hidden="true">12.2.</strong> CSV 处理</a></li><li><a href="../encoding/complex.zh.html"><strong aria-hidden="true">12.3.</strong> 结构化数据</a></li></ol></li><li><a href="../errors.zh.html"><strong aria-hidden="true">13.</strong> 错误处理</a></li><li><ol class="section"><li><a href="../errors/handle.zh.html"><strong aria-hidden="true">13.1.</strong> 处理错误变量</a></li></ol></li><li><a href="../file.zh.html"><strong aria-hidden="true">14.</strong> 文件系统</a></li><li><ol class="section"><li><a href="../file/read-write.zh.html"><strong aria-hidden="true">14.1.</strong> 读写</a></li><li><a href="../file/dir.zh.html"><strong aria-hidden="true">14.2.</strong> 目录穿越漏洞</a></li></ol></li><li><a href="../hardware.zh.html"><strong aria-hidden="true">15.</strong> 硬件支持</a></li><li><ol class="section"><li><a href="../hardware/processor.zh.html"><strong aria-hidden="true">15.1.</strong> 处理器</a></li></ol></li><li><a href="../mem.zh.html"><strong aria-hidden="true">16.</strong> 内存管理</a></li><li><ol class="section"><li><a href="../mem/global_static.zh.html"><strong aria-hidden="true">16.1.</strong> 全局静态</a></li></ol></li><li><a href="../net.zh.html"><strong aria-hidden="true">17.</strong> 网络</a></li><li><ol class="section"><li><a href="../net/server.zh.html"><strong aria-hidden="true">17.1.</strong> 服务器</a></li></ol></li><li><a href="../os.zh.html"><strong aria-hidden="true">18.</strong> 操作系统</a></li><li><ol class="section"><li><a href="../os/external.zh.html"><strong aria-hidden="true">18.1.</strong> 外部命令</a></li></ol></li><li><a href="../science.zh.html"><strong aria-hidden="true">19.</strong> 科学类</a></li><li><ol class="section"><li><a href="../science/mathematics.zh.html"><strong aria-hidden="true">19.1.</strong> 数学</a></li><li><ol class="section"><li><a href="../science/mathematics/linear_algebra.zh.html"><strong aria-hidden="true">19.1.1.</strong> 线性代数</a></li><li><a href="../science/mathematics/trigonometry.zh.html"><strong aria-hidden="true">19.1.2.</strong> 三角法</a></li><li><a href="../science/mathematics/complex_numbers.zh.html"><strong aria-hidden="true">19.1.3.</strong> 复数</a></li><li><a href="../science/mathematics/statistics.zh.html"><strong aria-hidden="true">19.1.4.</strong> 统计</a></li><li><a href="../science/mathematics/miscellaneous.zh.html"><strong aria-hidden="true">19.1.5.</strong> 混杂</a></li></ol></li></ol></li><li><a href="../text.zh.html"><strong aria-hidden="true">20.</strong> 文本处理</a></li><li><ol class="section"><li><a href="../text/regex.zh.html"><strong aria-hidden="true">20.1.</strong> 正则表达式</a></li><li><a href="../text/string_parsing.zh.html"><strong aria-hidden="true">20.2.</strong> 字符串解析</a></li></ol></li><li><a href="../web.zh.html"><strong aria-hidden="true">21.</strong> 网页编程</a></li><li><ol class="section"><li><a href="../web/scraping.zh.html"><strong aria-hidden="true">21.1.</strong> 提取链接</a></li><li><a href="../web/url.zh.html"><strong aria-hidden="true">21.2.</strong> 统一资源定位地址:URL</a></li><li><a href="../web/mime.zh.html"><strong aria-hidden="true">21.3.</strong> 媒体类型</a></li><li><a href="../web/clients.zh.html"><strong aria-hidden="true">21.4.</strong> 客户端</a></li><li><ol class="section"><li><a href="../web/clients/requests.zh.html"><strong aria-hidden="true">21.4.1.</strong> 提出请求</a></li><li><a href="../web/clients/apis.zh.html"><strong aria-hidden="true">21.4.2.</strong> 调用 Web API</a></li><li><a href="../web/clients/download.zh.html"><strong aria-hidden="true">21.4.3.</strong> 下载</a></li></ol></li></ol></li></ol>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                            aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- START - Rust Cookbook customization -->
+                        <button id="edit-button" class="icon-button" type="button" title="Fork and edit" aria-label="Fork and edit"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="edit">
+                            <i class="fa fa-edit">Edit</i>
+                        </button>
+                        <!-- END - Rust Cookbook customization -->
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Rust 烹饪书</h1>
+                    
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <!-- // START - Rust Cookbook customization -->
+            <script>
+                document.getElementById("edit-button").addEventListener("click", function () {
+                    var editWindow = window.open("https://github.com/chinanf-boy/rust-cookbook-zh/edit/master/src/algorithms/randomness.zh.md");
+                });</script>
+            <!-- // END - Rust Cookbook customization -->
+
+            <div id="content" class="content">
+                <main>
+                    <a class="header" href="#生成随机值" id="生成随机值"><h1>生成随机值</h1></a>
+<a class="header" href="#生成随机数" id="生成随机数"><h2>生成随机数</h2></a>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
+<p>通过<a href="https://docs.rs/rand/*/rand/fn.thread_rng.html"><code>rand::thread_rng</code></a>，在随机数生成器<a href="https://docs.rs/rand/*/rand/trait.Rng.html"><code>rand::Rng</code></a>的帮助下，生成随机数。每个线程都有一个初始化的生成器。整数在该类型的范围（最大值 ～ 最小值）内，均匀分布，还有，浮点数是从 0 到 1，但不包括 1 的 均匀分布。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+use rand::Rng;
+
+fn main() {
+    let mut rng = rand::thread_rng();
+
+    let n1: u8 = rng.gen();
+    let n2: u16 = rng.gen();
+    println!(&quot;Random u8: {}&quot;, n1);
+    println!(&quot;Random u16: {}&quot;, n2);
+    println!(&quot;Random u32: {}&quot;, rng.gen::&lt;u32&gt;());
+    println!(&quot;Random i32: {}&quot;, rng.gen::&lt;i32&gt;());
+    println!(&quot;Random float: {}&quot;, rng.gen::&lt;f64&gt;());
+}
+</code></pre></pre>
+<a class="header" href="#生成范围内的随机数" id="生成范围内的随机数"><h2>生成范围内的随机数</h2></a>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
+<p>用<a href="https://doc.rust-lang.org/rand/*/rand/trait.Rng.html#method.gen_range"><code>Rng::gen_range</code></a>，在半开放<code>[0, 10)</code>范围（不包括<code>10</code>）生成随机值。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+use rand::Rng;
+
+fn main() {
+    let mut rng = rand::thread_rng();
+    println!(&quot;Integer: {}&quot;, rng.gen_range(0, 10));
+    println!(&quot;Float: {}&quot;, rng.gen_range(0.0, 10.0));
+}
+</code></pre></pre>
+<p><a href="https://docs.rs/rand/*/rand/distributions/uniform/struct.Uniform.html"><code>Uniform</code></a>可以用来获得<a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">均匀分布</a>的值。下面的代码是相同作用，但是当在相同范围内，重复生成数字时可能更快。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+
+use rand::distributions::{Distribution, Uniform};
+
+fn main() {
+    let mut rng = rand::thread_rng();
+    let die = Uniform::from(1..7);
+
+    loop {
+        let throw = die.sample(&amp;mut rng);
+        println!(&quot;Roll the die: {}&quot;, throw);
+        if throw == 6 {
+            break;
+        }
+    }
+}
+</code></pre></pre>
+<a class="header" href="#生成给定分布的随机数" id="生成给定分布的随机数"><h2>生成给定分布的随机数</h2></a>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
+<p>默认情况下，随机数有<a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">均匀(Uniform) 分布</a>。要使用其他（概率/类型的）分布生成数字，您需要实例化一个分布(distribution)，然后用分布下的<a href="https://docs.rs/rand/*/rand/distributions/trait.Distribution.html#tymethod.sample"><code>Distribution::sample</code></a>方法，在随机数生成器<a href="https://docs.rs/rand/*/rand/trait.Rng.html"><code>rand::Rng</code></a>的帮助下，进行采样。</p>
+<p>关于<a href="https://docs.rs/rand/*/rand/distributions/index.html">可用分布的文档，在此</a>。下面是，一个使用<a href="https://docs.rs/rand/*/rand/distributions/normal/struct.Normal.html"><code>Normal</code></a>分布的的例子。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+use rand::distributions::{Normal, Distribution};
+
+fn main() {
+  let mut rng = rand::thread_rng();
+  let normal = Normal::new(2.0, 3.0);
+  let v = normal.sample(&amp;mut rng);
+  println!(&quot;{} is from a N(2, 9) distribution&quot;, v)
+}
+</code></pre></pre>
+<a class="header" href="#生成自定义类型的随机值" id="生成自定义类型的随机值"><h2>生成自定义类型的随机值</h2></a>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
+<p>随机生成一个元组<code>(i32, bool, f64)</code>，和用户定义类型的变量<code>Point</code>。在 <code>Point</code> 类型之上，对<a href="https://docs.rs/rand/*/rand/distributions/struct.Standard.html"><code>Standard</code></a>实现<a href="https://docs.rs/rand/*/rand/distributions/trait.Distribution.html"><code>Distribution</code></a> trait，为了(<code>Point</code>)允许随机生成(<code>gen</code>)。</p>
+<blockquote>
+<p>这里，用得是，具象化泛型类型。</p>
+</blockquote>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+use rand::Rng;
+use rand::distributions::{Distribution, Standard};
+
+#[derive(Debug)]
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+// 把 泛型 具象化为 Point， (定义实现)
+impl Distribution&lt;Point&gt; for Standard {
+    fn sample&lt;R: Rng + ?Sized&gt;(&amp;self, rng: &amp;mut R) -&gt; Point {
+        let (rand_x, rand_y) = rng.gen();
+        Point {
+            x: rand_x,
+            y: rand_y,
+        }
+    }
+}
+
+fn main() {
+    let mut rng = rand::thread_rng();
+    let rand_tuple = rng.gen::&lt;(i32, bool, f64)&gt;();
+    let rand_point: Point = rng.gen(); 
+    // 主要是 : Point，类型标签，让编译器知道 (调用上面的实现定义)
+    println!(&quot;Random tuple: {:?}&quot;, rand_tuple);
+    println!(&quot;Random Point: {:?}&quot;, rand_point);
+}
+</code></pre></pre>
+<a class="header" href="#从一组字母数字的字符创建随机密码" id="从一组字母数字的字符创建随机密码"><h2>从一组字母+数字的字符，创建随机密码</h2></a>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/os"><img src="https://badge-cache.kominick.com/badge/OS--x.svg?style=social" alt="cat-os-badge" /></a></p>
+<p>随机生成，给定长度的 ASCII 字符串，字符范围是<code>A-Z, a-z, 0-9</code>，运用<a href="https://docs.rs/rand/*/rand/distributions/struct.Alphanumeric.html"><code>Alphanumeric</code></a> （字母+数字）样品。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+use rand::{thread_rng, Rng};
+use rand::distributions::Alphanumeric;
+
+fn main() {
+    let rand_string: String = thread_rng()
+        .sample_iter(&amp;Alphanumeric)
+        .take(30)
+        .collect();
+
+    println!(&quot;{}&quot;, rand_string);
+}
+</code></pre></pre>
+<a class="header" href="#从一组用户定义的字符创建随机密码" id="从一组用户定义的字符创建随机密码"><h2>从一组用户定义的字符，创建随机密码</h2></a>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/os"><img src="https://badge-cache.kominick.com/badge/OS--x.svg?style=social" alt="cat-os-badge" /></a></p>
+<p>使用用户自定义的字节字符串，随机生成给定长度的 ASCII 字符串，运用<a href="https://docs.rs/rand/*/rand/trait.Rng.html#method.gen_range"><code>gen_range</code></a>。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+
+fn main() {
+    use rand::Rng;
+    const CHARSET: &amp;[u8] = b&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ\
+                            abcdefghijklmnopqrstuvwxyz\
+                            0123456789)(*&amp;^%$#@!~&quot;;
+    const PASSWORD_LEN: usize = 30;
+    let mut rng = rand::thread_rng();
+
+    let password: String = (0..PASSWORD_LEN)
+        .map(|_| {
+            let idx = rng.gen_range(0, CHARSET.len());
+            // 这是安全的，因为 `idx` 会在 `CHARSET` 的范围内。
+            char::from(unsafe { *CHARSET.get_unchecked(idx) }) // 来自用户的所有输入，最好都定义为不安全的。
+        })
+        .collect();
+
+    println!(&quot;{:?}&quot;, password);
+}
+</code></pre></pre>
+<!--
+Links, in a few categories. Follow the existing structure.
+Keep lines sorted.
+-->
+<!-- Categories -->
+<!-- Crates -->
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    
+                    <a rel="prev" href="../algorithms.zh.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
+
+                    
+                    <a rel="next" href="../algorithms/sorting.zh.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            
+            <a href="../algorithms.zh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter"
+                aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
+
+            
+            <a href="../algorithms/sorting.zh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter"
+                aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            
+        </nav>
+
+    </div>
+
+    
+
+    
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128555056-1"></script>
+    
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128555056-1');
+        }
+    </script>
+    
+
+    
+
+    
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+    
+
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+    
+
+    
+
+</body>
+
+</html>

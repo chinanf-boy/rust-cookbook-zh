@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>目录穿越漏洞 - Rust 烹饪书</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="有用的 Rust 代码 实践集合">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    
+
+    
+</head>
+
+<body class="light">
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">var path_to_root = "../";</script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = 'light'; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <ol class="chapter"><li><a href="../intro.zh.html"><strong aria-hidden="true">1.</strong> 目录表</a></li><li><a href="../about.zh.html"><strong aria-hidden="true">2.</strong> 关于</a></li><li><a href="../algorithms.zh.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li><a href="../algorithms/randomness.zh.html"><strong aria-hidden="true">3.1.</strong> 生成随机值</a></li><li><a href="../algorithms/sorting.zh.html"><strong aria-hidden="true">3.2.</strong> 排序向量</a></li></ol></li><li><a href="../cli.zh.html"><strong aria-hidden="true">4.</strong> 命令行</a></li><li><ol class="section"><li><a href="../cli/arguments.zh.html"><strong aria-hidden="true">4.1.</strong> 参数解析</a></li><li><a href="../cli/ansi_terminal.zh.html"><strong aria-hidden="true">4.2.</strong> ANSI 终端</a></li></ol></li><li><a href="../compression.zh.html"><strong aria-hidden="true">5.</strong> 压缩</a></li><li><ol class="section"><li><a href="../compression/tar.zh.html"><strong aria-hidden="true">5.1.</strong> 与 Tarballs 合作</a></li></ol></li><li><a href="../concurrency.zh.html"><strong aria-hidden="true">6.</strong> 并发性</a></li><li><ol class="section"><li><a href="../concurrency/threads.zh.html"><strong aria-hidden="true">6.1.</strong> 显式线程</a></li><li><a href="../concurrency/parallel.zh.html"><strong aria-hidden="true">6.2.</strong> 数据并行性</a></li></ol></li><li><a href="../cryptography.zh.html"><strong aria-hidden="true">7.</strong> 密码学</a></li><li><ol class="section"><li><a href="../cryptography/hashing.zh.html"><strong aria-hidden="true">7.1.</strong> 哈希</a></li><li><a href="../cryptography/encryption.zh.html"><strong aria-hidden="true">7.2.</strong> 加密</a></li></ol></li><li><a href="../data_structures.zh.html"><strong aria-hidden="true">8.</strong> 数据结构</a></li><li><ol class="section"><li><a href="../data_structures/bitfield.zh.html"><strong aria-hidden="true">8.1.</strong> 位字段</a></li></ol></li><li><a href="../database.zh.html"><strong aria-hidden="true">9.</strong> 数据库</a></li><li><ol class="section"><li><a href="../database/sqlite.zh.html"><strong aria-hidden="true">9.1.</strong> SQLite</a></li><li><a href="../database/postgres.zh.html"><strong aria-hidden="true">9.2.</strong> Postgres</a></li></ol></li><li><a href="../datetime.zh.html"><strong aria-hidden="true">10.</strong> 日期和时间</a></li><li><ol class="section"><li><a href="../datetime/duration.zh.html"><strong aria-hidden="true">10.1.</strong> 持续时间和计算</a></li><li><a href="../datetime/parse.zh.html"><strong aria-hidden="true">10.2.</strong> 解析与显示</a></li></ol></li><li><a href="../development_tools.zh.html"><strong aria-hidden="true">11.</strong> 开发工具</a></li><li><ol class="section"><li><a href="../development_tools/debugging.zh.html"><strong aria-hidden="true">11.1.</strong> 调试</a></li><li><ol class="section"><li><a href="../development_tools/debugging/log.zh.html"><strong aria-hidden="true">11.1.1.</strong> 日志消息</a></li><li><a href="../development_tools/debugging/config_log.zh.html"><strong aria-hidden="true">11.1.2.</strong> 配置日志记录</a></li></ol></li><li><a href="../development_tools/versioning.zh.html"><strong aria-hidden="true">11.2.</strong> 版本控制</a></li><li><a href="../development_tools/build_tools.zh.html"><strong aria-hidden="true">11.3.</strong> 建立时间工具</a></li></ol></li><li><a href="../encoding.zh.html"><strong aria-hidden="true">12.</strong> 编码</a></li><li><ol class="section"><li><a href="../encoding/strings.zh.html"><strong aria-hidden="true">12.1.</strong> 字符集</a></li><li><a href="../encoding/csv.zh.html"><strong aria-hidden="true">12.2.</strong> CSV 处理</a></li><li><a href="../encoding/complex.zh.html"><strong aria-hidden="true">12.3.</strong> 结构化数据</a></li></ol></li><li><a href="../errors.zh.html"><strong aria-hidden="true">13.</strong> 错误处理</a></li><li><ol class="section"><li><a href="../errors/handle.zh.html"><strong aria-hidden="true">13.1.</strong> 处理错误变量</a></li></ol></li><li><a href="../file.zh.html"><strong aria-hidden="true">14.</strong> 文件系统</a></li><li><ol class="section"><li><a href="../file/read-write.zh.html"><strong aria-hidden="true">14.1.</strong> 读写</a></li><li><a href="../file/dir.zh.html" class="active"><strong aria-hidden="true">14.2.</strong> 目录穿越漏洞</a></li></ol></li><li><a href="../hardware.zh.html"><strong aria-hidden="true">15.</strong> 硬件支持</a></li><li><ol class="section"><li><a href="../hardware/processor.zh.html"><strong aria-hidden="true">15.1.</strong> 处理器</a></li></ol></li><li><a href="../mem.zh.html"><strong aria-hidden="true">16.</strong> 内存管理</a></li><li><ol class="section"><li><a href="../mem/global_static.zh.html"><strong aria-hidden="true">16.1.</strong> 全局静态</a></li></ol></li><li><a href="../net.zh.html"><strong aria-hidden="true">17.</strong> 网络</a></li><li><ol class="section"><li><a href="../net/server.zh.html"><strong aria-hidden="true">17.1.</strong> 服务器</a></li></ol></li><li><a href="../os.zh.html"><strong aria-hidden="true">18.</strong> 操作系统</a></li><li><ol class="section"><li><a href="../os/external.zh.html"><strong aria-hidden="true">18.1.</strong> 外部命令</a></li></ol></li><li><a href="../science.zh.html"><strong aria-hidden="true">19.</strong> 科学类</a></li><li><ol class="section"><li><a href="../science/mathematics.zh.html"><strong aria-hidden="true">19.1.</strong> 数学</a></li><li><ol class="section"><li><a href="../science/mathematics/linear_algebra.zh.html"><strong aria-hidden="true">19.1.1.</strong> 线性代数</a></li><li><a href="../science/mathematics/trigonometry.zh.html"><strong aria-hidden="true">19.1.2.</strong> 三角法</a></li><li><a href="../science/mathematics/complex_numbers.zh.html"><strong aria-hidden="true">19.1.3.</strong> 复数</a></li><li><a href="../science/mathematics/statistics.zh.html"><strong aria-hidden="true">19.1.4.</strong> 统计</a></li><li><a href="../science/mathematics/miscellaneous.zh.html"><strong aria-hidden="true">19.1.5.</strong> 混杂</a></li></ol></li></ol></li><li><a href="../text.zh.html"><strong aria-hidden="true">20.</strong> 文本处理</a></li><li><ol class="section"><li><a href="../text/regex.zh.html"><strong aria-hidden="true">20.1.</strong> 正则表达式</a></li><li><a href="../text/string_parsing.zh.html"><strong aria-hidden="true">20.2.</strong> 字符串解析</a></li></ol></li><li><a href="../web.zh.html"><strong aria-hidden="true">21.</strong> 网页编程</a></li><li><ol class="section"><li><a href="../web/scraping.zh.html"><strong aria-hidden="true">21.1.</strong> 提取链接</a></li><li><a href="../web/url.zh.html"><strong aria-hidden="true">21.2.</strong> 统一资源定位地址:URL</a></li><li><a href="../web/mime.zh.html"><strong aria-hidden="true">21.3.</strong> 媒体类型</a></li><li><a href="../web/clients.zh.html"><strong aria-hidden="true">21.4.</strong> 客户端</a></li><li><ol class="section"><li><a href="../web/clients/requests.zh.html"><strong aria-hidden="true">21.4.1.</strong> 提出请求</a></li><li><a href="../web/clients/apis.zh.html"><strong aria-hidden="true">21.4.2.</strong> 调用 Web API</a></li><li><a href="../web/clients/download.zh.html"><strong aria-hidden="true">21.4.3.</strong> 下载</a></li></ol></li></ol></li></ol>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                            aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- START - Rust Cookbook customization -->
+                        <button id="edit-button" class="icon-button" type="button" title="Fork and edit" aria-label="Fork and edit"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="edit">
+                            <i class="fa fa-edit">Edit</i>
+                        </button>
+                        <!-- END - Rust Cookbook customization -->
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Rust 烹饪书</h1>
+                    
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <!-- // START - Rust Cookbook customization -->
+            <script>
+                document.getElementById("edit-button").addEventListener("click", function () {
+                    var editWindow = window.open("https://github.com/chinanf-boy/rust-cookbook-zh/edit/master/src/file/dir.zh.md");
+                });</script>
+            <!-- // END - Rust Cookbook customization -->
+
+            <div id="content" class="content">
+                <main>
+                    <a class="header" href="#目录穿梭" id="目录穿梭"><h1>目录穿梭</h1></a>
+<a class="header" href="#过去-24-小时内修改过的文件名" id="过去-24-小时内修改过的文件名"><h2>过去 24 小时内，修改过的文件名</h2></a>
+<p><a href="https://doc.rust-lang.org/std"><img src="https://badge-cache.kominick.com/badge/std-1.29.1-blue.svg" alt="std-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>通过调用<a href="https://doc.rust-lang.org/std/env/fn.current_dir.html"><code>env::current_dir</code></a>，获得当前工作目录，然后针对<a href="https://doc.rust-lang.org/std/fs/fn.read_dir.html"><code>fs::read_dir</code></a>中的每个条目，提取<a href="https://doc.rust-lang.org/std/fs/struct.DirEntry.html#method.path"><code>DirEntry::path</code></a>，并通过<a href="https://doc.rust-lang.org/std/fs/struct.Metadata.html"><code>fs::Metadata</code></a>得到元信息。 这个<a href="https://doc.rust-lang.org/std/fs/struct.Metadata.html#method.modified"><code>Metadata::modified</code></a>返回上次修改后的<a href="https://doc.rust-lang.org/std/time/struct.SystemTime.html#method.elapsed"><code>SystemTime::elapsed</code></a>时间。<a href="https://doc.rust-lang.org/std/time/struct.Duration.html#method.as_secs"><code>Duration::as_secs</code></a>会将时间转换为秒，并与 24 小时（24 _ 60 _ 60 秒）比较。<a href="https://doc.rust-lang.org/std/fs/struct.Metadata.html#method.is_file"><code>Metadata::is_file</code></a>则是筛选出目录。</p>
+<pre><pre class="playpen"><code class="language-rust"># #[macro_use]
+# extern crate error_chain;
+#
+use std::{env, fs};
+
+# error_chain! {
+#     foreign_links {
+#         Io(std::io::Error);
+#         SystemTimeError(std::time::SystemTimeError);
+#     }
+# }
+#
+fn run() -&gt; Result&lt;()&gt; {
+    let current_dir = env::current_dir()?;
+    println!(
+        &quot;Entries modified in the last 24 hours in {:?}:&quot;,
+        current_dir
+    );
+
+    for entry in fs::read_dir(current_dir)? {
+        let entry = entry?;
+        let path = entry.path();
+
+        let metadata = fs::metadata(&amp;path)?;
+        let last_modified = metadata.modified()?.elapsed()?.as_secs();
+
+        if last_modified &lt; 24 * 3600 &amp;&amp; metadata.is_file() {
+            println!(
+                &quot;Last modified: {:?} seconds, is read only: {:?}, size: {:?} bytes, filename: {:?}&quot;,
+                last_modified,
+                metadata.permissions().readonly(),
+                metadata.len(),
+                path.file_name().ok_or(&quot;No filename&quot;)?
+            );
+        }
+    }
+
+    Ok(())
+}
+#
+# quick_main!(run);
+</code></pre></pre>
+<a class="header" href="#查找给定路径的循环" id="查找给定路径的循环"><h2>查找给定路径的循环</h2></a>
+<p><a href="https://docs.rs/same-file/"><img src="https://badge-cache.kominick.com/crates/v/same_file.svg?label=same_file" alt="same_file-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>使用<a href="https://docs.rs/same-file/*/same_file/fn.is_same_file.html"><code>same_file::is_same_file</code></a>检测给定路径的循环。例如，可以通过符号链接，在 UNIX 系统上，创建一个循环：</p>
+<pre><code class="language-bash">mkdir -p /tmp/foo/bar/baz
+ln -s /tmp/foo/  /tmp/foo/bar/baz/qux
+</code></pre>
+<blockquote>
+<p>/tmp/foo/bar/baz/qux == /tmp/foo/ =&gt; /tmp/foo/bar/baz =&gt; /tmp/foo/bar/baz/qux (重复循环)</p>
+</blockquote>
+<p>下面将断言，存在一个循环。</p>
+<pre><pre class="playpen"><code class="language-rust no_run">extern crate same_file;
+
+use std::io;
+use std::path::{Path, PathBuf};
+use same_file::is_same_file;
+
+fn contains_loop&lt;P: AsRef&lt;Path&gt;&gt;(path: P) -&gt; io::Result&lt;Option&lt;(PathBuf, PathBuf)&gt;&gt; {
+    let path = path.as_ref();
+    let mut path_buf = path.to_path_buf();
+    while path_buf.pop() {
+        if is_same_file(&amp;path_buf, path)? {
+            return Ok(Some((path_buf, path.to_path_buf())));
+        } else if let Some(looped_paths) = contains_loop(&amp;path_buf)? {
+            return Ok(Some(looped_paths));
+        }
+    }
+    return Ok(None);
+}
+
+fn main() {
+    assert_eq!(
+        contains_loop(&quot;/tmp/foo/bar/baz/qux/bar/baz&quot;).unwrap(),
+        Some((
+            PathBuf::from(&quot;/tmp/foo&quot;),
+            PathBuf::from(&quot;/tmp/foo/bar/baz/qux&quot;)
+        ))
+    );
+}
+</code></pre></pre>
+<a class="header" href="#递归查找重复的文件名" id="递归查找重复的文件名"><h2>递归查找，重复的文件名</h2></a>
+<p><a href="https://docs.rs/walkdir/"><img src="https://badge-cache.kominick.com/crates/v/walkdir.svg?label=walkdir" alt="walkdir-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>在当前目录中，递归查找重复的文件名，只打印一次。</p>
+<pre><pre class="playpen"><code class="language-rust no_run">extern crate walkdir;
+
+use std::collections::HashMap;
+use walkdir::WalkDir;
+
+fn main() {
+    let mut filenames = HashMap::new();
+
+    for entry in WalkDir::new(&quot;.&quot;)
+            .into_iter()
+            .filter_map(Result::ok)
+            .filter(|e| !e.file_type().is_dir()) {
+        let f_name = String::from(entry.file_name().to_string_lossy());
+        let counter = filenames.entry(f_name.clone()).or_insert(0);
+        *counter += 1;
+
+        if *counter == 2 {
+            println!(&quot;{}&quot;, f_name);
+        }
+    }
+}
+</code></pre></pre>
+<a class="header" href="#递归查找所有文件匹配给定断言" id="递归查找所有文件匹配给定断言"><h2>递归查找所有文件，匹配给定断言</h2></a>
+<p><a href="https://docs.rs/walkdir/"><img src="https://badge-cache.kominick.com/crates/v/walkdir.svg?label=walkdir" alt="walkdir-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>在当前目录中查找，在前一天内有修改的 JSON 文件。使用<a href="https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.follow_links"><code>follow_links</code></a>确保，符号链接像普通目录和文件一样被遵循。</p>
+<pre><pre class="playpen"><code class="language-rust no_run"># #[macro_use]
+# extern crate error_chain;
+extern crate walkdir;
+
+use walkdir::WalkDir;
+#
+# error_chain! {
+#     foreign_links {
+#         WalkDir(walkdir::Error);
+#         Io(std::io::Error);
+#         SystemTime(std::time::SystemTimeError);
+#     }
+# }
+
+fn run() -&gt; Result&lt;()&gt; {
+    for entry in WalkDir::new(&quot;.&quot;)
+            .follow_links(true)
+            .into_iter()
+            .filter_map(|e| e.ok()) {
+        let f_name = entry.file_name().to_string_lossy();
+        let sec = entry.metadata()?.modified()?;
+
+        if f_name.ends_with(&quot;.json&quot;) &amp;&amp; sec.elapsed()?.as_secs() &lt; 86400 {
+            println!(&quot;{}&quot;, f_name);
+        }
+    }
+
+    Ok(())
+}
+#
+# quick_main!(run);
+</code></pre></pre>
+<a class="header" href="#跳过点隐藏文件时遍历目录" id="跳过点隐藏文件时遍历目录"><h2>跳过点(隐藏)文件时，遍历目录</h2></a>
+<p><a href="https://docs.rs/walkdir/"><img src="https://badge-cache.kominick.com/crates/v/walkdir.svg?label=walkdir" alt="walkdir-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>使用<a href="https://docs.rs/walkdir/*/walkdir/struct.IntoIter.html#method.filter_entry"><code>filter_entry</code></a>深度递归，传递的是<code>is_not_hidden</code>断言，因此跳过隐藏的文件和目录。<a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter"><code>Iterator::filter</code></a>应用到每个<a href="https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html"><code>WalkDir::DirEntry</code></a>，即使父目录是隐藏目录。</p>
+<p>根目录<code>&quot;.&quot;</code>的结果输出，是通过<code>is_not_hidden</code>断言中<a href="https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html#method.depth"><code>WalkDir::depth</code></a>的使用。</p>
+<pre><pre class="playpen"><code class="language-rust no_run">extern crate walkdir;
+
+use walkdir::{DirEntry, WalkDir};
+
+fn is_not_hidden(entry: &amp;DirEntry) -&gt; bool {
+    entry
+         .file_name()
+         .to_str()
+         .map(|s| entry.depth() == 0 || !s.starts_with(&quot;.&quot;))
+         .unwrap_or(false)
+}
+
+fn main() {
+    WalkDir::new(&quot;.&quot;)
+        .into_iter()
+        .filter_entry(|e| is_not_hidden(e))
+        .filter_map(|v| v.ok())
+        .for_each(|x| println!(&quot;{}&quot;, x.path().display()));
+}
+</code></pre></pre>
+<a class="header" href="#在给定深度目录递归计算文件大小" id="在给定深度目录递归计算文件大小"><h2>在给定深度(目录)，递归计算文件大小</h2></a>
+<p><a href="https://docs.rs/walkdir/"><img src="https://badge-cache.kominick.com/crates/v/walkdir.svg?label=walkdir" alt="walkdir-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>递归一定深度的目录，可以通过以下方式灵活设置：<a href="https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.min_depth"><code>WalkDir::min_depth</code></a> &amp; <a href="https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.max_depth"><code>WalkDir::max_depth</code></a>方法。 3 个子文件夹深度的所有文件，其总和大小的计算，忽略根文件夹中的文件。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate walkdir;
+
+use walkdir::WalkDir;
+
+fn main() {
+    let total_size = WalkDir::new(&quot;.&quot;)
+        .min_depth(1)
+        .max_depth(3)
+        .into_iter()
+        .filter_map(|entry| entry.ok())
+        .filter_map(|entry| entry.metadata().ok())
+        .filter(|metadata| metadata.is_file())
+        .fold(0, |acc, m| acc + m.len());
+
+    println!(&quot;Total size: {} bytes.&quot;, total_size);
+}
+</code></pre></pre>
+<a class="header" href="#递归查找所有-png-文件" id="递归查找所有-png-文件"><h2>递归查找所有 PNG 文件</h2></a>
+<p><a href="https://docs.rs/glob/"><img src="https://badge-cache.kominick.com/crates/v/glob.svg?label=glob" alt="glob-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>递归查找，当前目录中的所有 PNG 文件。在这种情况下，<code>**</code>模式匹配当前目录和所有子目录。</p>
+<p>可在任何路径部分，使用<code>**</code>模式。例如，<code>/media/**/*.png</code>，会匹配<code>media</code>下的所有 PNG，且是子目录。</p>
+<pre><pre class="playpen"><code class="language-rust no_run"># #[macro_use]
+# extern crate error_chain;
+extern crate glob;
+
+use glob::glob;
+#
+# error_chain! {
+#     foreign_links {
+#         Glob(glob::GlobError);
+#         Pattern(glob::PatternError);
+#     }
+# }
+
+fn run() -&gt; Result&lt;()&gt; {
+    for entry in glob(&quot;**/*.png&quot;)? {
+        println!(&quot;{}&quot;, entry?.display());
+    }
+
+    Ok(())
+}
+#
+# quick_main!(run);
+</code></pre></pre>
+<a class="header" href="#查找具有给定模式的所有文件忽略文件名大小写" id="查找具有给定模式的所有文件忽略文件名大小写"><h2>查找具有给定模式的所有文件，忽略文件名大小写。</h2></a>
+<p><a href="https://docs.rs/glob/"><img src="https://badge-cache.kominick.com/crates/v/glob.svg?label=glob" alt="glob-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>在<code>/media/</code>目录中查找所有图像文件，要匹配<code>img_[0-9]*.png</code>模式。</p>
+<p>一个自定义的<a href="https://docs.rs/glob/*/glob/struct.MatchOptions.html"><code>MatchOptions</code></a>结构，传递给<a href="https://docs.rs/glob/*/glob/fn.glob_with.html"><code>glob_with</code></a>函数，可以使全局模式不区分大小写，同时保留其他选项的默认<a href="https://doc.rust-lang.org/std/default/trait.Default.html"><code>Default</code></a>。</p>
+<pre><pre class="playpen"><code class="language-rust no_run"># #[macro_use]
+# extern crate error_chain;
+extern crate glob;
+
+use glob::{glob_with, MatchOptions};
+#
+# error_chain! {
+#     foreign_links {
+#         Glob(glob::GlobError);
+#         Pattern(glob::PatternError);
+#     }
+# }
+
+fn run() -&gt; Result&lt;()&gt; {
+    let options = MatchOptions {
+        case_sensitive: false,
+        ..Default::default()
+    };
+
+    for entry in glob_with(&quot;/media/img_[0-9]*.png&quot;, &amp;options)? {
+        println!(&quot;{}&quot;, entry?.display());
+    }
+
+    Ok(())
+}
+#
+# quick_main!(run);
+</code></pre></pre>
+<!--
+Links, in a few categories. Follow the existing structure.
+Keep lines sorted.
+-->
+<!-- Categories -->
+<!-- Crates -->
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    
+                    <a rel="prev" href="../file/read-write.zh.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
+
+                    
+                    <a rel="next" href="../hardware.zh.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            
+            <a href="../file/read-write.zh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter"
+                aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
+
+            
+            <a href="../hardware.zh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter"
+                aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            
+        </nav>
+
+    </div>
+
+    
+
+    
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128555056-1"></script>
+    
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128555056-1');
+        }
+    </script>
+    
+
+    
+
+    
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+    
+
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+    
+
+    
+
+</body>
+
+</html>

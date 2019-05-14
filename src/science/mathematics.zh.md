@@ -34,4 +34,4 @@
 [ex-standard-deviation]: science/mathematics/statistics.zh.html#standard-deviation
 [big-integers]: science/mathematics/miscellaneous.zh.html#big-integers
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

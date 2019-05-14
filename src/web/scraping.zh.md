@@ -6,4 +6,4 @@
 
 {{#include scraping/unique.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

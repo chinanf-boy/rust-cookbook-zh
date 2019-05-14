@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>关于 - Rust 烹饪书</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="有用的 Rust 代码 实践集合">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    
+
+    
+</head>
+
+<body class="light">
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">var path_to_root = "";</script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = 'light'; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <ol class="chapter"><li><a href="intro.zh.html"><strong aria-hidden="true">1.</strong> 目录表</a></li><li><a href="about.zh.html" class="active"><strong aria-hidden="true">2.</strong> 关于</a></li><li><a href="algorithms.zh.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li><a href="algorithms/randomness.zh.html"><strong aria-hidden="true">3.1.</strong> 生成随机值</a></li><li><a href="algorithms/sorting.zh.html"><strong aria-hidden="true">3.2.</strong> 排序向量</a></li></ol></li><li><a href="cli.zh.html"><strong aria-hidden="true">4.</strong> 命令行</a></li><li><ol class="section"><li><a href="cli/arguments.zh.html"><strong aria-hidden="true">4.1.</strong> 参数解析</a></li><li><a href="cli/ansi_terminal.zh.html"><strong aria-hidden="true">4.2.</strong> ANSI 终端</a></li></ol></li><li><a href="compression.zh.html"><strong aria-hidden="true">5.</strong> 压缩</a></li><li><ol class="section"><li><a href="compression/tar.zh.html"><strong aria-hidden="true">5.1.</strong> 与 Tarballs 合作</a></li></ol></li><li><a href="concurrency.zh.html"><strong aria-hidden="true">6.</strong> 并发性</a></li><li><ol class="section"><li><a href="concurrency/threads.zh.html"><strong aria-hidden="true">6.1.</strong> 显式线程</a></li><li><a href="concurrency/parallel.zh.html"><strong aria-hidden="true">6.2.</strong> 数据并行性</a></li></ol></li><li><a href="cryptography.zh.html"><strong aria-hidden="true">7.</strong> 密码学</a></li><li><ol class="section"><li><a href="cryptography/hashing.zh.html"><strong aria-hidden="true">7.1.</strong> 哈希</a></li><li><a href="cryptography/encryption.zh.html"><strong aria-hidden="true">7.2.</strong> 加密</a></li></ol></li><li><a href="data_structures.zh.html"><strong aria-hidden="true">8.</strong> 数据结构</a></li><li><ol class="section"><li><a href="data_structures/bitfield.zh.html"><strong aria-hidden="true">8.1.</strong> 位字段</a></li></ol></li><li><a href="database.zh.html"><strong aria-hidden="true">9.</strong> 数据库</a></li><li><ol class="section"><li><a href="database/sqlite.zh.html"><strong aria-hidden="true">9.1.</strong> SQLite</a></li><li><a href="database/postgres.zh.html"><strong aria-hidden="true">9.2.</strong> Postgres</a></li></ol></li><li><a href="datetime.zh.html"><strong aria-hidden="true">10.</strong> 日期和时间</a></li><li><ol class="section"><li><a href="datetime/duration.zh.html"><strong aria-hidden="true">10.1.</strong> 持续时间和计算</a></li><li><a href="datetime/parse.zh.html"><strong aria-hidden="true">10.2.</strong> 解析与显示</a></li></ol></li><li><a href="development_tools.zh.html"><strong aria-hidden="true">11.</strong> 开发工具</a></li><li><ol class="section"><li><a href="development_tools/debugging.zh.html"><strong aria-hidden="true">11.1.</strong> 调试</a></li><li><ol class="section"><li><a href="development_tools/debugging/log.zh.html"><strong aria-hidden="true">11.1.1.</strong> 日志消息</a></li><li><a href="development_tools/debugging/config_log.zh.html"><strong aria-hidden="true">11.1.2.</strong> 配置日志记录</a></li></ol></li><li><a href="development_tools/versioning.zh.html"><strong aria-hidden="true">11.2.</strong> 版本控制</a></li><li><a href="development_tools/build_tools.zh.html"><strong aria-hidden="true">11.3.</strong> 建立时间工具</a></li></ol></li><li><a href="encoding.zh.html"><strong aria-hidden="true">12.</strong> 编码</a></li><li><ol class="section"><li><a href="encoding/strings.zh.html"><strong aria-hidden="true">12.1.</strong> 字符集</a></li><li><a href="encoding/csv.zh.html"><strong aria-hidden="true">12.2.</strong> CSV 处理</a></li><li><a href="encoding/complex.zh.html"><strong aria-hidden="true">12.3.</strong> 结构化数据</a></li></ol></li><li><a href="errors.zh.html"><strong aria-hidden="true">13.</strong> 错误处理</a></li><li><ol class="section"><li><a href="errors/handle.zh.html"><strong aria-hidden="true">13.1.</strong> 处理错误变量</a></li></ol></li><li><a href="file.zh.html"><strong aria-hidden="true">14.</strong> 文件系统</a></li><li><ol class="section"><li><a href="file/read-write.zh.html"><strong aria-hidden="true">14.1.</strong> 读写</a></li><li><a href="file/dir.zh.html"><strong aria-hidden="true">14.2.</strong> 目录穿越漏洞</a></li></ol></li><li><a href="hardware.zh.html"><strong aria-hidden="true">15.</strong> 硬件支持</a></li><li><ol class="section"><li><a href="hardware/processor.zh.html"><strong aria-hidden="true">15.1.</strong> 处理器</a></li></ol></li><li><a href="mem.zh.html"><strong aria-hidden="true">16.</strong> 内存管理</a></li><li><ol class="section"><li><a href="mem/global_static.zh.html"><strong aria-hidden="true">16.1.</strong> 全局静态</a></li></ol></li><li><a href="net.zh.html"><strong aria-hidden="true">17.</strong> 网络</a></li><li><ol class="section"><li><a href="net/server.zh.html"><strong aria-hidden="true">17.1.</strong> 服务器</a></li></ol></li><li><a href="os.zh.html"><strong aria-hidden="true">18.</strong> 操作系统</a></li><li><ol class="section"><li><a href="os/external.zh.html"><strong aria-hidden="true">18.1.</strong> 外部命令</a></li></ol></li><li><a href="science.zh.html"><strong aria-hidden="true">19.</strong> 科学类</a></li><li><ol class="section"><li><a href="science/mathematics.zh.html"><strong aria-hidden="true">19.1.</strong> 数学</a></li><li><ol class="section"><li><a href="science/mathematics/linear_algebra.zh.html"><strong aria-hidden="true">19.1.1.</strong> 线性代数</a></li><li><a href="science/mathematics/trigonometry.zh.html"><strong aria-hidden="true">19.1.2.</strong> 三角法</a></li><li><a href="science/mathematics/complex_numbers.zh.html"><strong aria-hidden="true">19.1.3.</strong> 复数</a></li><li><a href="science/mathematics/statistics.zh.html"><strong aria-hidden="true">19.1.4.</strong> 统计</a></li><li><a href="science/mathematics/miscellaneous.zh.html"><strong aria-hidden="true">19.1.5.</strong> 混杂</a></li></ol></li></ol></li><li><a href="text.zh.html"><strong aria-hidden="true">20.</strong> 文本处理</a></li><li><ol class="section"><li><a href="text/regex.zh.html"><strong aria-hidden="true">20.1.</strong> 正则表达式</a></li><li><a href="text/string_parsing.zh.html"><strong aria-hidden="true">20.2.</strong> 字符串解析</a></li></ol></li><li><a href="web.zh.html"><strong aria-hidden="true">21.</strong> 网页编程</a></li><li><ol class="section"><li><a href="web/scraping.zh.html"><strong aria-hidden="true">21.1.</strong> 提取链接</a></li><li><a href="web/url.zh.html"><strong aria-hidden="true">21.2.</strong> 统一资源定位地址:URL</a></li><li><a href="web/mime.zh.html"><strong aria-hidden="true">21.3.</strong> 媒体类型</a></li><li><a href="web/clients.zh.html"><strong aria-hidden="true">21.4.</strong> 客户端</a></li><li><ol class="section"><li><a href="web/clients/requests.zh.html"><strong aria-hidden="true">21.4.1.</strong> 提出请求</a></li><li><a href="web/clients/apis.zh.html"><strong aria-hidden="true">21.4.2.</strong> 调用 Web API</a></li><li><a href="web/clients/download.zh.html"><strong aria-hidden="true">21.4.3.</strong> 下载</a></li></ol></li></ol></li></ol>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                            aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- START - Rust Cookbook customization -->
+                        <button id="edit-button" class="icon-button" type="button" title="Fork and edit" aria-label="Fork and edit"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="edit">
+                            <i class="fa fa-edit">Edit</i>
+                        </button>
+                        <!-- END - Rust Cookbook customization -->
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Rust 烹饪书</h1>
+                    
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <!-- // START - Rust Cookbook customization -->
+            <script>
+                document.getElementById("edit-button").addEventListener("click", function () {
+                    var editWindow = window.open("https://github.com/chinanf-boy/rust-cookbook-zh/edit/master/src/about.zh.md");
+                });</script>
+            <!-- // END - Rust Cookbook customization -->
+
+            <div id="content" class="content">
+                <main>
+                    <a class="header" href="#关于rust-烹饪" id="关于rust-烹饪"><h1>关于“Rust 烹饪”</h1></a>
+<a class="header" href="#目录" id="目录"><h2>目录</h2></a>
+<!-- START doctoc -->
+<!-- END doctoc -->
+<a class="header" href="#这本书的目标受众" id="这本书的目标受众"><h2>这本书的目标受众</h2></a>
+<p>本手册适用于新的 Rust 程序员，因此他们可以快速了解 Rust crate(箱子) 生态系统的能力。它也适用于经验丰富的 Rust 程序员，他们应该在食谱中，找到如何完成常见任务的简单提示。</p>
+<a class="header" href="#如何阅读本书" id="如何阅读本书"><h2>如何阅读本书</h2></a>
+<p>烹饪书的<a href="intro.zh.html">索引页</a>包含完整的食谱列表，分为几个部分：“基础”，“编码”，“并发”等。这些部分本身或多或少地按顺序排列，后面的部分，更先进，偶尔是在前面部分的概念之上构建。</p>
+<p>在索引中，每个部分都包含一个食谱列表。食谱是要完成任务的简单陈述，例如“生成范围内的随机数”；并且每个食谱都标有徽章，表明哪个<em>箱子</em>是他们所使用的，像<a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a>，以及那些箱子在<a href="https://crates.io">crates.io</a>上，属于哪些类别。像<a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a>。</p>
+<p>新的 Rust 程序员，应该从第一部分开始，按顺序到最后一部分，这样阅读起来会很舒服，这样做可以让人们对 crate 生态系统，有一个很好的大菊观。单击，索引中的章节标题，或单击，侧栏以导航到某章节页面。</p>
+<p>如果，您只是在寻找简单任务的解决方案，那么今时今日的烹饪书，还较难导航。查找特定食谱的最简单方法是扫描索引，查找感兴趣的箱子和类别。从那里，单击食谱名称进行查看。这导航方面在未来会改善的。</p>
+<a class="header" href="#如何使用食谱" id="如何使用食谱"><h2>如何使用食谱</h2></a>
+<p>食谱旨在让您即时访问到，能工作的代码，并全面解释其正在执行的操作，并指导您获取更多信息。</p>
+<p>烹饪书中的所有食谱都是完整的，自包含(自给自足)的程序，因此可以将它们直接复制到，您自己的项目中进行实验。为此，请按照以下说明，进行操作。</p>
+<p>考虑这个例子：“生成一个范围内的随机数”：</p>
+<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+use rand::Rng;
+
+fn main() {
+    let mut rng = rand::thread_rng();
+    println!(&quot;Random f64: {}&quot;, rng.gen::&lt;f64&gt;());
+}
+</code></pre></pre>
+<p>要在本地使用它，我们可以运行以下命令，来创建一个新的货物(cargo)项目，并切换到该目录：</p>
+<pre><code class="language-sh">cargo new my-example --bin
+cd my-example
+</code></pre>
+<p>现在，我们还需要添加必要的箱子到<a href="http://doc.crates.io/manifest.html">Cargo.toml</a>，如箱子徽章所示，在这种情况下只是“rand”。为此，我们将使用<code>cargo add</code>命令，这是由<a href="https://github.com/killercup/cargo-edit"><code>cargo-edit</code></a>箱子提供的(自定义)命令，我们需要先安装：</p>
+<pre><code class="language-sh">cargo install cargo-edit
+cargo add rand
+</code></pre>
+<p>现在，你可以把<code>src/main.rs</code>，替换成，用例中的完整内容并运行：</p>
+<pre><code class="language-sh">cargo run
+</code></pre>
+<p>示例附带的箱子徽章，链接到箱子的完整<a href="https://docs.rs">docs.rs</a>文档(一个专放Rust项目文档的官方托管网站)，并且通常，在你决定哪个箱子套件后，您应该阅读相关文档。</p>
+<a class="header" href="#关于错误处理的说明" id="关于错误处理的说明"><h2>关于错误处理的说明</h2></a>
+<p>如果做得正确，Rust 中的错误处理是健壮的，但对今时今日的 Rust 来说，就需要相当多的模版。正是这个原因，你经常看到 Rust 的例子，充满了<code>unwrap</code>调用，而不是正确的错误处理。</p>
+<p>由于这些食谱，具有原样复用的目标，并鼓励最佳实践，因此当涉及<code>Result</code>类型，它们就会正确设置错误处理。</p>
+<p>我们使用的基本模式是，具备一个<code>fn run() -&gt; Result</code>，让它像“真正的”main 函数行动。我们用的是<a href="https://docs.rs/error-chain/">error-chain</a>箱子，使<code>?</code>在<code>run</code>里面工作。</p>
+<p>错误处理的结构，通常如下：</p>
+<pre><pre class="playpen"><code class="language-rust">#[macro_use]
+extern crate error_chain;
+
+use std::net::IpAddr;
+use std::str;
+
+error_chain! {
+    foreign_links {
+        Utf8(std::str::Utf8Error);
+        AddrParse(std::net::AddrParseError);
+    }
+}
+
+fn run() -&gt; Result&lt;()&gt; {
+    let bytes = b&quot;2001:db8::1&quot;;
+
+    // Bytes 到 string.
+    let s = str::from_utf8(bytes)?;
+
+    // String 到 IP address.
+    let addr: IpAddr = s.parse()?;
+
+    println!(&quot;{:?}&quot;, addr);
+    Ok(())
+}
+
+quick_main!(run);
+</code></pre></pre>
+<p>这是使用<code>error_chain!</code>宏，自定义一个<code>Error</code>和<code>Result</code>类型，以及来自<strong>两个标准库的错误类型</strong>的自动转换。自动转换使<code>?</code>操作符工作。该<code>quick_main!</code>宏生成，实际<code>main</code>，并在发生错误时，打印出错误。</p>
+<p>为了便于阅读，错误处理模版，默认隐藏，如下所示。要阅读完整内容，请单击“展开”（<i class="fa fa-expand"></i>）按钮，它位于代码段的右上角。</p>
+<pre><pre class="playpen"><code class="language-rust"># #[macro_use]
+# extern crate error_chain;
+extern crate url;
+
+use url::{Url, Position};
+#
+# error_chain! {
+#     foreign_links {
+#         UrlParse(url::ParseError);
+#     }
+# }
+
+fn run() -&gt; Result&lt;()&gt; {
+    let parsed = Url::parse(&quot;https://httpbin.org/cookies/set?k2=v2&amp;k1=v1&quot;)?;
+    let cleaned: &amp;str = &amp;parsed[..Position::AfterPath];
+    println!(&quot;cleaned: {}&quot;, cleaned);
+    Ok(())
+}
+#
+# quick_main!(run);
+</code></pre></pre>
+<p>有关 Rust 中错误处理的更多背景知识，请阅读<a href="https://doc.rust-lang.org/book/error-handling.html">这本 Rust 书</a>和<a href="https://brson.github.io/2016/11/30/starting-with-error-chain">这篇博文</a>。</p>
+<a class="header" href="#关于箱子表示的说明" id="关于箱子表示的说明"><h2>关于箱子表示的说明</h2></a>
+<p>这本烹饪书，最终的目标，是提供对 Rust crate 生态系统的广泛认知，但是，今天我们在它的引导下，进行演示时，范围还很有限。希望从小范围开始，缓慢扩展(认知)，将有助于烹饪书，更快地成为高质量的资源，常话说：不要急，最重要快！并在增长时，保持一致的质量水平。</p>
+<p>目前，烹饪书专注于标准库，以及“核心”或“基础”，箱子 - 都是构成最常见的编程任务的那些箱子，其余的，就是生态系统的部分构建。</p>
+<p>这本烹饪书与<a href="https://internals.rust-lang.org/t/rust-libz-blitz/5184">Rust Libz Blitz</a>密切相关，一个识别和提高此类箱子质量的项目，因此该项目在很大程度上，延迟箱子入选的问题。该过程的一部分，作为已经评估的任何箱子，都在烹饪书的(书写)范围内，而正在等待评估的箱子也是如此。</p>
+<!--
+Links, in a few categories. Follow the existing structure.
+Keep lines sorted.
+-->
+<!-- Categories -->
+<!-- Crates -->
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    
+                    <a rel="prev" href="intro.zh.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
+
+                    
+                    <a rel="next" href="algorithms.zh.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            
+            <a href="intro.zh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter"
+                aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
+
+            
+            <a href="algorithms.zh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter"
+                aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            
+        </nav>
+
+    </div>
+
+    
+
+    
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128555056-1"></script>
+    
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128555056-1');
+        }
+    </script>
+    
+
+    
+
+    
+    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+    
+
+    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+    
+
+    
+
+</body>
+
+</html>

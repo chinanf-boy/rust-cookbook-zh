@@ -6,4 +6,4 @@
 
 {{#include mime/request.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

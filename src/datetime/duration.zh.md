@@ -6,4 +6,4 @@
 
 {{#include duration/timezone.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

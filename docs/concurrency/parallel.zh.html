@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>数据并行性 - Rust 烹饪书</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="有用的 Rust 代码 实践集合">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    
+
+    
+</head>
+
+<body class="light">
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">var path_to_root = "../";</script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = 'light'; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <ol class="chapter"><li><a href="../intro.zh.html"><strong aria-hidden="true">1.</strong> 目录表</a></li><li><a href="../about.zh.html"><strong aria-hidden="true">2.</strong> 关于</a></li><li><a href="../algorithms.zh.html"><strong aria-hidden="true">3.</strong> 算法</a></li><li><ol class="section"><li><a href="../algorithms/randomness.zh.html"><strong aria-hidden="true">3.1.</strong> 生成随机值</a></li><li><a href="../algorithms/sorting.zh.html"><strong aria-hidden="true">3.2.</strong> 排序向量</a></li></ol></li><li><a href="../cli.zh.html"><strong aria-hidden="true">4.</strong> 命令行</a></li><li><ol class="section"><li><a href="../cli/arguments.zh.html"><strong aria-hidden="true">4.1.</strong> 参数解析</a></li><li><a href="../cli/ansi_terminal.zh.html"><strong aria-hidden="true">4.2.</strong> ANSI 终端</a></li></ol></li><li><a href="../compression.zh.html"><strong aria-hidden="true">5.</strong> 压缩</a></li><li><ol class="section"><li><a href="../compression/tar.zh.html"><strong aria-hidden="true">5.1.</strong> 与 Tarballs 合作</a></li></ol></li><li><a href="../concurrency.zh.html"><strong aria-hidden="true">6.</strong> 并发性</a></li><li><ol class="section"><li><a href="../concurrency/threads.zh.html"><strong aria-hidden="true">6.1.</strong> 显式线程</a></li><li><a href="../concurrency/parallel.zh.html" class="active"><strong aria-hidden="true">6.2.</strong> 数据并行性</a></li></ol></li><li><a href="../cryptography.zh.html"><strong aria-hidden="true">7.</strong> 密码学</a></li><li><ol class="section"><li><a href="../cryptography/hashing.zh.html"><strong aria-hidden="true">7.1.</strong> 哈希</a></li><li><a href="../cryptography/encryption.zh.html"><strong aria-hidden="true">7.2.</strong> 加密</a></li></ol></li><li><a href="../data_structures.zh.html"><strong aria-hidden="true">8.</strong> 数据结构</a></li><li><ol class="section"><li><a href="../data_structures/bitfield.zh.html"><strong aria-hidden="true">8.1.</strong> 位字段</a></li></ol></li><li><a href="../database.zh.html"><strong aria-hidden="true">9.</strong> 数据库</a></li><li><ol class="section"><li><a href="../database/sqlite.zh.html"><strong aria-hidden="true">9.1.</strong> SQLite</a></li><li><a href="../database/postgres.zh.html"><strong aria-hidden="true">9.2.</strong> Postgres</a></li></ol></li><li><a href="../datetime.zh.html"><strong aria-hidden="true">10.</strong> 日期和时间</a></li><li><ol class="section"><li><a href="../datetime/duration.zh.html"><strong aria-hidden="true">10.1.</strong> 持续时间和计算</a></li><li><a href="../datetime/parse.zh.html"><strong aria-hidden="true">10.2.</strong> 解析与显示</a></li></ol></li><li><a href="../development_tools.zh.html"><strong aria-hidden="true">11.</strong> 开发工具</a></li><li><ol class="section"><li><a href="../development_tools/debugging.zh.html"><strong aria-hidden="true">11.1.</strong> 调试</a></li><li><ol class="section"><li><a href="../development_tools/debugging/log.zh.html"><strong aria-hidden="true">11.1.1.</strong> 日志消息</a></li><li><a href="../development_tools/debugging/config_log.zh.html"><strong aria-hidden="true">11.1.2.</strong> 配置日志记录</a></li></ol></li><li><a href="../development_tools/versioning.zh.html"><strong aria-hidden="true">11.2.</strong> 版本控制</a></li><li><a href="../development_tools/build_tools.zh.html"><strong aria-hidden="true">11.3.</strong> 建立时间工具</a></li></ol></li><li><a href="../encoding.zh.html"><strong aria-hidden="true">12.</strong> 编码</a></li><li><ol class="section"><li><a href="../encoding/strings.zh.html"><strong aria-hidden="true">12.1.</strong> 字符集</a></li><li><a href="../encoding/csv.zh.html"><strong aria-hidden="true">12.2.</strong> CSV 处理</a></li><li><a href="../encoding/complex.zh.html"><strong aria-hidden="true">12.3.</strong> 结构化数据</a></li></ol></li><li><a href="../errors.zh.html"><strong aria-hidden="true">13.</strong> 错误处理</a></li><li><ol class="section"><li><a href="../errors/handle.zh.html"><strong aria-hidden="true">13.1.</strong> 处理错误变量</a></li></ol></li><li><a href="../file.zh.html"><strong aria-hidden="true">14.</strong> 文件系统</a></li><li><ol class="section"><li><a href="../file/read-write.zh.html"><strong aria-hidden="true">14.1.</strong> 读写</a></li><li><a href="../file/dir.zh.html"><strong aria-hidden="true">14.2.</strong> 目录穿越漏洞</a></li></ol></li><li><a href="../hardware.zh.html"><strong aria-hidden="true">15.</strong> 硬件支持</a></li><li><ol class="section"><li><a href="../hardware/processor.zh.html"><strong aria-hidden="true">15.1.</strong> 处理器</a></li></ol></li><li><a href="../mem.zh.html"><strong aria-hidden="true">16.</strong> 内存管理</a></li><li><ol class="section"><li><a href="../mem/global_static.zh.html"><strong aria-hidden="true">16.1.</strong> 全局静态</a></li></ol></li><li><a href="../net.zh.html"><strong aria-hidden="true">17.</strong> 网络</a></li><li><ol class="section"><li><a href="../net/server.zh.html"><strong aria-hidden="true">17.1.</strong> 服务器</a></li></ol></li><li><a href="../os.zh.html"><strong aria-hidden="true">18.</strong> 操作系统</a></li><li><ol class="section"><li><a href="../os/external.zh.html"><strong aria-hidden="true">18.1.</strong> 外部命令</a></li></ol></li><li><a href="../science.zh.html"><strong aria-hidden="true">19.</strong> 科学类</a></li><li><ol class="section"><li><a href="../science/mathematics.zh.html"><strong aria-hidden="true">19.1.</strong> 数学</a></li><li><ol class="section"><li><a href="../science/mathematics/linear_algebra.zh.html"><strong aria-hidden="true">19.1.1.</strong> 线性代数</a></li><li><a href="../science/mathematics/trigonometry.zh.html"><strong aria-hidden="true">19.1.2.</strong> 三角法</a></li><li><a href="../science/mathematics/complex_numbers.zh.html"><strong aria-hidden="true">19.1.3.</strong> 复数</a></li><li><a href="../science/mathematics/statistics.zh.html"><strong aria-hidden="true">19.1.4.</strong> 统计</a></li><li><a href="../science/mathematics/miscellaneous.zh.html"><strong aria-hidden="true">19.1.5.</strong> 混杂</a></li></ol></li></ol></li><li><a href="../text.zh.html"><strong aria-hidden="true">20.</strong> 文本处理</a></li><li><ol class="section"><li><a href="../text/regex.zh.html"><strong aria-hidden="true">20.1.</strong> 正则表达式</a></li><li><a href="../text/string_parsing.zh.html"><strong aria-hidden="true">20.2.</strong> 字符串解析</a></li></ol></li><li><a href="../web.zh.html"><strong aria-hidden="true">21.</strong> 网页编程</a></li><li><ol class="section"><li><a href="../web/scraping.zh.html"><strong aria-hidden="true">21.1.</strong> 提取链接</a></li><li><a href="../web/url.zh.html"><strong aria-hidden="true">21.2.</strong> 统一资源定位地址:URL</a></li><li><a href="../web/mime.zh.html"><strong aria-hidden="true">21.3.</strong> 媒体类型</a></li><li><a href="../web/clients.zh.html"><strong aria-hidden="true">21.4.</strong> 客户端</a></li><li><ol class="section"><li><a href="../web/clients/requests.zh.html"><strong aria-hidden="true">21.4.1.</strong> 提出请求</a></li><li><a href="../web/clients/apis.zh.html"><strong aria-hidden="true">21.4.2.</strong> 调用 Web API</a></li><li><a href="../web/clients/download.zh.html"><strong aria-hidden="true">21.4.3.</strong> 下载</a></li></ol></li></ol></li></ol>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                            aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- START - Rust Cookbook customization -->
+                        <button id="edit-button" class="icon-button" type="button" title="Fork and edit" aria-label="Fork and edit"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="edit">
+                            <i class="fa fa-edit">Edit</i>
+                        </button>
+                        <!-- END - Rust Cookbook customization -->
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme"
+                            aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Rust 烹饪书</h1>
+                    
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <!-- // START - Rust Cookbook customization -->
+            <script>
+                document.getElementById("edit-button").addEventListener("click", function () {
+                    var editWindow = window.open("https://github.com/chinanf-boy/rust-cookbook-zh/edit/master/src/concurrency/parallel.zh.md");
+                });</script>
+            <!-- // END - Rust Cookbook customization -->
+
+            <div id="content" class="content">
+                <main>
+                    <a class="header" href="#并行任务" id="并行任务"><h1>并行任务</h1></a>
+<a class="header" href="#并行变换数组的元素" id="并行变换数组的元素"><h2>并行，变换数组的元素</h2></a>
+<p><a href="https://docs.rs/rayon/"><img src="https://badge-cache.kominick.com/crates/v/rayon.svg?label=rayon" alt="rayon-badge" /></a> <a href="https://crates.io/categories/concurrency"><img src="https://badge-cache.kominick.com/badge/concurrency--x.svg?style=social" alt="cat-concurrency-badge" /></a></p>
+<p>该示例使用了<code>rayon</code>箱子，这是 Rust 的数据并行库。<code>rayon</code>提供了<a href="https://docs.rs/rayon/*/rayon/iter/trait.IntoParallelRefMutIterator.html#tymethod.par_iter_mut"><code>par_iter_mut</code></a>方法，给任何的并行可迭代数据类型使用。这是一个类似迭代器的链，(潜在地)并行执行。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rayon;
+
+use rayon::prelude::*;
+
+fn main() {
+    let mut arr = [0, 7, 9, 11];
+    arr.par_iter_mut().for_each(|p| *p -= 1);
+    println!(&quot;{:?}&quot;, arr);
+}
+</code></pre></pre>
+<a class="header" href="#并行测试集合的任何或所有元素是否与给定断言匹配" id="并行测试集合的任何或所有元素是否与给定断言匹配"><h2>并行测试，集合的任何或所有元素是否与给定断言匹配</h2></a>
+<p><a href="https://docs.rs/rayon/"><img src="https://badge-cache.kominick.com/crates/v/rayon.svg?label=rayon" alt="rayon-badge" /></a> <a href="https://crates.io/categories/concurrency"><img src="https://badge-cache.kominick.com/badge/concurrency--x.svg?style=social" alt="cat-concurrency-badge" /></a></p>
+<p>这个例子演示了如何使用<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.any"><code>rayon::any</code></a>和<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.all"><code>rayon::all</code></a>方法，是与<a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.any"><code>std::any</code></a>和<a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.all"><code>std::all</code></a>相对应的并行方法。<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.any"><code>rayon::any</code></a>并行检查迭代器的任何元素，是否与断言匹配，并在找到一个元素后立即返回。<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.all"><code>rayon::all</code></a>并行检查迭代器的所有元素，是否与断言匹配，并在找到非匹配元素后，立即返回。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rayon;
+
+use rayon::prelude::*;
+
+fn main() {
+    let mut vec = vec![2, 4, 6, 8];
+
+    assert!(!vec.par_iter().any(|n| (*n % 2) != 0));
+    assert!(vec.par_iter().all(|n| (*n % 2) == 0));
+    assert!(!vec.par_iter().any(|n| *n &gt; 8 ));
+    assert!(vec.par_iter().all(|n| *n &lt;= 8 ));
+
+    vec.push(9);
+
+    assert!(vec.par_iter().any(|n| (*n % 2) != 0));
+    assert!(!vec.par_iter().all(|n| (*n % 2) == 0));
+    assert!(vec.par_iter().any(|n| *n &gt; 8 ));
+    assert!(!vec.par_iter().all(|n| *n &lt;= 8 )); 
+}
+</code></pre></pre>
+<a class="header" href="#使用给定断言并行搜索项目" id="使用给定断言并行搜索项目"><h2>使用给定断言，并行搜索项目</h2></a>
+<p><a href="https://docs.rs/rayon/"><img src="https://badge-cache.kominick.com/crates/v/rayon.svg?label=rayon" alt="rayon-badge" /></a> <a href="https://crates.io/categories/concurrency"><img src="https://badge-cache.kominick.com/badge/concurrency--x.svg?style=social" alt="cat-concurrency-badge" /></a></p>
+<p>这个例子使用<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.find_any"><code>rayon::find_any</code></a>和<a href="https://docs.rs/rayon/*/rayon/iter/trait.IntoParallelRefIterator.html#tymethod.par_iter"><code>par_iter</code></a>获得一个，通过并行搜索，满足给定闭包中断言的元素 vector。</p>
+<p>如果，有多个元素满足<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.find_any"><code>rayon::find_any</code></a>闭包参数中，定义的断言，<code>rayon</code>返回找到的第一个，但不一定是(顺序上的)第一个。</p>
+<p>另请注意，闭包的参数是对一个引用的一个引用（<code>&amp;&amp;x</code>）。请查阅<a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.find"><code>std::find</code></a>的讨论，了解更多细节。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rayon;
+
+use rayon::prelude::*;
+
+fn main() {
+    let v = vec![6, 2, 1, 9, 3, 8, 11];
+
+    let f1 = v.par_iter().find_any(|&amp;&amp;x| x == 9);
+    let f2 = v.par_iter().find_any(|&amp;&amp;x| x % 2 == 0 &amp;&amp; x &gt; 6);
+    let f3 = v.par_iter().find_any(|&amp;&amp;x| x &gt; 8);
+
+    assert_eq!(f1, Some(&amp;9));
+    assert_eq!(f2, Some(&amp;8));
+    assert!(f3 &gt; Some(&amp;8));
+}
+</code></pre></pre>
+<a class="header" href="#并行排序-vector" id="并行排序-vector"><h2>并行，排序 vector</h2></a>
+<p><a href="https://docs.rs/rayon/"><img src="https://badge-cache.kominick.com/crates/v/rayon.svg?label=rayon" alt="rayon-badge" /></a> <a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/concurrency"><img src="https://badge-cache.kominick.com/badge/concurrency--x.svg?style=social" alt="cat-concurrency-badge" /></a></p>
+<p>此示例：并行排序字符串 vector。</p>
+<p>分配一个空字符串的 vector。<code>par_iter_mut().for_each</code>会并发填充随机值。虽然存在<a href="https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html">多种选择</a>，可以对可枚举数据类型进行排序，<a href="https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html#method.par_sort_unstable"><code>par_sort_unstable</code></a>通常比<a href="https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html#method.par_sort">稳定排序</a>算法快。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rand;
+extern crate rayon;
+
+use rand::{Rng, thread_rng};
+use rand::distributions::Alphanumeric;
+use rayon::prelude::*;
+
+fn main() {
+  let mut vec = vec![String::new(); 100_000];
+  vec.par_iter_mut().for_each(|p| {
+    let mut rng = thread_rng();
+    *p = (0..5).map(|_| rng.sample(&amp;Alphanumeric)).collect()
+  });
+  vec.par_sort_unstable();
+}
+</code></pre></pre>
+<a class="header" href="#map-reduce-并行" id="map-reduce-并行"><h2>Map-reduce 并行</h2></a>
+<p><a href="https://docs.rs/rayon/"><img src="https://badge-cache.kominick.com/crates/v/rayon.svg?label=rayon" alt="rayon-badge" /></a> <a href="https://crates.io/categories/concurrency"><img src="https://badge-cache.kominick.com/badge/concurrency--x.svg?style=social" alt="cat-concurrency-badge" /></a></p>
+<p>这个例子使用<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.filter"><code>rayon::filter</code></a>，<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.map"><code>rayon::map</code></a>，和<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.reduce"><code>rayon::reduce</code></a>，计算<code>Person</code>对象的平均年龄，哪个年龄超过 30 。</p>
+<p><a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.filter"><code>rayon::filter</code></a>返回满足给定断言的集合，其中的元素。<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.map"><code>rayon::map</code></a>对每个元素执行一个操作，创建一个新的迭代，然后<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.reduce"><code>rayon::reduce</code></a>：执行带有一个当前元素，和前一个(执行结果)的操作。还显示了使用<a href="https://docs.rs/rayon/*/rayon/iter/trait.ParallelIterator.html#method.sum"><code>rayon::sum</code></a>，与本例中的 reduce 操作，具有相同的结果。</p>
+<pre><pre class="playpen"><code class="language-rust">extern crate rayon;
+
+use rayon::prelude::*;
+
+struct Person {
+    age: u32,
+}
+
+fn main() {
+    let v: Vec&lt;Person&gt; = vec![
+        Person { age: 23 },
+        Person { age: 19 },
+        Person { age: 42 },
+        Person { age: 17 },
+        Person { age: 17 },
+        Person { age: 31 },
+        Person { age: 30 },
+    ];
+
+    let num_over_30 = v.par_iter().filter(|&amp;x| x.age &gt; 30).count() as f32;
+    let sum_over_30 = v.par_iter()
+        .map(|x| x.age)
+        .filter(|&amp;x| x &gt; 30)
+        .reduce(|| 0, |x, y| x + y);
+
+    let alt_sum_30: u32 = v.par_iter()
+        .map(|x| x.age)
+        .filter(|&amp;x| x &gt; 30)
+        .sum();
+
+    let avg_over_30 = sum_over_30 as f32/num_over_30;
+    let alt_avg_over_30 = alt_sum_30 as f32/ num_over_30;
+
+    assert!((avg_over_30 - alt_avg_over_30).abs() &lt; std::f32::EPSILON);
+    println!(&quot;The average age of people older than 30 is {}&quot;, avg_over_30);
+}
+</code></pre></pre>
+<a class="header" href="#并行生成-jpg-缩略图" id="并行生成-jpg-缩略图"><h2>并行，生成 jpg 缩略图</h2></a>
+<p><a href="https://docs.rs/rayon/"><img src="https://badge-cache.kominick.com/crates/v/rayon.svg?label=rayon" alt="rayon-badge" /></a> <a href="https://docs.rs/glob/"><img src="https://badge-cache.kominick.com/crates/v/glob.svg?label=glob" alt="glob-badge" /></a> <a href="https://docs.rs/image/"><img src="https://badge-cache.kominick.com/crates/v/image.svg?label=image" alt="image-badge" /></a> <a href="https://crates.io/categories/concurrency"><img src="https://badge-cache.kominick.com/badge/concurrency--x.svg?style=social" alt="cat-concurrency-badge" /></a> <a href="https://crates.io/categories/filesystem"><img src="https://badge-cache.kominick.com/badge/filesystem--x.svg?style=social" alt="cat-filesystem-badge" /></a></p>
+<p>此示例：帮当前目录中的所有<code>.jpg</code> 文件生成缩略图，然后将其保存在名为<code>thumbnails</code>的新文件夹中。</p>
+<p><a href="https://docs.rs/glob/*/glob/fn.glob_with.html"><code>glob::glob_with</code></a>在当前目录中，查找 jpeg 文件。<code>rayon</code>使用<a href="https://docs.rs/rayon/*/rayon/iter/trait.IntoParallelRefIterator.html#tymethod.par_iter"><code>par_iter</code></a>，并发调整图像大小，每次都调用<a href="https://docs.rs/image/*/image/enum.DynamicImage.html#method.resize"><code>DynamicImage::resize</code></a>。</p>
+<pre><pre class="playpen"><code class="language-rust no_run"># #[macro_use]
+# extern crate error_chain;
+extern crate glob;
+extern crate image;
+extern crate rayon;
+
+use std::path::Path;
+use std::fs::create_dir_all;
+
+# use error_chain::ChainedError;
+use glob::{glob_with, MatchOptions};
+use image::{FilterType, ImageError};
+use rayon::prelude::*;
+
+# error_chain! {
+#     foreign_links {
+#         Image(ImageError);
+#         Io(std::io::Error);
+#         Glob(glob::PatternError);
+#     }
+# }
+
+fn run() -&gt; Result&lt;()&gt; {
+    let options: MatchOptions = Default::default();
+    let files: Vec&lt;_&gt; = glob_with(&quot;*.jpg&quot;, &amp;options)?
+        .filter_map(|x| x.ok())
+        .collect();
+
+    if files.len() == 0 {
+        bail!(&quot;No .jpg files found in current directory&quot;);
+    }
+
+    let thumb_dir = &quot;thumbnails&quot;;
+    create_dir_all(thumb_dir)?;
+
+    println!(&quot;Saving {} thumbnails into '{}'...&quot;, files.len(), thumb_dir);
+
+    let image_failures: Vec&lt;_&gt; = files
+        .par_iter()
+        .map(|path| {
+            make_thumbnail(path, thumb_dir, 300)
+                .map_err(|e| e.chain_err(|| path.display().to_string()))
+        })
+        .filter_map(|x| x.err())
+        .collect();
+
+    image_failures.iter().for_each(|x| println!(&quot;{}&quot;, x.display_chain()));
+
+    println!(&quot;{} thumbnails saved successfully&quot;, files.len() - image_failures.len());
+    Ok(())
+}
+
+fn make_thumbnail&lt;PA, PB&gt;(original: PA, thumb_dir: PB, longest_edge: u32) -&gt; Result&lt;()&gt;
+where
+    PA: AsRef&lt;Path&gt;,
+    PB: AsRef&lt;Path&gt;,
+{
+    let img = image::open(original.as_ref())?;
+    let file_path = thumb_dir.as_ref().join(original);
+
+    Ok(img.resize(longest_edge, longest_edge, FilterType::Nearest)
+        .save(file_path)?)
+}
+#
+# quick_main!(run);
+</code></pre></pre>
+<!--
+Links, in a few categories. Follow the existing structure.
+Keep lines sorted.
+-->
+<!-- Categories -->
+<!-- Crates -->
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    
+                    <a rel="prev" href="../concurrency/threads.zh.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
+
+                    
+                    <a rel="next" href="../cryptography.zh.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            
+            <a href="../concurrency/threads.zh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter"
+                aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
+
+            
+            <a href="../cryptography.zh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter"
+                aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            
+        </nav>
+
+    </div>
+
+    
+
+    
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128555056-1"></script>
+    
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128555056-1');
+        }
+    </script>
+    
+
+    
+
+    
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+    
+
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+    
+
+    
+
+</body>
+
+</html>

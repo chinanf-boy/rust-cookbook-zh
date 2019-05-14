@@ -2,4 +2,4 @@
 
 {{#include global_static/lazy-constant.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

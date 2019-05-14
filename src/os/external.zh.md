@@ -10,4 +10,4 @@
 
 {{#include external/continuous.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

@@ -6,4 +6,4 @@
 
 {{#include complex/endian-byte.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}

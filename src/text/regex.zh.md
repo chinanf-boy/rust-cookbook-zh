@@ -10,4 +10,4 @@
 
 {{#include regex/replace.zh.md}}
 
-{{#include links.zh.md}}
+{{#include ../links.zh.md}}
