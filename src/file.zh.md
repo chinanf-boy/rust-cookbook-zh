@@ -1,16 +1,16 @@
 # 文件系统
 
-| 烹饪书                                                     | 箱子                            | 类别                                                                |
-| ---------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------- |
+| 食谱                                                         | 箱子                            | 类别                                                                |
+| ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------------- |
 | [从文件中，读取字符串行][ex-std-read-lines]                  | [![std-badge]][std]             | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [避免写入和读取，同一文件][ex-avoid-read-write]              | [![same_file-badge]][same_file] | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [随机使用内存映射，访问文件][ex-random-file-access]          | [![memmap-badge]][memmap]       | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [过去 24 小时内，修改过的文件名][ex-file-24-hours-modified]  | [![std-badge]][std]             | [![cat-filesystem-badge]][cat-filesystem] [![cat-os-badge]][cat-os] |
-| [查找给定路径的循环][ex-find-file-loops]                   | [![same_file-badge]][same_file] | [![cat-filesystem-badge]][cat-filesystem]                           |
+| [查找给定路径的循环][ex-find-file-loops]                     | [![same_file-badge]][same_file] | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [递归查找，重复的文件名][ex-dedup-filenames]                 | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [递归查找，具有给定断言的所有文件][ex-file-predicate]        | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
-| [跳过点(隐藏)文件，遍历目录][ex-file-skip-dot]                   | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
-| [在给定深度(目录)，递归计算文件大小][ex-file-sizes]                | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
+| [跳过点(隐藏)文件，遍历目录][ex-file-skip-dot]               | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
+| [在给定深度(目录)，递归计算文件大小][ex-file-sizes]          | [![walkdir-badge]][walkdir]     | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [递归查找，所有 PNG 文件][ex-glob-recursive]                 | [![glob-badge]][glob]           | [![cat-filesystem-badge]][cat-filesystem]                           |
 | [查找具有给定模式的所有文件，忽略文件名大小写][ex-glob-with] | [![glob-badge]][glob]           | [![cat-filesystem-badge]][cat-filesystem]                           |
 

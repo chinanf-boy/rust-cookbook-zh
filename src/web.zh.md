@@ -2,7 +2,7 @@
 
 ## 刮擦网页
 
-| 烹饪书                                                                 | 箱子                                                                      | 类别                        |
+| 食谱                                                                   | 箱子                                                                      | 类别                        |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------- |
 | [从网页 HTML 中，提取所有链接][ex-extract-links-webpage]               | [![reqwest-badge]][reqwest] [![select-badge]][select]                     | [![cat-net-badge]][cat-net] |
 | [检查网页，是否有断开的链接][ex-check-broken-links]                    | [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] | [![cat-net-badge]][cat-net] |
@@ -10,7 +10,7 @@
 
 ## 统一资源位置（URL）
 
-| 烹饪书                                              | 箱子                | 类别                        |
+| 食谱                                                | 箱子                | 类别                        |
 | --------------------------------------------------- | ------------------- | --------------------------- |
 | [将字符串的一个 URL，解析为`Url`类型][ex-url-parse] | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
 | [通过移除路径段，创建一个 base URL][ex-url-base]    | [![url-badge]][url] | [![cat-net-badge]][cat-net] |
@@ -20,7 +20,7 @@
 
 ## 媒体类型（MIME）
 
-| 烹饪书                                                   | 箱子                                              | 类别                                                              |
+| 食谱                                                     | 箱子                                              | 类别                                                              |
 | -------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------- |
 | [从字符串，获取 MIME 类型][ex-mime-from-string]          | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |
 | [从文件名，获取 MIME 类型][ex-mime-from-filename]        | [![mime-badge]][mime]                             | [![cat-encoding-badge]][cat-encoding]                             |

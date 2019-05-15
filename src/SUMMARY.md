@@ -39,7 +39,7 @@
   - [处理错误变量](errors/handle.zh.md)
 - [文件系统](file.zh.md)
   - [读写](file/read-write.zh.md)
-  - [目录穿越漏洞](file/dir.zh.md)
+  - [目录穿梭](file/dir.zh.md)
 - [硬件支持](hardware.zh.md)
   - [处理器](hardware/processor.zh.md)
 - [内存管理](mem.zh.md)

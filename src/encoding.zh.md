@@ -1,6 +1,6 @@
 # 编码
 
-| 烹饪书                                                              | 箱子                                        | 类别                                  |
+| 食谱                                                                | 箱子                                        | 类别                                  |
 | ------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
 | [百分比编码(URL 编码)一个字符串][ex-percent-encode]                 | [![url-badge]][url]                         | [![cat-encoding-badge]][cat-encoding] |
 | [将字符串，编码为 application/x-www-form-urlencoded][ex-urlencoded] | [![url-badge]][url]                         | [![cat-encoding-badge]][cat-encoding] |

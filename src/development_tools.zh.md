@@ -4,7 +4,7 @@
 
 ## 版本控制
 
-| 烹饪书                                                 | 箱子                      | 类别                                                                          |
+| 食谱                                                   | 箱子                      | 类别                                                                          |
 | ------------------------------------------------------ | ------------------------- | ----------------------------------------------------------------------------- |
 | [解析，并增加版本字符串][ex-semver-increment]          | [![semver-badge]][semver] | [![cat-config-badge]][cat-config]                                             |
 | [分析，复杂版本字符串][ex-semver-complex]              | [![semver-badge]][semver] | [![cat-config-badge]][cat-config]                                             |
@@ -14,7 +14,7 @@
 
 ## 构建时
 
-| 烹饪书                                                 | 箱子              | 类别                                                    |
+| 食谱                                                   | 箱子              | 类别                                                    |
 | ------------------------------------------------------ | ----------------- | ------------------------------------------------------- |
 | [静态编译，并链接到捆绑的 C 库][ex-cc-static-bundled]  | [![cc-badge]][cc] | [![cat-development-tools-badge]][cat-development-tools] |
 | [编译，并链接到捆绑的 C++库][ex-cc-static-bundled-cpp] | [![cc-badge]][cc] | [![cat-development-tools-badge]][cat-development-tools] |

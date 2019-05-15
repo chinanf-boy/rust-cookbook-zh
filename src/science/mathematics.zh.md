@@ -1,6 +1,6 @@
 ## 数学
 
-| 烹饪书                                                          | 箱子                          | 类别                                |
+| 食谱                                                            | 箱子                          | 类别                                |
 | --------------------------------------------------------------- | ----------------------------- | ----------------------------------- |
 | [vector 和][vector-sum]                                         | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
 | [vector 范数][vector-norm]                                      | [![ndarray-badge]][ndarray]   | [![cat-science-badge]][cat-science] |
@@ -12,7 +12,7 @@
 | [验证 tan 等于 sin 除以 cos][tan-sin-cos]                       | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
 | [地球两点之间的距离][latitude-longitude]                        | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
 | [创建复数][create-complex]                                      | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
-| [复数相加][add-complex]                                           | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
+| [复数相加][add-complex]                                         | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
 | [复数的数学函数][mathematical-functions]                        | [![num-badge]][num]           | [![cat-science-badge]][cat-science] |
 | [集中趋势度量][ex-central-tendency]                             | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |
 | [计算标准偏差][ex-standard-deviation]                           | [![std-badge]][std]           | [![cat-science-badge]][cat-science] |

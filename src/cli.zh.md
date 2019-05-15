@@ -1,6 +1,6 @@
 # 命令行
 
-| 烹饪书                          | 箱子                            | 分类                                          |
+| 食谱                            | 箱子                            | 分类                                          |
 | ------------------------------- | ------------------------------- | --------------------------------------------- |
 | [解析命令行参数][ex-clap-basic] | [![clap-badge]][clap]           | [![cat-command-line-badge]][cat-command-line] |
 | [ANSI 终端][ex-ansi_term-basic] | [![ansi_term-badge]][ansi_term] | [![cat-command-line-badge]][cat-command-line] |

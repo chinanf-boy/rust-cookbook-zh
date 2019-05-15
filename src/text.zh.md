@@ -1,6 +1,6 @@
 # 文本处理
 
-| 烹饪书                                                                   | 箱子                                                        | 类别                                                |
+| 食谱                                                                     | 箱子                                                        | 类别                                                |
 | ------------------------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------- |
 | [收集 Unicode 字形][ex-unicode-graphemes]                                | [![unicode-segmentation-badge]][unicode-segmentation]       | [![cat-encoding-badge]][cat-text-processing]        |
 | [从电子邮件地址，提取登录信息并验证][ex-verify-extract-email]            | [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] | [![cat-text-processing-badge]][cat-text-processing] |

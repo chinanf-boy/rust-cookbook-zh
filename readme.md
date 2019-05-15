@@ -169,7 +169,7 @@
     - [x] [external/error-file.md](/src/os/external/error-file.zh.md)
     - [x] [external/continuous.md](/src/os/external/continuous.zh.md)
 - [x] [科学类](/src/science.zh.md)
-  - [ ] [数学](/src/science/mathematics.zh.md)
+  - [x] [数学](/src/science/mathematics.zh.md)
     - [x] [线性代数](/src/science/mathematics/linear_algebra.zh.md)
       - [x] [linear_algebra/vector-sum.md](/src/science/mathematics/linear_algebra/vector-sum.zh.md)
       - [x] [linear_algebra/vector-norm.md](/src/science/mathematics/linear_algebra/vector-norm.zh.md)
