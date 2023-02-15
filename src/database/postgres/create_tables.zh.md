@@ -4,7 +4,7 @@
 
 使用[`postgres`]在 Postgres 数据库中，创建表。
 
-[`Connection::connect`]帮助连接到现有数据库。该食谱的`Connection::connect`使用一个 URL 字符串格式。 它假定一个名为`library`，用户名是`postgres`，密码是`postgres`.
+[`Connection::connect`]帮助连接到现有数据库。该食谱的`Connection::connect`使用一个 URL 字符串格式。它假定现有一个名为`library`的数据库，用户名是`postgres`，密码是`postgres`.
 
 ```rust,no_run
 extern crate postgres;
