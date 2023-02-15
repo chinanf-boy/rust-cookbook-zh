@@ -1,4 +1,4 @@
-## 保持全球可变状态
+## 保持全局可变状态
 
 [![lazy_static-badge]][lazy_static] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
